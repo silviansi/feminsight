@@ -1,11 +1,11 @@
 <template>
-    <div class="min-h-screen flex items-center justify-center bg-gray-100">
+    <div class="min-h-screen flex items-center justify-center bg-red-100">
       <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
-        <h1 class="text-2xl font-bold text-center mb-6">Menstrual Cycle Calculator</h1>
+        <h1 class="text-2xl font-bold text-center mb-6">Kalkulator Siklus Menstruasi</h1>
         
         <form @submit.prevent="calculateNextPeriod">
           <div class="mb-4">
-            <label for="lastPeriod" class="block text-gray-700 font-medium mb-2">Last Menstrual Date</label>
+            <label for="lastPeriod" class="block text-gray-700 font-medium mb-2">Tanggal Terakhir Menstruasi</label>
             <input 
               type="date" 
               id="lastPeriod" 
@@ -13,7 +13,7 @@
               class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
           </div>
           <div class="mb-4">
-            <label for="duration" class="block text-gray-700 font-medium mb-2">Duration (days)</label>
+            <label for="duration" class="block text-gray-700 font-medium mb-2">Durasi (hari)</label>
             <input 
               type="number" 
               id="duration" 
@@ -22,7 +22,7 @@
               placeholder="e.g., 5">
           </div>
           <div class="mb-4">
-            <label for="cycleLength" class="block text-gray-700 font-medium mb-2">Cycle Length (days)</label>
+            <label for="cycleLength" class="block text-gray-700 font-medium mb-2">Panjang Siklus (hari)</label>
             <input 
               type="number" 
               id="cycleLength" 
@@ -33,13 +33,13 @@
           <button 
             type="submit" 
             class="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
-            Calculate
+            Kalkulasikan
           </button>
         </form>
         
         <div v-if="nextPeriod" class="mt-6 text-center">
-          <p class="text-lg font-medium">Next Menstrual Date: <span class="font-bold">{{ nextPeriod }}</span></p>
-          <p class="text-lg font-medium">Expected End Date: <span class="font-bold">{{ endPeriod }}</span></p>
+          <p class="text-lg font-medium">Tanggal Menstruasi Selanjutnya: <span class="font-bold">{{ nextPeriod }}</span></p>
+          <p class="text-lg font-medium">Tanggal Perkiraan Selesai: <span class="font-bold">{{ endPeriod }}</span></p>
         </div>
       </div>
     </div>
