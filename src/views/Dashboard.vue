@@ -1,7 +1,7 @@
 <template>
     <div class="min-h-screen flex items-center justify-center bg-red-100">
       <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
-        <h1 class="text-2xl font-bold text-center mb-6">Kalkulator Siklus Menstruasi</h1>
+        <h1 class="text-2xl font-bold text-center mb-6 text-red-900">Kalkulator Siklus Menstruasi</h1>
         
         <form @submit.prevent="calculateNextPeriod">
           <div class="mb-4">
@@ -32,7 +32,7 @@
           </div>
           <button 
             type="submit" 
-            class="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
+            class="w-full bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-800">
             Kalkulasikan
           </button>
         </form>
