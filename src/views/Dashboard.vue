@@ -13,7 +13,7 @@
           <label for="duration" class="block text-gray-700 font-medium mb-2">Durasi (hari)</label>
           <div class="flex items-center">
             <button type="button" @click="updateValue('duration', -1)" class="text-gray-900 px-3 py-1">-</button>
-            <input type="number" id="duration" v-model="duration" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <input type="number" id="duration" v-model="duration" class="text-center w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
             <button type="button" @click="updateValue('duration', 1)" class="text-gray-900 px-3 py-1">+</button>
           </div>
           <p v-if="errors.duration" class="text-red-500 text-sm mt-1">{{ errors.duration }}</p>
@@ -22,7 +22,7 @@
           <label for="cycleLength" class="block text-gray-700 font-medium mb-2">Panjang Siklus (hari)</label>
           <div class="flex items-center">
             <button type="button" @click="updateValue('cycleLength', -1)" class="text-gray-900 px-3 py-1">-</button>
-            <input type="number" id="cycleLength" v-model="cycleLength" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <input type="number" id="cycleLength" v-model="cycleLength" class="text-center w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
             <button type="button" @click="updateValue('cycleLength', 1)" class="text-gray-900 px-3 py-1">+</button>
           </div>
           <p v-if="errors.cycleLength" class="text-red-500 text-sm mt-1">{{ errors.cycleLength }}</p>
