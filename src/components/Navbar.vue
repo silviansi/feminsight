@@ -28,6 +28,7 @@
 
 <script>
 export default {
+    name: 'Navbar',
     data() {
         return {
             mobileMenuOpen: false,

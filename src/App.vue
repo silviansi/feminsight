@@ -1,9 +1,17 @@
-<script setup lang="ts">
-import Dashboard from './views/Menstruasi.vue'
-import Navbar from './components/Navbar.vue'
-</script>
-
 <template>
-  <Navbar />
-  <Dashboard />
+  <div id="app">
+    <Navbar />
+    <router-view></router-view>
+  </div>
 </template>
+
+<script>
+import Navbar from './components/Navbar.vue';
+
+export default {
+  name: 'App',
+  components: {
+    Navbar,
+  },
+}
+</script>

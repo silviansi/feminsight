@@ -2,6 +2,6 @@
 
 <script>
 export default {
-    name: "BMI"
+    name: 'BMIView',
 }
 </script>
