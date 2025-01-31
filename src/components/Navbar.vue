@@ -1,48 +1,33 @@
 <template>
-    <header class="bg-red-200 p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <!-- Logo -->
-            <h1 class="text-3xl font-bold text-red-800">
-            <router-link to="/">HealthCalc</router-link>
-            </h1>
+    <nav class="fixed top-0 left-0 w-full px-6 md:px-10 py-4 flex justify-between items-center bg-white/30 backdrop-blur-md z-50">
+      
+        <!-- Logo -->
+        <div class="text-pink-600 font-bold text-2xl">FemInsight</div>
   
-            <!-- Navigation -->
-            <nav class="space-x-4 hidden md:block">
-                <router-link to="/" class="hover:underline">Kalkulator Menstruasi</router-link>
-                <router-link to="/bmi" class="hover:underline">Kalkulator BMI</router-link>
-                <router-link to="/hpl" class="hover:underline">Kalkulator HPL</router-link>
-            </nav>
+        <!-- Menu Desktop -->
+        <ul class="hidden md:flex space-x-6">
+            <li><router-link to="/" class="text-gray-700 hover:text-pink-600">Home</router-link></li>
+            <li><router-link to="/bmi" class="text-gray-700 hover:text-pink-600">BMI</router-link></li>
+            <li><router-link to="/menstruasi" class="text-gray-700 hover:text-pink-600">Menstruasi</router-link></li>
+            <li><router-link to="/hpl" class="text-gray-700 hover:text-pink-600">HPL</router-link></li>
+        </ul>
   
-            <!-- Hamburger Menu -->
-            <button class="md:hidden block text-xl" @click="toggleMobileMenu">☰</button>
+        <!-- Tombol Menu Mobile -->
+        <button class="md:hidden text-gray-700 text-2xl" @click="isOpen = !isOpen">
+            ☰
+        </button>
+  
+        <!-- Menu Mobile -->
+        <div v-if="isOpen" class="absolute top-16 left-0 w-full bg-white/90 backdrop-blur-md shadow-md py-4 flex flex-col items-center space-y-4 md:hidden">
+            <router-link to="/" class="text-gray-700 hover:text-pink-600" @click="isOpen = false">Home</router-link>
+            <router-link to="/bmi" class="text-gray-700 hover:text-pink-600" @click="isOpen = false">BMI</router-link>
+            <router-link to="/menstruasi" class="text-gray-700 hover:text-pink-600" @click="isOpen = false">Menstruasi</router-link>
+            <router-link to="/hpl" class="text-gray-700 hover:text-pink-600" @click="isOpen = false">HPL</router-link>
         </div>
-  
-        <!-- Mobile Menu -->
-        <div v-if="mobileMenuOpen" class="bg-red-100 md:hidden p-4 space-y-2 text-red-800">
-            <router-link to="/" class="block hover:underline">Kalkulator Menstruasi</router-link>
-            <router-link to="/bmi" class="block hover:underline">Kalkulator BMI</router-link>
-            <router-link to="/hpl" class="block hover:underline">Kalkulator HPL</router-link>
-        </div>
-    </header>
+    </nav>
 </template>
   
-<script>
-export default {
-    data() {
-        return {
-            mobileMenuOpen: false,
-        };
-    },
-    methods: {
-        toggleMobileMenu() {
-            this.mobileMenuOpen = !this.mobileMenuOpen;
-        },
-    },
-};
+<script setup>
+import { ref } from "vue";
+const isOpen = ref(false);
 </script>
-
-<style scoped>
-header {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-</style>
