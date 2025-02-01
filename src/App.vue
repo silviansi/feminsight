@@ -1,9 +1,7 @@
 <template>
   <component :is="layout">
     <router-view v-slot="{ Component }">
-      <transition name="fade" mode="out-in">
-        <component :is="Component" />
-      </transition>
+      <component :is="Component" />
     </router-view>
   </component>
 </template>
@@ -11,13 +9,9 @@
 <script setup>
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
-import LandingLayouts from '@/layouts/LandingLayouts.vue';
-import MenuLayout from '@/layouts/MenuLayout.vue';
 
 const route = useRoute();
-
-// Pastikan default layout adalah LandingLayouts
-const layout = computed(() => route.meta.layout || LandingLayouts);
+const layout = computed(() => route.meta.layout || 'div');
 </script>
 
 <style>
