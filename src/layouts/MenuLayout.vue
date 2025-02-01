@@ -6,8 +6,8 @@ import Navbar from '../components/Navbar.vue';
 <template>
     <div>
         <Navbar />
-        <main class="min-h-screen flex justify-center items-center">
-            <slot />
+        <main>
+            <slot></slot>
         </main>
     </div>
 </template>
