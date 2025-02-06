@@ -43,7 +43,7 @@
           <p v-if="errors.cycleLength" class="text-red-500 text-sm mt-1">{{ errors.cycleLength }}</p>
         </div>
 
-        <button type="submit" class="w-full bg-pink-600 text-white py-2 px-4 rounded-lg hover:bg-red-800">
+        <button type="submit" class="w-full bg-pink-600 text-white py-2 px-4 rounded-lg hover:bg-pink-800">
             Kalkulasikan
         </button>
       </form>
