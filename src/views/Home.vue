@@ -14,19 +14,25 @@
           <div class="p-6 bg-white rounded-lg shadow-lg text-center flex flex-col items-center">
             <h2 class="text-lg sm:text-xl font-semibold text-pink-500">Kalkulator Menstruasi</h2>
             <p class="text-gray-600 mb-4 text-sm sm:text-base">Prediksi siklus menstruasi Anda dengan mudah.</p>
-            <a href="/menstruasi" class="mt-auto px-4 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-700">Coba</a>
+            <router-link to="/menstruasi" class="auto-mx">
+              <button class="px-4 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-700">Coba</button>
+            </router-link>
           </div>
           
           <div class="p-6 bg-white rounded-lg shadow-lg text-center flex flex-col items-center">
             <h2 class="text-lg sm:text-xl font-semibold text-blue-500">Kalkulator BMI</h2>
             <p class="text-gray-600 mb-4 text-sm sm:text-base">Hitung indeks massa tubuh Anda.</p>
-            <a href="/bmi" class="mt-auto px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700">Coba</a>
+            <router-link to="/bmi" class="auto-mx">
+              <button class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700">Coba</button>
+            </router-link>
           </div>
           
           <div class="p-6 bg-white rounded-lg shadow-lg text-center flex flex-col items-center">
             <h2 class="text-lg sm:text-xl font-semibold text-green-500">Kalkulator HPL</h2>
             <p class="text-gray-600 mb-4 text-sm sm:text-base">Perkirakan tanggal persalinan Anda.</p>
-            <a href="/hpl" class="mt-auto px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-700">Coba</a>
+            <router-link to="/hpl" class="mt-auto">
+              <button class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-700">Coba</button>
+            </router-link>
           </div>
         </div>
       </div>
