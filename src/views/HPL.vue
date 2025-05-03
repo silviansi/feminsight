@@ -1,8 +1,5 @@
 <template>
-    <div class="relative h-screen flex items-center justify-center bg-gradient-to-r from-green-50 to-white">
-    <!-- Dekorasi Lingkaran -->
-    <div class="absolute top-10 right-20 w-56 h-56 bg-gradient-to-br from-green-200 to-green-300 rounded-full blur-3xl opacity-50"></div>
-    <div class="absolute bottom-10 left-10 w-40 h-40 bg-gradient-to-br from-green-200 to-green-300 rounded-full blur-3xl opacity-50"></div>
+    <div class="relative h-screen flex items-center justify-center">
 
     <!-- Konten -->
     <div class="relative z-10 text-center w-full max-w-md px-4 py-8 bg-white bg-opacity-80 rounded-xl shadow-lg mt-4">
