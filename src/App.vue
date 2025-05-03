@@ -1,25 +1,31 @@
 <template>
-  <component :is="layout">
-    <router-view v-slot="{ Component }">
-      <component :is="Component" />
-    </router-view>
-  </component>
+  <div class="relative min-h-screen overflow-hidden">
+    <!-- Background pita coquette -->
+    <div class="absolute inset-0 bg-[url('/images/bg-coquette.jpg')] bg-repeat bg-[length:30%] opacity-30 -z-10"></div>
+
+    <!-- Navbar -->
+    <Navbar />
+
+    <!-- Isi halaman -->
+    <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>
+
+    <!-- Footer -->
+    <Footer />
+  </div>
 </template>
 
 <script setup>
-import { computed } from 'vue';
-import { useRoute } from 'vue-router';
-
-const route = useRoute();
-const layout = computed(() => route.meta.layout || 'div');
+import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <style>
-/* Animasi transisi */
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity 0.5s ease;
 }
-.fade-enter, .fade-leave-to {
+.fade-enter-from, .fade-leave-to {
   opacity: 0;
 }
 </style>
