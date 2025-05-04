@@ -1,86 +1,97 @@
 <template>
-  <div class="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden">
-    <div class="absolute top-10 left-5 w-30 rotate-[-12deg]">
-        <img src="/images/ribbon-1.png" alt="Health & Wellness" class="w-full h-auto object-cover opacity-40"/>
+  <div class="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden mt-8">
+    <div class="absolute lace-border w-full h-12 top-2"></div>
+
+    <!-- Ribbon -->
+    <div class="absolute top-10 left-5 w-28 md:w-40 rotate-[-12deg] opacity-40">
+      <img src="/images/ribbon-1.png" alt="Health & Wellness" class="w-full h-auto object-cover" />
     </div>
+
     <!-- Jumbotron -->
-    <section class="relative py-16 px-6 mt-10 md:px-20 overflow-hidden">
-    <div class="relative z-10 flex flex-col-reverse md:flex-row items-center gap-8">
-      <!-- Text content -->
-      <div class="max-w-lg text-center md:text-left">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-[#6a4c46] mb-4">
-          Kenali tubuhmu, cintai dirimu — bersama <span class="text-[#333333]">Fem</span><span class="text-pink-800">Insight</span>
-        </h1>
-        <p class="text-gray-700 text-lg mb-6">
-          Tubuh perempuan unik dan berharga — FemInsight membantu Anda memahami siklus, merencanakan kesehatan, dan merawat diri dengan percaya diri.
-        </p>
-        <router-link to="/kalkulator" class="inline-block">
-          <button class="px-6 py-3 bg-[#f8bbd0] text-[#6a4c46] font-medium rounded-full transition-all hover:scale-105 hover:bg-[#f4a6c6] shadow-lg transform hover:shadow-xl">
-            Ayo Mulai!
-          </button>
-        </router-link>
+    <section class="relative py-16 px-4 sm:px-6 md:px-20 w-full max-w-7xl">
+      <div class="flex flex-col-reverse md:flex-row items-center gap-8">
+        <!-- Text content -->
+        <div class="w-full md:w-1/2 text-center md:text-left">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#6a4c46] mb-4 leading-snug">
+            Kenali tubuhmu, cintai dirimu — bersama <span class="text-[#333333]">Fem</span><span class="text-pink-800">Insight</span>
+          </h1>
+          <p class="text-gray-700 text-base sm:text-lg mb-6">
+            Tubuh perempuan unik dan berharga — FemInsight membantu Anda memahami siklus, merencanakan kesehatan, dan merawat diri dengan percaya diri.
+          </p>
+          <router-link to="/kalkulator">
+            <button class="px-6 py-3 bg-[#f8bbd0] text-[#6a4c46] font-medium rounded-full transition-all hover:scale-105 hover:bg-[#f4a6c6] shadow-lg">
+              Ayo Mulai!
+            </button>
+          </router-link>
+        </div>
+
+        <!-- Collage Images -->
+        <div class="relative w-full md:w-1/2 h-[350px] sm:h-[400px] hidden md:block">
+          <!-- Polaroid 1 -->
+          <div class="absolute top-8 left-6 sm:left-10 w-40 rotate-[-10deg] bg-white shadow-lg p-2 border rounded-lg">
+            <img src="/images/polaroid-1.png" alt="Polaroid 1" class="w-full h-28 sm:h-32 object-cover rounded" />
+            <p class="text-xs text-center mt-1 text-gray-600">Self-care 💅</p>
+            <div class="absolute top-[-10px] left-1/2 -translate-x-1/2 w-12 sm:w-16 h-4 bg-yellow-300/70 rounded rotate-[5deg]"></div>
+          </div>
+
+          <!-- Polaroid 2 -->
+          <div class="absolute top-8 right-0 w-36 rotate-[8deg] bg-white shadow-lg p-2 border rounded-lg">
+            <img src="/images/polaroid-2.png" alt="Polaroid 2" class="w-full h-24 sm:h-28 object-cover rounded" />
+            <p class="text-xs text-center mt-1 text-gray-600">FemPower 💪</p>
+            <div class="absolute top-[-10px] left-1/2 -translate-x-1/2 w-12 sm:w-14 h-4 bg-pink-300/70 rounded rotate-[3deg]"></div>
+          </div>
+
+          <!-- Polaroid 3 -->
+          <div class="absolute top-28 right-36 w-40 rotate-[-3deg] bg-white shadow-lg p-2 border rounded-lg">
+            <img src="/images/polaroid-3.png" alt="Polaroid 2" class="w-full h-24 sm:h-28 object-cover rounded" />
+            <p class="text-xs text-center mt-1 text-gray-600">Body Awareness 🧘🏻‍♀️</p>
+            <div class="absolute top-[-10px] left-1/2 -translate-x-1/2 w-12 sm:w-14 h-4 bg-fuchsia-300/70 rounded rotate-[3deg]"></div>
+          </div>
+
+          <!-- Sticky Note -->
+          <div class="absolute bottom-4 left-36 w-32 rotate-[10deg] bg-[#f8bbd0] p-3 shadow-md border border-[#f8bbd0] rounded">
+            <p class="text-sm text-[#6a4c46] text-center font-medium">Jaga kesehatanmu 🌸</p>
+            <div class="absolute top-[-8px] left-1/2 -translate-x-1/2 w-10 sm:w-12 h-3 bg-blue-200/70 rounded rotate-[-6deg]"></div>
+          </div>
+
+          <!-- Stamp -->
+          <div class="absolute bottom-0 right-10 w-24">
+            <img src="/images/stamp-1.png" alt="Stamp" class="w-full h-auto object-cover opacity-80" />
+          </div>
+          <div class="absolute bottom-20 right-4 w-20 rotate-[10deg]">
+            <img src="/images/stamp-2.png" alt="Stamp" class="w-full h-auto object-cover opacity-80" />
+          </div>
+
+        </div>
       </div>
-
-      <!-- Collage Images -->
-      <div class="relative w-full md:w-[500px] h-[400px]">
-        <!-- Polaroid 1 -->
-        <div class="absolute top-0 left-10 w-40 rotate-[-10deg] bg-white shadow-lg p-2 border rounded-lg">
-          <img src="/images/polaroid-1.png" alt="Polaroid 1" class="w-full h-32 object-cover rounded"/>
-          <p class="text-xs text-center mt-1 text-gray-600">Self-care</p>
-          <div class="absolute top-[-10px] left-1/2 -translate-x-1/2 w-16 h-4 bg-yellow-300/70 rounded rotate-[5deg]"></div>
-        </div>
-
-        <!-- Sticky Note -->
-        <div class="absolute bottom-8 left-36 w-32 rotate-[10deg] bg-[#f8bbd0] p-3 shadow-md border border-[#f8bbd0] rounded">
-          <p class="text-sm text-[#6a4c46] text-center font-medium">Jaga kesehatanmu 🌸</p>
-          <div class="absolute top-[-8px] left-1/2 -translate-x-1/2 w-12 h-3 bg-blue-200/70 rounded rotate-[-6deg]"></div>
-        </div>
-
-        <!-- Stamp -->
-        <div class="absolute bottom-0 right-10 w-24">
-          <img src="/images/stamp-1.png" alt="Stamp" class="w-full h-auto object-cover opacity-80"/>
-        </div>
-
-        <!-- Polaroid 2 -->
-        <div class="absolute top-10 right-0 w-36 rotate-[8deg] bg-white shadow-lg p-2 border rounded-lg">
-          <img src="/images/polaroid-2.png" alt="Polaroid 2" class="w-full h-28 object-cover rounded"/>
-          <p class="text-xs text-center mt-1 text-gray-600">FemPower 💪</p>
-          <div class="absolute top-[-10px] left-1/2 -translate-x-1/2 w-14 h-4 bg-pink-300/70 rounded rotate-[3deg]"></div>
-        </div>
-      </div>
-    </div>
     </section>
 
     <!-- Fitur Unggulan -->
-    <section class="relative z-10 w-full max-w-6xl py-2 mb-6">
-      <h2 class="text-3xl sm-text-4xl font-extrabold text-pink-600 text-center mb-10">
+    <section class="w-full max-w-6xl py-12 px-4">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-pink-600 text-center mb-10">
         Kenapa memilih FemInsight?
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition-all transform hover:scale-105">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition transform hover:scale-105">
           <img src="/images/icon-easy.png" alt="Mudah digunakan" class="mx-auto w-16 h-16 mb-4" />
           <h3 class="text-xl font-semibold text-[#6a4c46] mb-2">Mudah Digunakan</h3>
           <p class="text-gray-600 text-sm sm:text-base">Antarmuka intuitif, cocok untuk semua usia.</p>
         </div>
-
-        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition-all transform hover:scale-105">
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition transform hover:scale-105">
           <img src="/images/icon-accurate.png" alt="Akurat & Andal" class="mx-auto w-16 h-16 mb-4" />
           <h3 class="text-xl font-semibold text-[#6a4c46] mb-2">Akurat & Andal</h3>
           <p class="text-gray-600 text-sm sm:text-base">Kalkulasi berbasis data medis terpercaya.</p>
         </div>
-
-        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition-all transform hover:scale-105">
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition transform hover:scale-105">
           <img src="/images/icon-femtips.png" alt="FemTips" class="mx-auto w-16 h-16 mb-4" />
           <h3 class="text-xl font-semibold text-[#6a4c46] mb-2">FemTips</h3>
-          <p class="text-gray-600 text-sm sm:text-base">
-            Temukan tips seputar kesehatan dan perawatan diri agar hidup makin nyaman dan percaya diri.
-          </p>
+          <p class="text-gray-600 text-sm sm:text-base">Temukan tips seputar kesehatan dan perawatan diri agar makin percaya diri.</p>
         </div>
       </div>
     </section>
 
     <!-- Kalkulator -->
-    <section class="relative z-10 text-center w-full max-w-6xl py-4">
+    <section class="w-full max-w-6xl py-12 px-4 text-center">
       <h2 class="text-3xl sm:text-4xl font-extrabold text-pink-600 mb-6">
         Kalkulator Kesehatan & Kebugaran
       </h2>
@@ -88,39 +99,35 @@
         Solusi mudah untuk melacak kesehatan dan merencanakan masa depan Anda dengan percaya diri.
       </p>
 
-      <!-- Navigasi Kalkulator -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Kalkulator Menstruasi -->
-        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl text-center transition-all transform hover:scale-105">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:scale-105">
           <img src="/images/icon-calendar-1.png" alt="Kalkulator Menstruasi" class="mx-auto w-16 h-16 mb-4" />
           <h3 class="text-xl font-semibold text-pink-600 mb-2">Kalkulator Menstruasi</h3>
           <p class="text-gray-600 text-sm sm:text-base mb-4">Prediksi siklus menstruasi Anda dengan mudah.</p>
           <router-link to="/menstruasi">
-            <button class="px-6 py-3 bg-pink-200 text-[#6a4c46] font-medium rounded-full transition-all hover:scale-105 hover:bg-pink-300 shadow">
+            <button class="px-6 py-3 bg-pink-200 text-[#6a4c46] font-medium rounded-full transition hover:scale-105 hover:bg-pink-300 shadow">
               Coba Sekarang
             </button>
           </router-link>
         </div>
 
-        <!-- Kalkulator BMI -->
-        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl text-center transition-all transform hover:scale-105">
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:scale-105">
           <img src="/images/icon-bmi.png" alt="Kalkulator BMI" class="mx-auto w-16 h-16 mb-4" />
           <h3 class="text-xl font-semibold text-blue-500 mb-2">Kalkulator BMI</h3>
           <p class="text-gray-600 text-sm sm:text-base mb-4">Hitung indeks massa tubuh Anda.</p>
           <router-link to="/bmi">
-            <button class="px-6 py-3 bg-blue-200 text-[#6a4c46] font-medium rounded-full transition-all hover:scale-105 hover:bg-blue-300 shadow">
+            <button class="px-6 py-3 bg-blue-200 text-[#6a4c46] font-medium rounded-full transition hover:scale-105 hover:bg-blue-300 shadow">
               Coba Sekarang
             </button>
           </router-link>
         </div>
 
-        <!-- Kalkulator HPL -->
-        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl text-center transition-all transform hover:scale-105">
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:scale-105">
           <img src="/images/icon-hpl.png" alt="Kalkulator HPL" class="mx-auto w-16 h-16 mb-4" />
           <h3 class="text-xl font-semibold text-green-500 mb-2">Kalkulator HPL</h3>
           <p class="text-gray-600 text-sm sm:text-base mb-4">Perkirakan tanggal persalinan Anda.</p>
           <router-link to="/hpl">
-            <button class="px-6 py-3 bg-green-200 text-[#6a4c46] font-medium rounded-full transition-all hover:scale-105 hover:bg-green-300 shadow">
+            <button class="px-6 py-3 bg-green-200 text-[#6a4c46] font-medium rounded-full transition hover:scale-105 hover:bg-green-300 shadow">
               Coba Sekarang
             </button>
           </router-link>
@@ -128,34 +135,31 @@
       </div>
     </section>
 
-    <!-- Infografis & Fun Fact -->
-    <section class="relative z-10 w-full max-w-6xl py-16">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-pink-600 text-center mb-6">
-        Infografis & Fun Fact Seputar Kesehatan
+    <!-- FAQ Section -->
+    <section class="w-full max-w-6xl py-12 px-4">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-pink-600 text-center mb-10">
+        Pertanyaan yang Sering Diajukan (FAQ)
       </h2>
 
-      <!-- Infografis -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
-        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition-all transform hover:scale-105">
-          <img src="/images/infografis-1.png" alt="Infografis 1" class="mx-auto w-24 h-24 mb-4" />
-          <h3 class="text-xl font-semibold text-pink-600 mb-2">Siklus Menstruasi</h3>
-          <p class="text-gray-600 text-sm sm:text-base">Infografis ini membantu Anda memahami tahap-tahap siklus menstruasi dengan lebih mudah dan visual.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition-all transform hover:scale-105">
-          <img src="/images/infografis-2.png" alt="Infografis 2" class="mx-auto w-24 h-24 mb-4" />
-          <h3 class="text-xl font-semibold text-pink-600 mb-2">Kesehatan Tubuh Perempuan</h3>
-          <p class="text-gray-600 text-sm sm:text-base">Temukan tips merawat tubuh Anda dengan infografis tentang pola makan dan olahraga yang tepat.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition-all transform hover:scale-105">
-          <img src="/images/infografis-3.png" alt="Infografis 3" class="mx-auto w-24 h-24 mb-4" />
-          <h3 class="text-xl font-semibold text-pink-600 mb-2">Pentingnya Hidrasi</h3>
-          <p class="text-gray-600 text-sm sm:text-base">Infografis ini mengingatkan Anda akan pentingnya hidrasi untuk kesehatan kulit dan tubuh secara keseluruhan.</p>
+      <div class="space-y-4">
+        <div v-for="(faq, index) in faqs" :key="index" class="bg-white border border-pink-100 rounded-xl shadow hover:shadow-md transition">
+          <button @click="toggle(index)" class="w-full flex justify-between items-center p-4 sm:p-6 text-left rounded-xl hover:bg-pink-50 transition">
+            <span class="text-[#6a4c46] text-base sm:text-lg font-semibold flex items-center gap-2">
+              {{ faq.question }} <span class="text-pink-500 text-xl">{{ faq.emoji }}</span>
+            </span>
+            <svg :class="{'transform rotate-180': activeIndex === index}" class="h-5 w-5 text-pink-500 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div v-if="activeIndex === index" class="px-4 sm:px-6 pb-4 sm:pb-6 text-gray-600 text-sm sm:text-base">
+            {{ faq.answer }}
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Fun Fact -->
+    <!-- Fun Fact -->
+    <section class="w-full max-w-6xl py-12 px-4">
       <div class="bg-pink-100 p-8 rounded-xl shadow-lg text-center">
         <h3 class="text-xl font-semibold text-[#6a4c46] mb-4">Fun Fact</h3>
         <p class="text-lg text-gray-700 mb-4">
@@ -170,5 +174,41 @@
   </div>
 </template>
 
-<style secop>
+
+<script setup>
+import { ref } from 'vue'
+
+const faqs = [
+  {
+    question: 'Apakah FemInsight aman digunakan?',
+    answer: 'Ya, FemInsight menggunakan data anonim dan tidak menyimpan informasi pribadi Anda. Semua kalkulasi berbasis data medis yang terpercaya.',
+    emoji: '💖'
+  },
+  {
+    question: 'Apakah FemInsight gratis digunakan?',
+    answer: 'Tentu saja! Semua fitur kalkulator dan tips kesehatan di FemInsight bisa diakses secara gratis tanpa biaya apapun.',
+    emoji: '🎀'
+  },
+  {
+    question: 'Apakah saya perlu mendaftar akun untuk menggunakan kalkulator?',
+    answer: 'Tidak perlu. Anda bisa langsung menggunakan kalkulator kapan saja tanpa registrasi atau login.',
+    emoji: '🌸'
+  }
+]
+
+const activeIndex = ref(null)
+
+const toggle = (index) => {
+  activeIndex.value = activeIndex.value === index ? null : index
+}
+</script>
+
+<style scoped>
+/* Di style.css / app.css atau dalam <style> */
+.lace-border {
+  background-image: url('/images/lace-2.png');
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: auto 100%;
+}
 </style>
