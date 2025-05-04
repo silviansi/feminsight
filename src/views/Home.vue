@@ -1,31 +1,54 @@
 <template>
   <div class="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden">
-
+    <div class="absolute top-10 left-5 w-30 rotate-[-12deg]">
+        <img src="/images/ribbon-1.png" alt="Health & Wellness" class="w-full h-auto object-cover opacity-40"/>
+    </div>
     <!-- Jumbotron -->
-    <section class="w-full px-10 pt-10 flex flex-col lg:flex-row items-center justify-between overflow-hidden relative z-10">
+    <section class="relative py-16 px-6 mt-10 md:px-20 overflow-hidden">
+    <div class="relative z-10 flex flex-col-reverse md:flex-row items-center gap-8">
+      <!-- Text content -->
+      <div class="max-w-lg text-center md:text-left">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-[#6a4c46] mb-4">
+          Kenali tubuhmu, cintai dirimu — bersama <span class="text-[#333333]">Fem</span><span class="text-pink-800">Insight</span>
+        </h1>
+        <p class="text-gray-700 text-lg mb-6">
+          Tubuh perempuan unik dan berharga — FemInsight membantu Anda memahami siklus, merencanakan kesehatan, dan merawat diri dengan percaya diri.
+        </p>
+        <router-link to="/kalkulator" class="inline-block">
+          <button class="px-6 py-3 bg-[#f8bbd0] text-[#6a4c46] font-medium rounded-full transition-all hover:scale-105 hover:bg-[#f4a6c6] shadow-lg transform hover:shadow-xl">
+            Ayo Mulai!
+          </button>
+        </router-link>
+      </div>
 
-    <!-- Konten Jumbotron -->
-    <div class="w-full lg:w-1/2 text-center lg:text-left mb-6 lg:mb-0">
-      <h1 class="text-4xl font-extrabold text-[#6a4c46] mb-4">
-        Selamat datang di 
-        <span class="text-[#333333]">Fem</span>
-        <span class="text-pink-800">Insight</span>
-      </h1>
-      <p class="text-lg text-gray-700 mb-4">
-        Tubuh perempuan unik dan berharga — FemInsight membantu Anda memahami siklus, merencanakan kesehatan, dan merawat diri dengan percaya diri.
-      </p>
-      <router-link to="/kalkulator" class="inline-block">
-        <button class="px-6 py-3 bg-[#f8bbd0] text-[#6a4c46] font-medium rounded-full transition-all hover:scale-105 hover:bg-[#f4a6c6] shadow-lg transform hover:shadow-xl">
-          Ayo Mulai!
-        </button>
-      </router-link>
+      <!-- Collage Images -->
+      <div class="relative w-full md:w-[500px] h-[400px]">
+        <!-- Polaroid 1 -->
+        <div class="absolute top-0 left-10 w-40 rotate-[-10deg] bg-white shadow-lg p-2 border rounded-lg">
+          <img src="/images/polaroid-1.png" alt="Polaroid 1" class="w-full h-32 object-cover rounded"/>
+          <p class="text-xs text-center mt-1 text-gray-600">Self-care</p>
+          <div class="absolute top-[-10px] left-1/2 -translate-x-1/2 w-16 h-4 bg-yellow-300/70 rounded rotate-[5deg]"></div>
+        </div>
+
+        <!-- Sticky Note -->
+        <div class="absolute bottom-8 left-36 w-32 rotate-[10deg] bg-[#f8bbd0] p-3 shadow-md border border-[#f8bbd0] rounded">
+          <p class="text-sm text-[#6a4c46] text-center font-medium">Jaga kesehatanmu 🌸</p>
+          <div class="absolute top-[-8px] left-1/2 -translate-x-1/2 w-12 h-3 bg-blue-200/70 rounded rotate-[-6deg]"></div>
+        </div>
+
+        <!-- Stamp -->
+        <div class="absolute bottom-0 right-10 w-24">
+          <img src="/images/stamp-1.png" alt="Stamp" class="w-full h-auto object-cover opacity-80"/>
+        </div>
+
+        <!-- Polaroid 2 -->
+        <div class="absolute top-10 right-0 w-36 rotate-[8deg] bg-white shadow-lg p-2 border rounded-lg">
+          <img src="/images/polaroid-2.png" alt="Polaroid 2" class="w-full h-28 object-cover rounded"/>
+          <p class="text-xs text-center mt-1 text-gray-600">FemPower 💪</p>
+          <div class="absolute top-[-10px] left-1/2 -translate-x-1/2 w-14 h-4 bg-pink-300/70 rounded rotate-[3deg]"></div>
+        </div>
+      </div>
     </div>
-
-    <!-- Gambar di sebelah kanan -->
-    <div class="w-full lg:w-1/2 hidden lg:block">
-      <img src="/images/header-1.png" alt="Health & Wellness" class="mx-auto object-cover">
-    </div>
-
     </section>
 
     <!-- Fitur Unggulan -->
@@ -146,3 +169,6 @@
 
   </div>
 </template>
+
+<style secop>
+</style>
