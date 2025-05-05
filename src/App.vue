@@ -7,9 +7,11 @@
     <Navbar />
 
     <!-- Isi halaman -->
-    <transition name="fade" mode="out-in">
-      <router-view />
-    </transition>
+    <router-view v-slot="{ Component }">
+      <transition name="fade">
+        <component :is="Component" />
+      </transition>
+    </router-view>
 
     <!-- Footer -->
     <Footer />
