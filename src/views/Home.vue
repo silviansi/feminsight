@@ -19,11 +19,12 @@
           <p class="text-gray-700 text-base sm:text-lg mb-6">
             Tubuh perempuan unik dan berharga — FemInsight membantu Anda memahami siklus, merencanakan kesehatan, dan merawat diri dengan percaya diri.
           </p>
-          <router-link to="/kalkulator">
-            <button class="px-6 py-3 bg-[#f8bbd0] text-[#6a4c46] font-medium rounded-full transition-all hover:scale-105 hover:bg-[#f4a6c6] shadow-lg">
-              Ayo Mulai! 💗
-            </button>
-          </router-link>
+          <button
+            @click="scrollToFeatures"
+            class="px-6 py-3 bg-[#f8bbd0] text-[#6a4c46] font-medium rounded-full transition-all hover:scale-105 hover:bg-[#f4a6c6] shadow-lg">
+            Ayo Mulai! 💗
+          </button>
+          <p class="text-gray-500 text-sm mt-4">Dapatkan informasi lebih lanjut tentang fitur kami.</p> 
         </div>
 
         <!-- Kolase gambar -->
@@ -54,7 +55,7 @@
             <p class="text-sm text-[#6a4c46] text-center font-medium leading-tight">Jaga kesehatanmu 🌸</p>
             <div class="absolute top-[-8px] left-1/2 -translate-x-1/2 w-10 sm:w-12 h-3 bg-blue-200/70 rounded rotate-[-6deg]"></div>
           </div>
-          
+
           <!-- Stamps -->
           <div class="absolute bottom-0 right-10 w-24">
             <img src="/images/stamp-1.png" alt="Stamp" class="w-full h-auto object-cover opacity-80" />
@@ -68,7 +69,7 @@
     </section>
 
     <!-- Section Fitur Unggulan FemInsight -->
-    <section class="w-full max-w-6xl py-12 px-4 text-center">
+    <section id="features" class="w-full max-w-6xl py-16 px-4 text-center">
       <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] mb-4">Fitur Unggulan FemInsight</h2>
       <p class="text-base sm:text-lg text-gray-600 mb-12 max-w-2xl mx-auto">FemInsight hadir untuk membantu perempuan memahami dan menjaga kesehatannya dengan alat dan informasi terpercaya.</p>
 
@@ -175,28 +176,75 @@
       </div>
     </section>
 
-    <!-- Section: FAQ -->
+    <!-- Section: Artikel Populer -->
     <section class="w-full max-w-6xl py-12 px-4">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] text-center mb-10">
-        Pertanyaan yang Sering Diajukan (FAQ)
-      </h2>
+      <div class="text-center mb-10">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#6a4c46]">Artikel Populer & Tips Kesehatan Wanita</h2>
+        <p class="text-base sm:text-lg text-gray-600 mt-2">Temukan berbagai artikel seputar kesehatan wanita yang bermanfaat untuk gaya hidup sehat dan keseimbangan tubuh.</p>
+      </div>
 
-      <div class="space-y-4">
-        <div v-for="(faq, index) in faqs" :key="index" class="bg-white border border-pink-100 rounded-xl shadow hover:shadow-md transition">
-          <button @click="toggle(index)" class="w-full flex justify-between items-center p-4 sm:p-6 text-left rounded-xl hover:bg-pink-50 transition">
-            <span class="text-[#6a4c46] text-base sm:text-lg font-semibold flex items-center gap-2">
-              {{ faq.question }} <span class="text-pink-500 text-xl">{{ faq.emoji }}</span>
-            </span>
-            <svg :class="{'transform rotate-180': activeIndex === index}" class="h-5 w-5 text-pink-500 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div v-if="activeIndex === index" class="px-4 sm:px-6 pb-4 sm:pb-6 text-gray-600 text-sm sm:text-base">
-            {{ faq.answer }}
+      <!-- Wrapper for Articles -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+        <!-- Artikel 1 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <img src="/images/articel-1.jpg" alt="Artikel 1" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-[#6a4c46] text-lg text-center mb-2">Menjaga Kesehatan Reproduksi Wanita</h3>
+            <p class="text-gray-600 text-sm mb-4">Pelajari bagaimana menjaga kesehatan reproduksi dengan tips yang mudah diterapkan dalam kehidupan sehari-hari.</p>
+            <a href="#" class="text-[#6a4c46] font-semibold hover:underline">Baca Selengkapnya</a>
           </div>
+        </div>
+
+        <!-- Artikel 2 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <img src="/images/articel-2.jpg" alt="Artikel 2" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-[#6a4c46] text-lg text-center mb-2">Nutrisi untuk Kesehatan Wanita</h3>
+            <p class="text-gray-600 text-sm mb-4">Artikel ini memberikan tips diet sehat yang bisa meningkatkan kualitas hidup dan mendukung kesehatan jangka panjang.</p>
+            <a href="#" class="text-[#6a4c46] font-semibold hover:underline">Baca Selengkapnya</a>
+          </div>
+        </div>
+
+        <!-- Artikel 3 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <img src="/images/articel-3.jpg" alt="Artikel 3" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-[#6a4c46] text-lg text-center mb-2">Cara Mengelola Stres dengan Yoga</h3>
+            <p class="text-gray-600 text-sm mb-4">Stres bisa mempengaruhi kesehatan tubuh. Pelajari cara mengelola stres dengan yoga dan relaksasi yang mudah diikuti.</p>
+            <a href="#" class="text-[#6a4c46] font-semibold hover:underline">Baca Selengkapnya</a>
+          </div>
+        </div>
+
+        <!-- Tombol Lihat Semua Artikel (tanpa card) -->
+        <div class="flex justify-center items-center p-4">
+          <a href="#" class="bg-transparent text-[#6a4c46] border-2 border-[#6a4c46] py-2 px-6 rounded-full text-sm font-semibold hover:bg-[#f8bbd0] hover:text-[#6a4c46] transition duration-300">Lihat Semua Artikel</a>
         </div>
       </div>
     </section>
+
+      <!-- Section: FAQ -->
+      <section class="w-full max-w-6xl py-12 px-4">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] text-center mb-10">
+          Pertanyaan yang Sering Diajukan (FAQ)
+        </h2>
+
+        <div class="space-y-4">
+          <div v-for="(faq, index) in faqs" :key="index" class="bg-white border border-pink-100 rounded-xl shadow hover:shadow-md transition">
+            <button @click="toggle(index)" class="w-full flex justify-between items-center p-4 sm:p-6 text-left rounded-xl hover:bg-pink-50 transition">
+              <span class="text-[#6a4c46] text-base sm:text-lg font-semibold flex items-center gap-2">
+                {{ faq.question }} <span class="text-pink-500 text-xl">{{ faq.emoji }}</span>
+              </span>
+              <svg :class="{'transform rotate-180': activeIndex === index}" class="h-5 w-5 text-pink-500 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div v-if="activeIndex === index" class="px-4 sm:px-6 pb-4 sm:pb-6 text-gray-600 text-sm sm:text-base">
+              {{ faq.answer }}
+            </div>
+          </div>
+        </div>
+      </section>
+      
 
     <!-- Section: Fun Fact -->
     <section class="w-full max-w-6xl py-12 px-4">
@@ -217,6 +265,13 @@
 
 <script setup>
 import { ref } from 'vue'
+
+const scrollToFeatures = () => {
+  const element = document.getElementById('features')
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' })
+  }
+}
 
 const faqs = [
   {
@@ -242,6 +297,7 @@ const toggle = (index) => {
   activeIndex.value = activeIndex.value === index ? null : index
 }
 </script>
+
 
 <style scoped>
 .lace-border {
