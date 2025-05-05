@@ -1,14 +1,15 @@
 <template>
   <div class="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden mt-8">
+    <!-- Lace background di bawah navbar -->
     <div class="absolute lace-border w-full h-12 top-2"></div>
 
     <!-- Ribbon -->
-    <div class="absolute top-10 left-5 w-28 md:w-40 rotate-[-12deg] opacity-40">
+    <div class="absolute top-14 left-5 w-28 md:w-40 rotate-[-12deg] opacity-40">
       <img src="/images/ribbon-1.png" alt="Health & Wellness" class="w-full h-auto object-cover" />
     </div>
 
-    <!-- Jumbotron -->
-    <section class="relative py-16 px-4 sm:px-6 md:px-20 w-full max-w-7xl">
+    <!-- Section: Jumbotron -->
+    <section class="relative py-16 px-4 sm:px-6 md:px-20 w-full max-w-7xl mt-8">
       <div class="flex flex-col-reverse md:flex-row items-center gap-8">
         <!-- Text content -->
         <div class="w-full md:w-1/2 text-center md:text-left">
@@ -20,12 +21,12 @@
           </p>
           <router-link to="/kalkulator">
             <button class="px-6 py-3 bg-[#f8bbd0] text-[#6a4c46] font-medium rounded-full transition-all hover:scale-105 hover:bg-[#f4a6c6] shadow-lg">
-              Ayo Mulai!
+              Ayo Mulai! 💗
             </button>
           </router-link>
         </div>
 
-        <!-- Collage Images -->
+        <!-- Kolase gambar -->
         <div class="relative w-full md:w-1/2 h-[350px] sm:h-[400px] hidden md:block">
           <!-- Polaroid 1 -->
           <div class="absolute top-8 left-6 sm:left-10 w-40 rotate-[-10deg] bg-white shadow-lg p-2 border rounded-lg">
@@ -49,12 +50,12 @@
           </div>
 
           <!-- Sticky Note -->
-          <div class="absolute bottom-4 left-36 w-32 rotate-[10deg] bg-[#f8bbd0] p-3 shadow-md border border-[#f8bbd0] rounded">
-            <p class="text-sm text-[#6a4c46] text-center font-medium">Jaga kesehatanmu 🌸</p>
+          <div class="absolute bottom-4 left-36 w-32 rotate-[10deg] bg-[#f8bbd0] p-3 shadow-lg border-2 border-[#f8bbd0] rounded-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:rotate-3">
+            <p class="text-sm text-[#6a4c46] text-center font-medium leading-tight">Jaga kesehatanmu 🌸</p>
             <div class="absolute top-[-8px] left-1/2 -translate-x-1/2 w-10 sm:w-12 h-3 bg-blue-200/70 rounded rotate-[-6deg]"></div>
           </div>
-
-          <!-- Stamp -->
+          
+          <!-- Stamps -->
           <div class="absolute bottom-0 right-10 w-24">
             <img src="/images/stamp-1.png" alt="Stamp" class="w-full h-auto object-cover opacity-80" />
           </div>
@@ -66,33 +67,72 @@
       </div>
     </section>
 
-    <!-- Fitur Unggulan -->
-    <section class="w-full max-w-6xl py-12 px-4">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-pink-600 text-center mb-10">
-        Kenapa memilih FemInsight?
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition transform hover:scale-105">
-          <img src="/images/icon-easy.png" alt="Mudah digunakan" class="mx-auto w-16 h-16 mb-4" />
-          <h3 class="text-xl font-semibold text-[#6a4c46] mb-2">Mudah Digunakan</h3>
-          <p class="text-gray-600 text-sm sm:text-base">Antarmuka intuitif, cocok untuk semua usia.</p>
+    <!-- Section Fitur Unggulan FemInsight -->
+    <section class="w-full max-w-6xl py-12 px-4 text-center">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] mb-4">Fitur Unggulan FemInsight</h2>
+      <p class="text-base sm:text-lg text-gray-600 mb-12 max-w-2xl mx-auto">FemInsight hadir untuk membantu perempuan memahami dan menjaga kesehatannya dengan alat dan informasi terpercaya.</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <!-- Fitur 1 -->
+        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300">
+          <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-pink-200 text-[#6a4c46] rounded-full text-3xl">
+              📆
+          </div>
+          <h3 class="text-lg font-semibold text-[#6a4c46] mb-2">Pelacak Siklus Menstruasi</h3>
+          <p class="text-gray-600 text-sm">Lacak dan prediksi siklus menstruasi dengan mudah, sehingga kamu bisa lebih memahami tubuhmu setiap bulan.</p>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition transform hover:scale-105">
-          <img src="/images/icon-accurate.png" alt="Akurat & Andal" class="mx-auto w-16 h-16 mb-4" />
-          <h3 class="text-xl font-semibold text-[#6a4c46] mb-2">Akurat & Andal</h3>
-          <p class="text-gray-600 text-sm sm:text-base">Kalkulasi berbasis data medis terpercaya.</p>
+
+        <!-- Fitur 2 -->
+        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300">
+          <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-pink-200 text-[#6a4c46] rounded-full text-3xl">
+            ⚖️
+          </div>
+          <h3 class="text-lg font-semibold text-[#6a4c46] mb-2">Kalkulator BMI</h3>
+          <p class="text-gray-600 text-sm">Hitung Indeks Massa Tubuh (BMI) untuk memantau status berat badan dan kesehatan secara umum.</p>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition transform hover:scale-105">
-          <img src="/images/icon-femtips.png" alt="FemTips" class="mx-auto w-16 h-16 mb-4" />
-          <h3 class="text-xl font-semibold text-[#6a4c46] mb-2">FemTips</h3>
-          <p class="text-gray-600 text-sm sm:text-base">Temukan tips seputar kesehatan dan perawatan diri agar makin percaya diri.</p>
+
+        <!-- Fitur 3 -->
+        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300">
+          <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-pink-200 text-[#6a4c46] rounded-full text-3xl">
+            🤰
+          </div>
+          <h3 class="text-lg font-semibold text-[#6a4c46] mb-2">Kalkulator HPL</h3>
+          <p class="text-gray-600 text-sm">Prediksi Hari Perkiraan Lahir (HPL) dengan memasukkan tanggal menstruasi terakhir untuk perencanaan kehamilan yang lebih baik.</p>
         </div>
+
+        <!-- Fitur 4 -->
+        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300">
+          <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-pink-200 text-[#6a4c46] rounded-full text-3xl">
+            ✨
+          </div>
+          <h3 class="text-lg font-semibold text-[#6a4c46] mb-2">Inspirasi & Quotes Positif</h3>
+          <p class="text-gray-600 text-sm">Dapatkan inspirasi dan afirmasi positif untuk mendukung kesehatan mental Anda, dengan kata-kata yang menenangkan dan membangkitkan semangat.</p>
+        </div>
+
+        <!-- Fitur 5 -->
+        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300">
+          <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-pink-200 text-[#6a4c46] rounded-full text-3xl">
+            🥗
+          </div>
+          <h3 class="text-lg font-semibold text-[#6a4c46] mb-2">Rekomendasi Nutrisi untuk Siklus</h3>
+          <p class="text-gray-600 text-sm">Temukan rekomendasi makanan yang sesuai dengan fase siklus menstruasi Anda untuk mendukung kesehatan tubuh secara optimal sepanjang bulan.</p>
+        </div>
+
+        <!-- Fitur 6 -->
+        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300">
+          <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-pink-200 text-[#6a4c46] rounded-full text-3xl">
+            🧘‍♀️
+          </div>
+          <h3 class="text-lg font-semibold text-[#6a4c46] mb-2">Tips Kesehatan & Relaksasi</h3>
+          <p class="text-gray-600 text-sm">Pelajari tips relaksasi dan teknik perawatan diri untuk menjaga keseimbangan serta kesehatan tubuh dan pikiran.</p>
+        </div>
+
       </div>
     </section>
 
-    <!-- Kalkulator -->
+    <!-- Section: Kalkulator -->
     <section class="w-full max-w-6xl py-12 px-4 text-center">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-pink-600 mb-6">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] mb-6">
         Kalkulator Kesehatan & Kebugaran
       </h2>
       <p class="text-base sm:text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
@@ -102,8 +142,8 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:scale-105">
           <img src="/images/icon-calendar-1.png" alt="Kalkulator Menstruasi" class="mx-auto w-16 h-16 mb-4" />
-          <h3 class="text-xl font-semibold text-pink-600 mb-2">Kalkulator Menstruasi</h3>
-          <p class="text-gray-600 text-sm sm:text-base mb-4">Prediksi siklus menstruasi Anda dengan mudah.</p>
+          <h3 class="text-xl font-bold text-pink-600 mb-2">Kalkulator Menstruasi</h3>
+          <p class="text-gray-600 text-sm sm:text-base mb-4">Prediksi siklus menstruasi Anda.</p>
           <router-link to="/menstruasi">
             <button class="px-6 py-3 bg-pink-200 text-[#6a4c46] font-medium rounded-full transition hover:scale-105 hover:bg-pink-300 shadow">
               Coba Sekarang
@@ -113,7 +153,7 @@
 
         <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:scale-105">
           <img src="/images/icon-bmi.png" alt="Kalkulator BMI" class="mx-auto w-16 h-16 mb-4" />
-          <h3 class="text-xl font-semibold text-blue-500 mb-2">Kalkulator BMI</h3>
+          <h3 class="text-xl font-bold text-blue-500 mb-2">Kalkulator BMI</h3>
           <p class="text-gray-600 text-sm sm:text-base mb-4">Hitung indeks massa tubuh Anda.</p>
           <router-link to="/bmi">
             <button class="px-6 py-3 bg-blue-200 text-[#6a4c46] font-medium rounded-full transition hover:scale-105 hover:bg-blue-300 shadow">
@@ -124,7 +164,7 @@
 
         <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:scale-105">
           <img src="/images/icon-hpl.png" alt="Kalkulator HPL" class="mx-auto w-16 h-16 mb-4" />
-          <h3 class="text-xl font-semibold text-green-500 mb-2">Kalkulator HPL</h3>
+          <h3 class="text-xl font-bold text-green-500 mb-2">Kalkulator HPL</h3>
           <p class="text-gray-600 text-sm sm:text-base mb-4">Perkirakan tanggal persalinan Anda.</p>
           <router-link to="/hpl">
             <button class="px-6 py-3 bg-green-200 text-[#6a4c46] font-medium rounded-full transition hover:scale-105 hover:bg-green-300 shadow">
@@ -135,9 +175,9 @@
       </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- Section: FAQ -->
     <section class="w-full max-w-6xl py-12 px-4">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-pink-600 text-center mb-10">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] text-center mb-10">
         Pertanyaan yang Sering Diajukan (FAQ)
       </h2>
 
@@ -158,7 +198,7 @@
       </div>
     </section>
 
-    <!-- Fun Fact -->
+    <!-- Section: Fun Fact -->
     <section class="w-full max-w-6xl py-12 px-4">
       <div class="bg-pink-100 p-8 rounded-xl shadow-lg text-center">
         <h3 class="text-xl font-semibold text-[#6a4c46] mb-4">Fun Fact</h3>
@@ -204,7 +244,6 @@ const toggle = (index) => {
 </script>
 
 <style scoped>
-/* Di style.css / app.css atau dalam <style> */
 .lace-border {
   background-image: url('/images/lace-2.png');
   background-repeat: repeat-x;
