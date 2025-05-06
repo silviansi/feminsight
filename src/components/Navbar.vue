@@ -23,9 +23,9 @@
                 </ul>
             </li>
   
-            <li><router-link to="" class="text-[#6a4c46] font-medium hover:text-pink-600 transition-colors">Tentang Kami</router-link></li>
-            <li><router-link to="" class="text-[#6a4c46] font-medium hover:text-pink-600 transition-colors">Edukasi & Inspirasi</router-link></li>
-            <li><router-link to="/hpl" class="text-[#6a4c46] font-medium hover:text-pink-600 transition-colors">Komunitas</router-link></li>
+            <li><router-link to="/about-us" class="text-[#6a4c46] font-medium hover:text-pink-600 transition-colors">Tentang Kami</router-link></li>
+            <li><router-link to="/blog" class="text-[#6a4c46] font-medium hover:text-pink-600 transition-colors">Blog</router-link></li>
+            <li><router-link to="/tips" class="text-[#6a4c46] font-medium hover:text-pink-600 transition-colors">Tips & Inspirasi</router-link></li>
         </ul>
   
         <!-- Tombol Menu Mobile -->
@@ -51,9 +51,9 @@
                 </ul>
             </li>
   
-            <li><router-link to="" class="block py-2 font-medium hover:text-pink-600 transition-colors" @click="closeMenu">Tentang Kami</router-link></li>
-            <li><router-link to="" class="block py-2 font-medium hover:text-pink-600 transition-colors" @click="closeMenu">Edukasi & Inspirasi</router-link></li>
-            <li><router-link to="" class="block py-2 font-medium hover:text-pink-600 transition-colors" @click="closeMenu">Komunitas</router-link></li>
+            <li><router-link to="/about-us" class="block py-2 font-medium hover:text-pink-600 transition-colors" @click="closeMenu">Tentang Kami</router-link></li>
+            <li><router-link to="/blog" class="block py-2 font-medium hover:text-pink-600 transition-colors" @click="closeMenu">Blog</router-link></li>
+            <li><router-link to="/tips" class="block py-2 font-medium hover:text-pink-600 transition-colors" @click="closeMenu">Tips & Inspirasi</router-link></li>
         </ul>
     </transition>
 </template>
@@ -104,7 +104,6 @@ export default {
 </script>
   
 <style scoped>
-/* Animasi transisi mobile */
 .fade-enter-active, .fade-leave-active {
     transition: opacity 0.2s;
 }
