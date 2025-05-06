@@ -89,7 +89,7 @@ export default {
       errors: {
         duration: '', 
         cycleLength: '',
-    },
+      },
     };
   },
   methods: {

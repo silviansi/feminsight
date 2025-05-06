@@ -217,7 +217,7 @@
 
         <!-- Tombol Lihat Semua Artikel (tanpa card) -->
         <div class="flex justify-center items-center p-4">
-          <a href="#" class="bg-transparent text-[#6a4c46] border-2 border-[#6a4c46] py-2 px-6 rounded-full text-sm font-semibold hover:bg-[#f8bbd0] hover:text-[#6a4c46] transition duration-300">Lihat Semua Artikel</a>
+          <a href="/blog" class="bg-transparent text-[#6a4c46] border-2 border-[#6a4c46] py-2 px-6 rounded-full text-sm font-semibold hover:bg-[#f8bbd0] hover:text-[#6a4c46] transition duration-300">Lihat Semua Artikel</a>
         </div>
       </div>
     </section>
@@ -297,7 +297,6 @@ const toggle = (index) => {
   activeIndex.value = activeIndex.value === index ? null : index
 }
 </script>
-
 
 <style scoped>
 .lace-border {
