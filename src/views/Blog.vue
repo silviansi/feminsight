@@ -22,7 +22,7 @@
                 <h2 class="text-lg font-semibold text-pink-600 mb-2">{{ blog.title }}</h2>
                 <p class="text-gray-700 text-base flex-grow">{{ blog.shortDescription }}</p>
                 <router-link :to="`/blog/${blog.id}`" class="mt-4">
-                <button class="w-full bg-[#f8bbd0] text-[#6a4c46] font-semibold py-2 rounded-lg hover:bg-[#f4a6c6] transition">
+                <button class="text-[#6a4c46] font-semibold hover:underline">
                     Baca Selengkapnya
                 </button>
                 </router-link>
@@ -35,73 +35,112 @@
 <script setup>
 import { ref } from 'vue'
   
-// Data blog (dengan gambar)
+// Data blog
 const blogs = ref([
   {
     id: '1',
     title: 'Bagaimana Pola Haid Bisa Menjadi Cerminan Kesehatan Reproduksi?',
     shortDescription: 'Siklus haid yang teratur bisa menjadi indikator kesehatan tubuh secara keseluruhan.',
     image: '/images/blog-1.jpg',
-    content: `Siklus haid tidak hanya menunjukkan kesiapan tubuh untuk reproduksi, tetapi juga mencerminkan keseimbangan hormon dalam tubuh. Gangguan seperti haid terlalu sering, jarang, atau tidak datang sama sekali bisa menjadi tanda adanya ketidakseimbangan hormon, stres berlebih, atau kondisi medis seperti PCOS dan endometriosis. Memantau pola haid bisa membantu deteksi dini masalah kesehatan.`
   },
   {
     id: '2',
     title: 'Kaitan Endometriosis dengan Kesuburan Perempuan',
     shortDescription: 'Endometriosis sering tak disadari, padahal bisa memengaruhi kesuburan.',
     image: '/images/blog-2.jpg',
-    content: `Endometriosis terjadi saat jaringan mirip endometrium tumbuh di luar rahim. Kondisi ini bisa menyebabkan nyeri hebat saat haid dan berdampak pada kesuburan. Jaringan endometriosis dapat menghalangi tuba falopi atau mengganggu proses ovulasi. Diagnosis dini dan pengobatan tepat, seperti terapi hormonal atau laparoskopi, dapat membantu meningkatkan peluang kehamilan.`
   },
   {
     id: '3',
     title: 'Mengapa Pemeriksaan Payudara Secara Rutin Penting?',
     shortDescription: 'Deteksi dini kanker payudara bisa menyelamatkan nyawa.',
     image: '/images/blog-3.jpg',
-    content: `Pemeriksaan payudara secara rutin membantu mendeteksi perubahan atau benjolan yang tidak biasa sejak dini. Kanker payudara yang ditemukan pada tahap awal memiliki tingkat kesembuhan yang jauh lebih tinggi. Perempuan dianjurkan melakukan SADARI (Periksa Payudara Sendiri) setiap bulan dan pemeriksaan klinis secara berkala, terutama setelah usia 40 tahun.`
   },
   {
     id: '4',
     title: 'Peran Hormon Estrogen dalam Kesehatan Perempuan',
     shortDescription: 'Estrogen bukan hanya tentang reproduksi, tapi juga memengaruhi banyak fungsi tubuh.',
     image: '/images/blog-4.jpg',
-    content: `Hormon estrogen berperan besar dalam perkembangan organ reproduksi, mengatur siklus haid, serta menjaga kesehatan tulang dan jantung. Kadar estrogen yang terlalu rendah atau tinggi bisa menyebabkan masalah, seperti osteoporosis atau risiko kanker payudara. Memahami peran estrogen membantu perempuan lebih peka terhadap perubahan tubuh.`
   },
   {
     id: '5',
     title: 'Bagaimana Anemia Bisa Memengaruhi Kesehatan Reproduksi?',
     shortDescription: 'Anemia defisiensi besi sering terjadi pada perempuan usia subur.',
     image: '/images/blog-5.jpg',
-    content: `Anemia terjadi saat tubuh kekurangan sel darah merah sehat, sering akibat kekurangan zat besi. Pada perempuan, anemia bisa diperparah oleh menstruasi berat atau kehamilan. Kondisi ini bisa menyebabkan kelelahan, sulit konsentrasi, dan bahkan mengganggu ovulasi. Asupan makanan bergizi dan suplemen zat besi bisa membantu mengatasinya.`
   },
   {
     id: '6',
     title: 'Mengapa Polycystic Ovary Syndrome (PCOS) Perlu Diwaspadai?',
     shortDescription: 'PCOS adalah gangguan hormonal yang umum namun sering terabaikan.',
     image: '/images/blog-6.jpg',
-    content: `PCOS ditandai dengan ketidakseimbangan hormon yang menyebabkan haid tidak teratur, jerawat, pertumbuhan rambut berlebih, dan kista kecil di ovarium. PCOS juga berkaitan dengan risiko diabetes tipe 2 dan gangguan metabolisme. Diagnosis dini dan pengelolaan pola hidup sehat berperan penting dalam mengurangi gejalanya.`
   },
   {
     id: '7',
     title: 'Fakta tentang Infeksi Saluran Kemih (ISK) pada Perempuan',
     shortDescription: 'Perempuan lebih rentan mengalami ISK dibanding laki-laki.',
     image: '/images/blog-7.jpg',
-    content: `ISK terjadi ketika bakteri masuk ke saluran kemih dan menyebabkan infeksi. Gejalanya termasuk nyeri saat buang air kecil, sering ingin buang air kecil, dan urin berbau tajam. Karena uretra perempuan lebih pendek, bakteri lebih mudah mencapai kandung kemih. Menjaga kebersihan dan cukup minum air putih bisa membantu mencegah ISK.`
   },
   {
     id: '8',
     title: 'Mengapa Vaksin HPV Penting untuk Perempuan?',
     shortDescription: 'Lindungi diri dari kanker serviks dengan vaksin HPV.',
     image: '/images/blog-8.jpg',
-    content: `Vaksin HPV melindungi dari Human Papillomavirus, penyebab utama kanker serviks. Vaksin ini paling efektif diberikan pada usia 9-26 tahun, tetapi perempuan dewasa masih bisa mendapat manfaatnya. Selain vaksinasi, tetap lakukan skrining rutin seperti Pap Smear untuk deteksi dini dan pencegahan optimal.`
+  },
+  {
+    id: '9',
+    title: 'Manfaat Pap Smear untuk Deteksi Dini Kanker Serviks',
+    shortDescription: 'Pelajari pentingnya tes Pap Smear dalam menjaga kesehatan reproduksi.',
+    image: '/images/blog-9.jpg',
+  },
+  {
+    id: '10',
+    title: 'Perimenopause: Gejala Awal dan Cara Menghadapinya',
+    shortDescription: 'Pahami fase perimenopause agar bisa mempersiapkan diri dengan baik.',
+    image: '/images/blog-10.jpg',
+  },
+  {
+    id: '11',
+    title: 'Pentingnya Konsumsi Asam Folat bagi Perempuan Usia Subur',
+    shortDescription: 'Asam folat membantu mencegah cacat tabung saraf pada janin.',
+    image: '/images/blog-11.jpg',
+  },
+  {
+    id: '12',
+    title: 'Dampak Stres pada Kesehatan Reproduksi Perempuan',
+    shortDescription: 'Stres kronis bisa mengganggu keseimbangan hormon dan siklus haid.',
+    image: '/images/blog-12.jpg'
+  },
+  {
+    id: '13',
+    title: 'Mengapa Asupan Kalsium Penting bagi Perempuan?',
+    shortDescription: 'Kalsium berperan penting dalam menjaga kesehatan tulang, terutama menjelang menopause.',
+    image: '/images/blog-13.jpg'
+  },
+  {
+    id: '14',
+    title: 'Cara Menjaga Kesehatan Vagina secara Alami',
+    shortDescription: 'Keseimbangan pH dan kebersihan area kewanitaan penting untuk mencegah infeksi.',
+    image: '/images/blog-14.jpg'
+  },
+  {
+    id: '15',
+    title: 'Manfaat Yoga untuk Kesehatan Hormonal Perempuan',
+    shortDescription: 'Yoga membantu meredakan stres dan menyeimbangkan hormon reproduksi.',
+    image: '/images/blog-15.jpg'
+  },
+  {
+    id: '16',
+    title: 'Nutrisi Penting untuk Kesehatan Kehamilan',
+    shortDescription: 'Asupan zat besi, asam folat, dan omega-3 penting selama masa kehamilan.',
+    image: '/images/blog-16.jpg'
   }
 ])
 </script>
   
-  <style scoped>
-  .lace-border {
-    background-image: url('/images/lace-2.png');
-    background-repeat: repeat-x;
-    background-position: top center;
-    background-size: auto 100%;
-  }
-  </style>
-  
+<style scoped>
+.lace-border {
+  background-image: url('/images/lace-2.png');
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: auto 100%;
+}
+</style>
