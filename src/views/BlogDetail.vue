@@ -16,7 +16,7 @@
             </div>
   
             <!-- Content -->
-            <div v-html="blog.content" class="prose lg:prose-xl text-gray-700 max-w-3xl mx-auto"></div>
+            <div v-html="blog.content" class="prose lg:prose-xl text-gray-700 max-w-3xl mx-auto px-3"></div>
         </div>
         <div v-else class="text-center">
             <p>Loading...</p>
@@ -49,31 +49,31 @@ const blogs = [
 
     <p>Organ reproduksi wanita meliputi ovarium, tuba falopi, rahim, serviks, dan vagina. Setiap bagian memiliki peran penting dalam proses reproduksi, mulai dari produksi sel telur hingga kehamilan dan kelahiran. Oleh karena itu, memahami cara kerja sistem ini menjadi dasar untuk menjaga kesehatannya.</p><br>
 
-    <h2><strong>Mengapa Kesehatan Reproduksi Penting?</strong></h2><br>
+    <h2><strong>Mengapa Kesehatan Reproduksi Penting?</strong></h2>
     <ul>
-    <li><strong>🧸 Pencegahan Penyakit</strong> <br> Menjaga kebersihan dan kesehatan organ reproduksi membantu mencegah infeksi menular seksual (IMS), kanker serviks, endometriosis, serta gangguan hormonal seperti sindrom ovarium polikistik (PCOS).</li>
-    <li><strong>🧸 Perencanaan Kehamilan</strong> <br> Memahami siklus menstruasi dan kesehatan reproduksi memudahkan perempuan merencanakan kehamilan dengan baik, baik dalam konteks program hamil maupun pencegahan kehamilan yang tidak diinginkan.</li>
-    <li><strong>🧸 Kesejahteraan Mental</strong> <br> Ketidakseimbangan hormon reproduksi dapat memengaruhi suasana hati dan kesehatan mental. Kesehatan reproduksi yang baik membantu menjaga kestabilan emosi dan kualitas hidup.</li>
-    <li><strong>🧸 Pengendalian Penyakit Genetik</strong> <br> Konsultasi genetik sebelum kehamilan dapat membantu mencegah penularan penyakit genetik kepada keturunan.</li>
+        <li><strong>🦋 Pencegahan Penyakit</strong> <br> Menjaga kebersihan dan kesehatan organ reproduksi membantu mencegah infeksi menular seksual (IMS), kanker serviks, endometriosis, serta gangguan hormonal seperti sindrom ovarium polikistik (PCOS).</li>
+        <li><strong>🦋 Perencanaan Kehamilan</strong> <br> Memahami siklus menstruasi dan kesehatan reproduksi memudahkan perempuan merencanakan kehamilan dengan baik, baik dalam konteks program hamil maupun pencegahan kehamilan yang tidak diinginkan.</li>
+        <li><strong>🦋 Kesejahteraan Mental</strong> <br> Ketidakseimbangan hormon reproduksi dapat memengaruhi suasana hati dan kesehatan mental. Kesehatan reproduksi yang baik membantu menjaga kestabilan emosi dan kualitas hidup.</li>
+        <li><strong>🦋 Pengendalian Penyakit Genetik</strong> <br> Konsultasi genetik sebelum kehamilan dapat membantu mencegah penularan penyakit genetik kepada keturunan.</li>
     </ul><br>
 
-    <h2><strong>Cara Menjaga Kesehatan Reproduksi</strong></h2><br>
+    <h2><strong>Cara Menjaga Kesehatan Reproduksi</strong></h2>
     <ol>
-    <li><strong>🌷 Melakukan pemeriksaan rutin</strong> <br> Lakukan pap smear, pemeriksaan payudara, USG transvaginal, dan konsultasi dokter secara berkala untuk deteksi dini penyakit seperti kanker serviks dan kista ovarium.</li>
-    <li><strong>🌷 Menjaga kebersihan organ intim</strong> <br> Cuci area kewanitaan dengan air bersih, hindari penggunaan sabun berpewangi, serta ganti pembalut atau pantyliner secara teratur.</li>
-    <li><strong>🌷 Menerapkan pola hidup sehat</strong> <br> Konsumsi makanan bergizi (tinggi serat, vitamin, dan mineral), olahraga teratur, cukup tidur, serta kelola stres dengan baik melalui meditasi atau aktivitas yang menyenangkan.</li>
-    <li><strong>🌷 Melakukan vaksinasi</strong> <br> Vaksin HPV (Human Papillomavirus) direkomendasikan untuk mencegah kanker serviks. Vaksinasi hepatitis B juga penting untuk mencegah infeksi menular seksual.</li>
-    <li><strong>🌷 Menghindari perilaku berisiko</strong> <br> Hindari hubungan seksual tanpa pengaman, penggunaan narkoba suntik, dan kebiasaan merokok yang dapat merusak kesehatan reproduksi.</li>
+        <li><strong>🌷 Melakukan pemeriksaan rutin</strong> <br> Lakukan pap smear, pemeriksaan payudara, USG transvaginal, dan konsultasi dokter secara berkala untuk deteksi dini penyakit seperti kanker serviks dan kista ovarium.</li>
+        <li><strong>🌷 Menjaga kebersihan organ intim</strong> <br> Cuci area kewanitaan dengan air bersih, hindari penggunaan sabun berpewangi, serta ganti pembalut atau pantyliner secara teratur.</li>
+        <li><strong>🌷 Menerapkan pola hidup sehat</strong> <br> Konsumsi makanan bergizi (tinggi serat, vitamin, dan mineral), olahraga teratur, cukup tidur, serta kelola stres dengan baik melalui meditasi atau aktivitas yang menyenangkan.</li>
+        <li><strong>🌷 Melakukan vaksinasi</strong> <br> Vaksin HPV (Human Papillomavirus) direkomendasikan untuk mencegah kanker serviks. Vaksinasi hepatitis B juga penting untuk mencegah infeksi menular seksual.</li>
+        <li><strong>🌷 Menghindari perilaku berisiko</strong> <br> Hindari hubungan seksual tanpa pengaman, penggunaan narkoba suntik, dan kebiasaan merokok yang dapat merusak kesehatan reproduksi.</li>
     </ol><br>
 
     <h2><strong>Tanda-tanda Gangguan Kesehatan Reproduksi</strong></h2>
     <p>Penting untuk mengenali gejala gangguan reproduksi agar dapat segera ditangani. Berikut beberapa tanda yang perlu diwaspadai:</p>
     <ul>
-    <li>🌸 Siklus menstruasi tidak teratur atau sangat nyeri</li>
-    <li>🌸 Keputihan yang berbau tidak sedap atau berubah warna</li>
-    <li>🌸 Nyeri saat berhubungan seksual</li>
-    <li>🌸 Pendarahan di luar siklus menstruasi</li>
-    <li>🌸 Nyeri panggul berkepanjangan</li>
+        <li>🌸 Siklus menstruasi tidak teratur atau sangat nyeri</li>
+        <li>🌸 Keputihan yang berbau tidak sedap atau berubah warna</li>
+        <li>🌸 Nyeri saat berhubungan seksual</li>
+        <li>🌸 Pendarahan di luar siklus menstruasi</li>
+        <li>🌸 Nyeri panggul berkepanjangan</li>
     </ul><br>
 
     <blockquote>“Kesehatan reproduksi adalah kunci untuk hidup sehat dan bahagia bagi setiap wanita.” — WHO</blockquote><br>
@@ -98,34 +98,34 @@ const blogs = [
 
     <h2><strong>Gejala Umum Endometriosis</strong></h2>
     <ul>
-    <li><strong>☁️ Nyeri Haid Berlebihan</strong> <br> Rasa nyeri yang hebat selama menstruasi, lebih intens daripada kram biasa.</li>
-    <li><strong>☁️ Nyeri saat Berhubungan Intim</strong> <br> Rasa sakit yang dirasakan selama atau setelah hubungan seksual.</li>
-    <li><strong>☁️ Gangguan Pencernaan</strong> <br> Sembelit, diare, atau kembung terutama saat menstruasi.</li>
-    <li><strong>☁️ Kesulitan Hamil</strong> <br> Sulitnya mencapai kehamilan meskipun sudah mencoba dalam waktu lama.</li>
+        <li><strong>☁️ Nyeri Haid Berlebihan</strong> <br> Rasa nyeri yang hebat selama menstruasi, lebih intens daripada kram biasa.</li>
+        <li><strong>☁️ Nyeri saat Berhubungan Intim</strong> <br> Rasa sakit yang dirasakan selama atau setelah hubungan seksual.</li>
+        <li><strong>☁️ Gangguan Pencernaan</strong> <br> Sembelit, diare, atau kembung terutama saat menstruasi.</li>
+        <li><strong>☁️ Kesulitan Hamil</strong> <br> Sulitnya mencapai kehamilan meskipun sudah mencoba dalam waktu lama.</li>
     </ul><br>
 
     <h2><strong>Bagaimana Endometriosis Mempengaruhi Kesuburan?</strong></h2>
     <ol>
-    <li><strong>👒 Penyumbatan Tuba Falopi</strong> <br> Jaringan parut dan perlengketan (adhesi) dapat menyumbat saluran tuba, mencegah pertemuan sel telur dan sperma.</li>
-    <li><strong>👒 Gangguan Ovulasi</strong> <br> Kista endometriosis (endometrioma) di ovarium dapat mengganggu proses pelepasan sel telur.</li>
-    <li><strong>👒 Peradangan Kronis</strong> <br> Peradangan yang terus-menerus menciptakan lingkungan yang tidak ideal untuk pembuahan dan implantasi embrio.</li>
-    <li><strong>👒 Penurunan Kualitas Sel Telur</strong> <br> Endometriosis berhubungan dengan penurunan kualitas oosit, yang berdampak pada keberhasilan kehamilan.</li>
+        <li><strong>👒 Penyumbatan Tuba Falopi</strong> <br> Jaringan parut dan perlengketan (adhesi) dapat menyumbat saluran tuba, mencegah pertemuan sel telur dan sperma.</li>
+        <li><strong>👒 Gangguan Ovulasi</strong> <br> Kista endometriosis (endometrioma) di ovarium dapat mengganggu proses pelepasan sel telur.</li>
+        <li><strong>👒 Peradangan Kronis</strong> <br> Peradangan yang terus-menerus menciptakan lingkungan yang tidak ideal untuk pembuahan dan implantasi embrio.</li>
+        <li><strong>👒 Penurunan Kualitas Sel Telur</strong> <br> Endometriosis berhubungan dengan penurunan kualitas oosit, yang berdampak pada keberhasilan kehamilan.</li>
     </ol><br>
 
     <blockquote>“Endometriosis adalah penyebab sekitar 30-50% kasus infertilitas pada perempuan.” — American Society for Reproductive Medicine</blockquote><br>
 
     <h2><strong>Diagnosis dan Penanganan Endometriosis</strong></h2>
     <ol>
-    <li><strong>💗 Diagnosis</strong> <br> Pemeriksaan yang meliputi USG, MRI, atau laparoskopi (operasi minimal invasif) untuk memastikan adanya jaringan endometriosis.</li>
-    <li><strong>💗 Pengobatan</strong> <br> Pilihan terapi meliputi obat pereda nyeri, terapi hormonal (seperti pil KB atau agonis GnRH), dan pembedahan untuk mengangkat jaringan endometriosis.</li>
-    <li><strong>💗 Program Kehamilan</strong> <br> Jika endometriosis menyebabkan infertilitas, dokter bisa merekomendasikan inseminasi buatan atau bayi tabung (IVF).</li>
+        <li><strong>💗 Diagnosis</strong> <br> Pemeriksaan yang meliputi USG, MRI, atau laparoskopi (operasi minimal invasif) untuk memastikan adanya jaringan endometriosis.</li>
+        <li><strong>💗 Pengobatan</strong> <br> Pilihan terapi meliputi obat pereda nyeri, terapi hormonal (seperti pil KB atau agonis GnRH), dan pembedahan untuk mengangkat jaringan endometriosis.</li>
+        <li><strong>💗 Program Kehamilan</strong> <br> Jika endometriosis menyebabkan infertilitas, dokter bisa merekomendasikan inseminasi buatan atau bayi tabung (IVF).</li>
     </ol><br>
 
     <h2><strong>Pencegahan dan Pola Hidup Sehat</strong></h2>
     <ul>
-    <li><strong>💐 Kelola Stres</strong> <br> Stres berlebihan dapat memperburuk gejala endometriosis. Praktik relaksasi seperti yoga dan meditasi disarankan.</li>
-    <li><strong>💐 Pola Makan Sehat</strong> <br> Konsumsi makanan tinggi antioksidan seperti sayuran hijau, buah-buahan, dan ikan berlemak dapat membantu mengurangi peradangan.</li>
-    <li><strong>💐 Olahraga Teratur</strong> <br> Aktivitas fisik ringan seperti berjalan kaki atau berenang dapat meningkatkan aliran darah dan mengurangi nyeri panggul.</li>
+        <li><strong>💐 Kelola Stres</strong> <br> Stres berlebihan dapat memperburuk gejala endometriosis. Praktik relaksasi seperti yoga dan meditasi disarankan.</li>
+        <li><strong>💐 Pola Makan Sehat</strong> <br> Konsumsi makanan tinggi antioksidan seperti sayuran hijau, buah-buahan, dan ikan berlemak dapat membantu mengurangi peradangan.</li>
+        <li><strong>💐 Olahraga Teratur</strong> <br> Aktivitas fisik ringan seperti berjalan kaki atau berenang dapat meningkatkan aliran darah dan mengurangi nyeri panggul.</li>
     </ul><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
@@ -145,25 +145,25 @@ const blogs = [
 
     <h2><strong>Jenis Pemeriksaan Payudara</strong></h2>
     <ul>
-    <li><strong>💓 SADARI (Pemeriksaan Payudara Sendiri)</strong> <br> Pemeriksaan mandiri yang dilakukan secara rutin setiap bulan, biasanya seminggu setelah menstruasi selesai.</li>
-    <li><strong>💓 SADANIS (Pemeriksaan Payudara oleh Tenaga Medis)</strong> <br> Pemeriksaan fisik oleh dokter atau tenaga medis yang berpengalaman untuk mendeteksi kelainan yang sulit dirasakan sendiri.</li>
-    <li><strong>💓 Mammografi</strong> <br> Pemeriksaan pencitraan menggunakan sinar-X untuk mendeteksi perubahan kecil yang tidak teraba pada payudara. Direkomendasikan bagi perempuan usia 40 tahun ke atas atau yang memiliki risiko tinggi.</li>
+        <li><strong>💓 SADARI (Pemeriksaan Payudara Sendiri)</strong> <br> Pemeriksaan mandiri yang dilakukan secara rutin setiap bulan, biasanya seminggu setelah menstruasi selesai.</li>
+        <li><strong>💓 SADANIS (Pemeriksaan Payudara oleh Tenaga Medis)</strong> <br> Pemeriksaan fisik oleh dokter atau tenaga medis yang berpengalaman untuk mendeteksi kelainan yang sulit dirasakan sendiri.</li>
+        <li><strong>💓 Mammografi</strong> <br> Pemeriksaan pencitraan menggunakan sinar-X untuk mendeteksi perubahan kecil yang tidak teraba pada payudara. Direkomendasikan bagi perempuan usia 40 tahun ke atas atau yang memiliki risiko tinggi.</li>
     </ul><br>
 
     <h2><strong>Mengapa Pemeriksaan Payudara Penting?</strong></h2>
     <ol>
-    <li><strong>🍒 Deteksi Dini Kanker Payudara</strong> <br> Kanker payudara yang ditemukan pada tahap awal memiliki tingkat kesembuhan yang tinggi dan pengobatan yang lebih sederhana.</li>
-    <li><strong>🍒 Mengenali Perubahan Dini</strong> <br> Mengenali tanda-tanda seperti benjolan, perubahan kulit, atau keluarnya cairan dari puting sejak dini dapat mencegah komplikasi.</li>
-    <li><strong>🍒 Meningkatkan Kesadaran Tubuh</strong> <br> Memahami kondisi normal payudara membantu perempuan mengenali perubahan yang tidak biasa.</li>
+        <li><strong>🍒 Deteksi Dini Kanker Payudara</strong> <br> Kanker payudara yang ditemukan pada tahap awal memiliki tingkat kesembuhan yang tinggi dan pengobatan yang lebih sederhana.</li>
+        <li><strong>🍒 Mengenali Perubahan Dini</strong> <br> Mengenali tanda-tanda seperti benjolan, perubahan kulit, atau keluarnya cairan dari puting sejak dini dapat mencegah komplikasi.</li>
+        <li><strong>🍒 Meningkatkan Kesadaran Tubuh</strong> <br> Memahami kondisi normal payudara membantu perempuan mengenali perubahan yang tidak biasa.</li>
     </ol><br>
 
     <h2><strong>Tanda-Tanda yang Perlu Diwaspadai</strong></h2>
     <ul>
-    <li>💍 Benjolan atau penebalan di payudara atau ketiak.</li>
-    <li>💍 Perubahan ukuran, bentuk, atau tampilan payudara.</li>
-    <li>💍 Kulit payudara menjadi kemerahan, berkerut, atau seperti kulit jeruk.</li>
-    <li>💍 Keluarnya cairan tidak biasa dari puting, terutama jika berdarah.</li>
-    <li>💍 Nyeri yang tidak hilang dalam waktu lama.</li>
+        <li>🌹 Benjolan atau penebalan di payudara atau ketiak.</li>
+        <li>🌹 Perubahan ukuran, bentuk, atau tampilan payudara.</li>
+        <li>🌹 Kulit payudara menjadi kemerahan, berkerut, atau seperti kulit jeruk.</li>
+        <li>🌹 Keluarnya cairan tidak biasa dari puting, terutama jika berdarah.</li>
+        <li>🌹 Nyeri yang tidak hilang dalam waktu lama.</li>
     </ul><br>
 
     <h2><strong>Kapan Harus Memulai Pemeriksaan?</strong></h2>
@@ -186,29 +186,29 @@ const blogs = [
 
     <h2><strong>Fungsi Utama Estrogen</strong></h2>
     <ul>
-    <li><strong>🌸 Regulasi Siklus Menstruasi</strong> <br> Estrogen berperan dalam pertumbuhan lapisan endometrium, mempersiapkan rahim untuk kemungkinan kehamilan.</li>
-    <li><strong>🌸 Kesehatan Tulang</strong> <br> Estrogen membantu menjaga kepadatan tulang dan mencegah osteoporosis, terutama saat menopause ketika kadar estrogen menurun.</li>
-    <li><strong>🌸 Kesehatan Jantung</strong> <br> Estrogen berkontribusi dalam menjaga kadar kolesterol yang sehat dan melindungi kesehatan pembuluh darah.</li>
-    <li><strong>🌸 Kesehatan Kulit dan Rambut</strong> <br> Hormon ini mendukung elastisitas kulit dan pertumbuhan rambut yang sehat.</li>
-    <li><strong>🌸 Keseimbangan Emosional</strong> <br> Estrogen berperan dalam kestabilan suasana hati dan fungsi kognitif.</li>
+        <li><strong>🍉 Regulasi Siklus Menstruasi</strong> <br> Estrogen berperan dalam pertumbuhan lapisan endometrium, mempersiapkan rahim untuk kemungkinan kehamilan.</li>
+        <li><strong>🍉 Kesehatan Tulang</strong> <br> Estrogen membantu menjaga kepadatan tulang dan mencegah osteoporosis, terutama saat menopause ketika kadar estrogen menurun.</li>
+        <li><strong>🍉 Kesehatan Jantung</strong> <br> Estrogen berkontribusi dalam menjaga kadar kolesterol yang sehat dan melindungi kesehatan pembuluh darah.</li>
+        <li><strong>🍉 Kesehatan Kulit dan Rambut</strong> <br> Hormon ini mendukung elastisitas kulit dan pertumbuhan rambut yang sehat.</li>
+        <li><strong>🍉 Keseimbangan Emosional</strong> <br> Estrogen berperan dalam kestabilan suasana hati dan fungsi kognitif.</li>
     </ul><br>
 
     <h2><strong>Gejala Ketidakseimbangan Estrogen</strong></h2>
     <ul>
-    <li>🌼 Menstruasi tidak teratur atau berhenti.</li>
-    <li>🌼 Hot flashes dan keringat malam (terutama saat menopause).</li>
-    <li>🌼 Penurunan gairah seksual.</li>
-    <li>🌼 Perubahan suasana hati, kecemasan, atau depresi.</li>
-    <li>🌼 Penambahan berat badan, terutama di area perut.</li>
-    <li>🌼 Nyeri sendi atau tulang rapuh.</li>
+        <li>🌼 Menstruasi tidak teratur atau berhenti.</li>
+        <li>🌼 Hot flashes dan keringat malam (terutama saat menopause).</li>
+        <li>🌼 Penurunan gairah seksual.</li>
+        <li>🌼 Perubahan suasana hati, kecemasan, atau depresi.</li>
+        <li>🌼 Penambahan berat badan, terutama di area perut.</li>
+        <li>🌼 Nyeri sendi atau tulang rapuh.</li>
     </ul><br>
 
     <h2><strong>Cara Menjaga Keseimbangan Estrogen</strong></h2>
     <ol>
-    <li><strong>✨ Pola Hidup Sehat</strong> <br> Konsumsi makanan bergizi, olahraga rutin, dan tidur cukup membantu keseimbangan hormon.</li>
-    <li><strong>✨ Kelola Stres</strong> <br> Stres kronis dapat mengganggu produksi hormon, jadi penting untuk menerapkan relaksasi.</li>
-    <li><strong>✨ Konsultasi Medis</strong> <br> Pemeriksaan hormon dan konsultasi dokter penting, terutama bagi perempuan yang mengalami gejala menopause atau gangguan hormonal lainnya.</li>
-    <li><strong>✨ Berhenti Merokok</strong> <br> Merokok dapat menurunkan kadar estrogen dan mempercepat menopause.</li>
+        <li><strong>✨ Pola Hidup Sehat</strong> <br> Konsumsi makanan bergizi, olahraga rutin, dan tidur cukup membantu keseimbangan hormon.</li>
+        <li><strong>✨ Kelola Stres</strong> <br> Stres kronis dapat mengganggu produksi hormon, jadi penting untuk menerapkan relaksasi.</li>
+        <li><strong>✨ Konsultasi Medis</strong> <br> Pemeriksaan hormon dan konsultasi dokter penting, terutama bagi perempuan yang mengalami gejala menopause atau gangguan hormonal lainnya.</li>
+        <li><strong>✨ Berhenti Merokok</strong> <br> Merokok dapat menurunkan kadar estrogen dan mempercepat menopause.</li>
     </ol><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
@@ -228,36 +228,36 @@ const blogs = [
 
     <h2><strong>Jenis-Jenis Anemia</strong></h2>
     <ul>
-    <li><strong>🍓 Anemia Defisiensi Zat Besi</strong> <br> Penyebab paling umum, terjadi ketika tubuh kekurangan zat besi yang diperlukan untuk membuat hemoglobin.</li>
-    <li><strong>🍓 Anemia Akibat Kekurangan Vitamin</strong> <br> Kekurangan vitamin B12 atau folat juga dapat mengurangi produksi sel darah merah yang sehat.</li>
-    <li><strong>🍓 Anemia Hemolitik</strong> <br> Terjadi ketika sel darah merah dihancurkan lebih cepat daripada tubuh dapat memproduksinya.</li>
-    <li><strong>🍓 Anemia Aplastik</strong> <br> Kondisi langka yang terjadi ketika sumsum tulang tidak menghasilkan cukup sel darah merah.</li>
+        <li><strong>🍓 Anemia Defisiensi Zat Besi</strong> <br> Penyebab paling umum, terjadi ketika tubuh kekurangan zat besi yang diperlukan untuk membuat hemoglobin.</li>
+        <li><strong>🍓 Anemia Akibat Kekurangan Vitamin</strong> <br> Kekurangan vitamin B12 atau folat juga dapat mengurangi produksi sel darah merah yang sehat.</li>
+        <li><strong>🍓 Anemia Hemolitik</strong> <br> Terjadi ketika sel darah merah dihancurkan lebih cepat daripada tubuh dapat memproduksinya.</li>
+        <li><strong>🍓 Anemia Aplastik</strong> <br> Kondisi langka yang terjadi ketika sumsum tulang tidak menghasilkan cukup sel darah merah.</li>
     </ul><br>
 
     <h2><strong>Anemia dan Kesehatan Reproduksi</strong></h2>
     <p>Anemia dapat memengaruhi kesehatan reproduksi perempuan dengan berbagai cara. Dalam jangka panjang, anemia yang tidak ditangani dapat mengganggu kemampuan tubuh untuk mendukung kehamilan yang sehat. Beberapa efek yang dapat timbul akibat anemia pada perempuan termasuk:</p>
     <ul>
-    <li><strong>🦢 Kemandulan</strong> <br> Anemia berat dapat memengaruhi kesuburan, mengurangi kemampuan tubuh untuk ovulasi secara normal, dan menghambat proses pembuahan.</li>
-    <li><strong>🦢 Keguguran</strong> <br> Kekurangan oksigen dan nutrisi akibat anemia dapat meningkatkan risiko keguguran pada trimester pertama kehamilan.</li>
-    <li><strong>🦢 Komplikasi Kehamilan</strong> <br> Anemia selama kehamilan dapat menyebabkan preeklamsia, kelahiran prematur, dan gangguan kesehatan pada bayi seperti berat badan lahir rendah.</li>
-    <li><strong>🦢 Gangguan Menstruasi</strong> <br> Anemia juga dapat menyebabkan siklus menstruasi yang tidak teratur atau perdarahan yang berat.</li>
+        <li><strong>🍑 Kemandulan</strong> <br> Anemia berat dapat memengaruhi kesuburan, mengurangi kemampuan tubuh untuk ovulasi secara normal, dan menghambat proses pembuahan.</li>
+        <li><strong>🍑 Keguguran</strong> <br> Kekurangan oksigen dan nutrisi akibat anemia dapat meningkatkan risiko keguguran pada trimester pertama kehamilan.</li>
+        <li><strong>🍑 Komplikasi Kehamilan</strong> <br> Anemia selama kehamilan dapat menyebabkan preeklamsia, kelahiran prematur, dan gangguan kesehatan pada bayi seperti berat badan lahir rendah.</li>
+        <li><strong>🍑 Gangguan Menstruasi</strong> <br> Anemia juga dapat menyebabkan siklus menstruasi yang tidak teratur atau perdarahan yang berat.</li>
     </ul><br>
 
     <h2><strong>Gejala Anemia yang Perlu Diwaspadai</strong></h2>
     <ul>
-    <li>🧸 Rasa lelah dan lemas yang berlebihan.</li>
-    <li>🧸 Pusing atau kepala terasa ringan.</li>
-    <li>🧸 Perubahan warna kulit menjadi pucat atau kekuningan.</li>
-    <li>🧸 Sesak napas atau detak jantung tidak teratur.</li>
-    <li>🧸 Nyeri dada atau gangguan pernapasan.</li>
+        <li>🫧 Rasa lelah dan lemas yang berlebihan.</li>
+        <li>🫧 Pusing atau kepala terasa ringan.</li>
+        <li>🫧 Perubahan warna kulit menjadi pucat atau kekuningan.</li>
+        <li>🫧 Sesak napas atau detak jantung tidak teratur.</li>
+        <li>🫧 Nyeri dada atau gangguan pernapasan.</li>
     </ul><br>
 
     <h2><strong>Cara Mengatasi Anemia</strong></h2>
     <ol>
-    <li><strong>💖 Konsumsi Zat Besi dan Vitamin</strong> <br> Makanan kaya zat besi seperti daging merah, sayuran berdaun hijau, dan kacang-kacangan sangat dianjurkan. Sumber vitamin B12 dan folat juga penting untuk mencegah anemia.</li>
-    <li><strong>💖 Penggunaan Suplemen</strong> <br> Dalam kasus kekurangan gizi yang parah, suplemen zat besi, vitamin B12, atau folat mungkin diperlukan untuk memperbaiki kondisi.</li>
-    <li><strong>💖 Pemeriksaan Rutin</strong> <br> Pemeriksaan darah secara teratur dapat membantu mendeteksi anemia lebih dini, terutama bagi perempuan yang berisiko tinggi, seperti mereka yang sedang hamil atau menstruasi berat.</li>
-    <li><strong>💖 Perawatan Medis Lainnya</strong> <br> Dalam kasus anemia berat atau yang disebabkan oleh penyakit tertentu, perawatan medis lebih lanjut seperti transfusi darah atau pengobatan penyakit dasar mungkin diperlukan.</li>
+        <li><strong>💖 Konsumsi Zat Besi dan Vitamin</strong> <br> Makanan kaya zat besi seperti daging merah, sayuran berdaun hijau, dan kacang-kacangan sangat dianjurkan. Sumber vitamin B12 dan folat juga penting untuk mencegah anemia.</li>
+        <li><strong>💖 Penggunaan Suplemen</strong> <br> Dalam kasus kekurangan gizi yang parah, suplemen zat besi, vitamin B12, atau folat mungkin diperlukan untuk memperbaiki kondisi.</li>
+        <li><strong>💖 Pemeriksaan Rutin</strong> <br> Pemeriksaan darah secara teratur dapat membantu mendeteksi anemia lebih dini, terutama bagi perempuan yang berisiko tinggi, seperti mereka yang sedang hamil atau menstruasi berat.</li>
+        <li><strong>💖 Perawatan Medis Lainnya</strong> <br> Dalam kasus anemia berat atau yang disebabkan oleh penyakit tertentu, perawatan medis lebih lanjut seperti transfusi darah atau pengobatan penyakit dasar mungkin diperlukan.</li>
     </ol><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
@@ -278,36 +278,36 @@ const blogs = [
     <h2><strong>Gejala PCOS</strong></h2>
     <p>Gejala PCOS dapat bervariasi antar individu, namun beberapa gejala yang paling umum meliputi:</p>
     <ul>
-    <li><strong>📜 Menstruasi Tidak Teratur</strong> <br> Salah satu gejala utama PCOS adalah siklus menstruasi yang tidak teratur, atau bahkan tidak menstruasi sama sekali. Ini terjadi karena ovarium tidak melepaskan telur secara teratur.</li>
-    <li><strong>📜 Kesulitan Hamil</strong> <br> Karena gangguan ovulasi, perempuan dengan PCOS sering kali kesulitan untuk hamil.</li>
-    <li><strong>📜 Hormon Androgen Tinggi</strong> <br> Hormon androgen yang berlebihan dapat menyebabkan gejala seperti jerawat, pertumbuhan rambut berlebih (hirsutisme), dan penipisan rambut pada kulit kepala.</li>
-    <li><strong>📜 Kista Ovarium</strong> <br> Banyak perempuan dengan PCOS memiliki ovarium yang membesar dan mengandung banyak kista kecil yang berisi cairan. Kista ini bisa terlihat pada pemeriksaan ultrasonografi.</li>
+        <li><strong>📜 Menstruasi Tidak Teratur</strong> <br> Salah satu gejala utama PCOS adalah siklus menstruasi yang tidak teratur, atau bahkan tidak menstruasi sama sekali. Ini terjadi karena ovarium tidak melepaskan telur secara teratur.</li>
+        <li><strong>📜 Kesulitan Hamil</strong> <br> Karena gangguan ovulasi, perempuan dengan PCOS sering kali kesulitan untuk hamil.</li>
+        <li><strong>📜 Hormon Androgen Tinggi</strong> <br> Hormon androgen yang berlebihan dapat menyebabkan gejala seperti jerawat, pertumbuhan rambut berlebih (hirsutisme), dan penipisan rambut pada kulit kepala.</li>
+        <li><strong>📜 Kista Ovarium</strong> <br> Banyak perempuan dengan PCOS memiliki ovarium yang membesar dan mengandung banyak kista kecil yang berisi cairan. Kista ini bisa terlihat pada pemeriksaan ultrasonografi.</li>
     </ul><br>
 
     <h2><strong>Penyebab PCOS</strong>
     <p>Penyebab pasti dari PCOS belum sepenuhnya dipahami, namun beberapa faktor yang dapat memengaruhi antara lain:</p>
     <ul>
-    <li><strong>💓 Genetik</strong> <br> Jika ada riwayat keluarga dengan PCOS, kemungkinan seseorang akan mengidap kondisi ini lebih besar.</li>
-    <li><strong>💓 Hormon Insulin</strong> <br> Banyak perempuan dengan PCOS memiliki kadar insulin yang lebih tinggi, yang dapat menyebabkan tubuh menghasilkan lebih banyak hormon androgen.</li>
-    <li><strong>💓 Peradangan Kronis</strong> <br> Perempuan dengan PCOS sering kali menunjukkan tanda-tanda peradangan kronis ringan yang dapat memengaruhi fungsi ovarium.</li>
+        <li><strong>💓 Genetik</strong> <br> Jika ada riwayat keluarga dengan PCOS, kemungkinan seseorang akan mengidap kondisi ini lebih besar.</li>
+        <li><strong>💓 Hormon Insulin</strong> <br> Banyak perempuan dengan PCOS memiliki kadar insulin yang lebih tinggi, yang dapat menyebabkan tubuh menghasilkan lebih banyak hormon androgen.</li>
+        <li><strong>💓 Peradangan Kronis</strong> <br> Perempuan dengan PCOS sering kali menunjukkan tanda-tanda peradangan kronis ringan yang dapat memengaruhi fungsi ovarium.</li>
     </ul><br>
 
     <h2><strong>Komplikasi yang Dapat Timbul akibat PCOS</strong></h2>
     <p>Jika tidak dikelola dengan baik, PCOS dapat menimbulkan beberapa komplikasi kesehatan, termasuk:</p>
     <ul>
-    <li><strong>✨ Kemandulan</strong> <br> Kesulitan untuk hamil adalah salah satu masalah terbesar yang dihadapi oleh perempuan dengan PCOS, karena gangguan pada ovulasi yang terjadi.</li>
-    <li><strong>✨ Diabetes Tipe 2</strong> <br> PCOS meningkatkan risiko diabetes tipe 2 karena ketidakmampuan tubuh dalam menggunakan insulin secara efektif.</li>
-    <li><strong>✨ Masalah Jantung</strong> <br> Perempuan dengan PCOS lebih berisiko mengalami masalah jantung, seperti hipertensi dan gangguan kolesterol.</li>
-    <li><strong>✨ Depresi dan Kecemasan</strong> <br> PCOS dapat memengaruhi kualitas hidup, dengan meningkatnya risiko gangguan mental seperti depresi dan kecemasan, yang sering disebabkan oleh gejala fisik seperti jerawat dan penambahan berat badan.</li>
+        <li><strong>✨ Kemandulan</strong> <br> Kesulitan untuk hamil adalah salah satu masalah terbesar yang dihadapi oleh perempuan dengan PCOS, karena gangguan pada ovulasi yang terjadi.</li>
+        <li><strong>✨ Diabetes Tipe 2</strong> <br> PCOS meningkatkan risiko diabetes tipe 2 karena ketidakmampuan tubuh dalam menggunakan insulin secara efektif.</li>
+        <li><strong>✨ Masalah Jantung</strong> <br> Perempuan dengan PCOS lebih berisiko mengalami masalah jantung, seperti hipertensi dan gangguan kolesterol.</li>
+        <li><strong>✨ Depresi dan Kecemasan</strong> <br> PCOS dapat memengaruhi kualitas hidup, dengan meningkatnya risiko gangguan mental seperti depresi dan kecemasan, yang sering disebabkan oleh gejala fisik seperti jerawat dan penambahan berat badan.</li>
     </ul><br>
 
     <h2><strong>Pengelolaan dan Pengobatan PCOS</strong></h2>
     <p>Walaupun PCOS tidak dapat disembuhkan, ada beberapa cara untuk mengelola gejalanya dan mencegah komplikasi jangka panjang:</p>
     <ol>
-    <li><strong>💅 Perubahan Gaya Hidup</strong> <br> Diet sehat dan olahraga teratur dapat membantu menurunkan berat badan, mengurangi resistensi insulin, dan mengatur siklus menstruasi.</li>
-    <li><strong>💅 Pengobatan Hormon</strong> <br> Penggunaan pil KB atau obat hormon lain dapat membantu mengatur siklus menstruasi dan mengurangi gejala seperti jerawat dan pertumbuhan rambut berlebih.</li>
-    <li><strong>💅 Metformin</strong> <br> Obat ini digunakan untuk mengatur kadar insulin, yang membantu mengatur ovulasi dan menurunkan risiko diabetes.</li>
-    <li><strong>💅 Induksi Ovulasi</strong> <br> Bagi perempuan yang ingin hamil, obat seperti clomiphene dapat digunakan untuk merangsang ovulasi dan meningkatkan peluang kehamilan.</li>
+        <li><strong>💅 Perubahan Gaya Hidup</strong> <br> Diet sehat dan olahraga teratur dapat membantu menurunkan berat badan, mengurangi resistensi insulin, dan mengatur siklus menstruasi.</li>
+        <li><strong>💅 Pengobatan Hormon</strong> <br> Penggunaan pil KB atau obat hormon lain dapat membantu mengatur siklus menstruasi dan mengurangi gejala seperti jerawat dan pertumbuhan rambut berlebih.</li>
+        <li><strong>💅 Metformin</strong> <br> Obat ini digunakan untuk mengatur kadar insulin, yang membantu mengatur ovulasi dan menurunkan risiko diabetes.</li>
+        <li><strong>💅 Induksi Ovulasi</strong> <br> Bagi perempuan yang ingin hamil, obat seperti clomiphene dapat digunakan untuk merangsang ovulasi dan meningkatkan peluang kehamilan.</li>
     </ol><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
@@ -331,39 +331,39 @@ const blogs = [
     <h2><strong>Gejala ISK pada Perempuan</strong></h2>
     <p>Gejala ISK dapat muncul secara tiba-tiba dan biasanya meliputi:</p>
     <ul>
-    <li>👒 Rasa terbakar saat buang air kecil</strong></li>
-    <li>👒 Sering ingin buang air kecil, tetapi hanya sedikit yang keluar</strong></li>
-    <li>👒 Urine berwarna keruh atau berbau menyengat</strong></li>
-    <li>👒 Nyeri di area panggul atau perut bagian bawah</strong></li>
-    <li>👒 Demam dan menggigil (jika infeksi sudah mencapai ginjal)</strong></li>
+        <li>👒 Rasa terbakar saat buang air kecil</strong></li>
+        <li>👒 Sering ingin buang air kecil, tetapi hanya sedikit yang keluar</strong></li>
+        <li>👒 Urine berwarna keruh atau berbau menyengat</strong></li>
+        <li>👒 Nyeri di area panggul atau perut bagian bawah</strong></li>
+        <li>👒 Demam dan menggigil (jika infeksi sudah mencapai ginjal)</strong></li>
     </ul><br>
 
     <h2><strong>Penyebab ISK</strong></h2>
     <p>Penyebab utama ISK adalah bakteri, terutama <em>E. coli</em>, yang biasanya hidup di usus besar dan sekitar anus. Faktor risiko yang meningkatkan kemungkinan ISK antara lain:</p>
     <ul>
-    <li><strong>🕊️ Aktivitas seksual</strong> <br> Hubungan seksual dapat mendorong bakteri masuk ke uretra.</li>
-    <li><strong>🕊️ Menahan buang air kecil</strong> <br> Menahan urine terlalu lama memungkinkan pertumbuhan bakteri dalam kandung kemih.</li>
-    <li><strong>🕊️ Kebersihan yang kurang tepat</strong> <br> Membersihkan area genital dari belakang ke depan setelah buang air besar dapat memindahkan bakteri ke uretra.</li>
-    <li><strong>🕊️ Kehamilan dan menopause</strong> <br> Perubahan hormonal mempengaruhi flora vagina dan meningkatkan risiko ISK.</li>
-    <li><strong>🕊️ Penggunaan alat kontrasepsi tertentu</strong> <br> Diafragma dan spermisida dapat meningkatkan risiko ISK.</li>
+        <li><strong>🕊️ Aktivitas seksual</strong> <br> Hubungan seksual dapat mendorong bakteri masuk ke uretra.</li>
+        <li><strong>🕊️ Menahan buang air kecil</strong> <br> Menahan urine terlalu lama memungkinkan pertumbuhan bakteri dalam kandung kemih.</li>
+        <li><strong>🕊️ Kebersihan yang kurang tepat</strong> <br> Membersihkan area genital dari belakang ke depan setelah buang air besar dapat memindahkan bakteri ke uretra.</li>
+        <li><strong>🕊️ Kehamilan dan menopause</strong> <br> Perubahan hormonal mempengaruhi flora vagina dan meningkatkan risiko ISK.</li>
+        <li><strong>🕊️ Penggunaan alat kontrasepsi tertentu</strong> <br> Diafragma dan spermisida dapat meningkatkan risiko ISK.</li>
     </ul><br>
 
     <h2><strong>Komplikasi ISK jika Tidak Diobati</strong></h2>
     <p>ISK yang tidak segera ditangani dapat menyebabkan komplikasi serius, seperti:</p>
     <ul>
-    <li><strong>👛 Pielonefritis (infeksi ginjal)</strong> <br> Infeksi yang menyebar ke ginjal dapat menyebabkan kerusakan ginjal permanen dan infeksi darah (sepsis).</li>
-    <li><strong>👛 Infeksi berulang</strong> <br> Perempuan yang pernah mengalami ISK memiliki risiko lebih tinggi terkena infeksi berulang.</li>
-    <li><strong>👛 Masalah kehamilan</strong> <br> ISK saat hamil dapat meningkatkan risiko bayi lahir prematur atau berat lahir rendah.</li>
+        <li><strong>👛 Pielonefritis (infeksi ginjal)</strong> <br> Infeksi yang menyebar ke ginjal dapat menyebabkan kerusakan ginjal permanen dan infeksi darah (sepsis).</li>
+        <li><strong>👛 Infeksi berulang</strong> <br> Perempuan yang pernah mengalami ISK memiliki risiko lebih tinggi terkena infeksi berulang.</li>
+        <li><strong>👛 Masalah kehamilan</strong> <br> ISK saat hamil dapat meningkatkan risiko bayi lahir prematur atau berat lahir rendah.</li>
     </ul><br>
 
     <h2><strong>Cara Mencegah ISK</strong></h2>
     <p>Beberapa langkah pencegahan yang efektif meliputi:</p>
     <ol>
-    <li><strong>🌹 Minum air putih yang cukup</strong> <br> Membantu membilas bakteri dari saluran kemih.</li>
-    <li><strong>🌹 Buang air kecil setelah berhubungan seksual</strong> <br> Membantu mengeluarkan bakteri yang mungkin masuk ke uretra.</li>
-    <li><strong>🌹 Membersihkan area genital dengan benar</strong> <br> Bersihkan dari depan ke belakang setelah buang air besar atau kecil.</li>
-    <li><strong>🌹 Hindari produk iritan</strong> <br> Jangan gunakan sabun wangi, semprotan kewanitaan, atau bedak di area genital.</li>
-    <li><strong>🌹 Jangan menahan buang air kecil terlalu lama</strong></li>
+        <li><strong>🌹 Minum air putih yang cukup</strong> <br> Membantu membilas bakteri dari saluran kemih.</li>
+        <li><strong>🌹 Buang air kecil setelah berhubungan seksual</strong> <br> Membantu mengeluarkan bakteri yang mungkin masuk ke uretra.</li>
+        <li><strong>🌹 Membersihkan area genital dengan benar</strong> <br> Bersihkan dari depan ke belakang setelah buang air besar atau kecil.</li>
+        <li><strong>🌹 Hindari produk iritan</strong> <br> Jangan gunakan sabun wangi, semprotan kewanitaan, atau bedak di area genital.</li>
+        <li><strong>🌹 Jangan menahan buang air kecil terlalu lama</strong></li>
     </ol><br>
 
     <h2><strong>📜 Pengobatan ISK</strong></h2>
@@ -384,8 +384,8 @@ const blogs = [
     <h2><strong>Apa Itu HPV?</strong></h2>
     <p>HPV adalah kelompok virus yang terdiri dari lebih dari 100 jenis. Sekitar 40 jenis di antaranya dapat menginfeksi area genital. HPV dibagi menjadi dua kategori utama:</p>
     <ul>
-    <li><strong>🌹 HPV risiko rendah</strong> <br> Menyebabkan kutil kelamin dan lesi jinak pada serviks.</li>
-    <li><strong>🌹 HPV risiko tinggi</strong> <br> Dapat menyebabkan kanker serviks, kanker anus, kanker tenggorokan, serta kanker lainnya.</li>
+        <li><strong>🫧 HPV risiko rendah</strong> <br> Menyebabkan kutil kelamin dan lesi jinak pada serviks.</li>
+        <li><strong>🫧 HPV risiko tinggi</strong> <br> Dapat menyebabkan kanker serviks, kanker anus, kanker tenggorokan, serta kanker lainnya.</li>
     </ul><br>
 
     <h2><strong>Bagaimana HPV Menular?</strong></h2>
@@ -397,26 +397,26 @@ const blogs = [
     <h2><strong>Manfaat Vaksin HPV</strong></h2>
     <p>Vaksin HPV telah terbukti sangat efektif dalam mencegah infeksi dari tipe HPV yang paling berbahaya. Manfaat utamanya meliputi:</p>
     <ul>
-    <li>🍓 Mencegah kanker serviks</strong></li>
-    <li>🍓 Mencegah kutil kelamin</strong></li>
-    <li>🍓 Mencegah kanker vulva, vagina, anus, dan orofaring (tenggorokan)</strong></li>
-    <li>🍓 Mengurangi kebutuhan tes lanjutan dan prosedur medis akibat hasil Pap smear abnormal</strong></li>
+        <li>🍃 Mencegah kanker serviks</strong></li>
+        <li>🍃 Mencegah kutil kelamin</strong></li>
+        <li>🍃 Mencegah kanker vulva, vagina, anus, dan orofaring (tenggorokan)</strong></li>
+        <li>🍃 Mengurangi kebutuhan tes lanjutan dan prosedur medis akibat hasil Pap smear abnormal</strong></li>
     </ul><br>
 
     <h2><strong>Kapan Sebaiknya Vaksin HPV Diberikan?</strong></h2>
     <p>Organisasi Kesehatan Dunia (WHO) dan Ikatan Dokter Indonesia (IDI) merekomendasikan vaksinasi HPV untuk:</p>
     <ul>
-    <li><strong>🦢 Perempuan usia 9–14 tahun</strong> <br> Sebelum memulai aktivitas seksual, karena vaksin paling efektif sebelum terpapar HPV.</li>
-    <li><strong>🦢 Remaja dan dewasa muda hingga usia 26 tahun</strong> <br> Vaksin tetap memberikan manfaat walaupun seseorang sudah aktif secara seksual, selama belum terinfeksi semua tipe HPV yang dilindungi vaksin.</li>
-    <li><strong>🦢 Perempuan usia 27–45 tahun</strong> <br> Vaksinasi masih dapat dipertimbangkan setelah konsultasi dengan dokter, tergantung risiko paparan HPV.</li>
+        <li><strong>🦢 Perempuan usia 9–14 tahun</strong> <br> Sebelum memulai aktivitas seksual, karena vaksin paling efektif sebelum terpapar HPV.</li>
+        <li><strong>🦢 Remaja dan dewasa muda hingga usia 26 tahun</strong> <br> Vaksin tetap memberikan manfaat walaupun seseorang sudah aktif secara seksual, selama belum terinfeksi semua tipe HPV yang dilindungi vaksin.</li>
+        <li><strong>🦢 Perempuan usia 27–45 tahun</strong> <br> Vaksinasi masih dapat dipertimbangkan setelah konsultasi dengan dokter, tergantung risiko paparan HPV.</li>
     </ul><br>
 
     <h2><strong>Jenis-jenis Vaksin HPV</strong></h2>
     <p>Di Indonesia, tersedia beberapa jenis vaksin HPV:</p>
     <ul>
-    <li><strong>💓 Vaksin bivalen</strong> (melindungi dari HPV tipe 16 dan 18)</li>
-    <li><strong>💓 Vaksin quadrivalent</strong> (melindungi dari HPV tipe 6, 11, 16, dan 18)</li>
-    <li><strong>💓 Vaksin nonavalent</strong> (melindungi dari 9 tipe HPV, termasuk tipe risiko tinggi lainnya)</li>
+        <li><strong>💓 Vaksin bivalen</strong> (melindungi dari HPV tipe 16 dan 18)</li>
+        <li><strong>💓 Vaksin quadrivalent</strong> (melindungi dari HPV tipe 6, 11, 16, dan 18)</li>
+        <li><strong>💓 Vaksin nonavalent</strong> (melindungi dari 9 tipe HPV, termasuk tipe risiko tinggi lainnya)</li>
     </ul><br>
 
     <h2><strong>Efektivitas dan Keamanan Vaksin HPV</strong></h2>
@@ -446,26 +446,26 @@ const blogs = [
     <h2><strong>Siapa yang Perlu Melakukan Pap Smear?</strong></h2>
     <p>Rekomendasi umum dari WHO dan Ikatan Dokter Indonesia menyarankan:</p>
     <ul>
-    <li><strong>🌸 Perempuan usia 21–65 tahun</strong> <br> yang sudah aktif secara seksual disarankan melakukan Pap smear secara rutin.</li>
-    <li><strong>🌸 Frekuensi pemeriksaan</strong> <br> Biasanya setiap 3 tahun sekali. Jika Pap smear dikombinasikan dengan tes HPV, pemeriksaan bisa dilakukan setiap 5 tahun sekali.</li>
-    <li><strong>🌸 Perempuan di atas usia 65 tahun</strong> <br> dapat berhenti melakukan Pap smear jika hasil tes sebelumnya normal selama 10 tahun terakhir.</li>
+        <li><strong>🌸 Perempuan usia 21–65 tahun</strong> <br> yang sudah aktif secara seksual disarankan melakukan Pap smear secara rutin.</li>
+        <li><strong>🌸 Frekuensi pemeriksaan</strong> <br> Biasanya setiap 3 tahun sekali. Jika Pap smear dikombinasikan dengan tes HPV, pemeriksaan bisa dilakukan setiap 5 tahun sekali.</li>
+        <li><strong>🌸 Perempuan di atas usia 65 tahun</strong> <br> dapat berhenti melakukan Pap smear jika hasil tes sebelumnya normal selama 10 tahun terakhir.</li>
     </ul><br>
 
     <h2><strong>Manfaat Pap Smear</strong></h2>
     <p>Berikut beberapa manfaat utama Pap smear:</p>
     <ul>
-    <li><strong>🍒 Deteksi dini sel abnormal</strong> <br> Menemukan perubahan sel sebelum menjadi kanker sehingga pengobatan bisa lebih efektif dan sederhana.</li>
-    <li><strong>🍒 Mengurangi angka kematian akibat kanker serviks</strong> <br> Studi menunjukkan bahwa Pap smear secara signifikan menurunkan angka kematian akibat kanker serviks.</li>
-    <li><strong>🍒 Memantau kesehatan serviks secara keseluruhan</strong> <br> Pap smear juga bisa mendeteksi infeksi, peradangan, atau kondisi lain yang memerlukan perhatian medis.</li>
-    <li><strong>🍒 Memberikan ketenangan</strong> <br> Dengan hasil normal, perempuan dapat merasa lebih tenang tentang kondisi kesehatannya.</li>
+        <li><strong>🍒 Deteksi dini sel abnormal</strong> <br> Menemukan perubahan sel sebelum menjadi kanker sehingga pengobatan bisa lebih efektif dan sederhana.</li>
+        <li><strong>🍒 Mengurangi angka kematian akibat kanker serviks</strong> <br> Studi menunjukkan bahwa Pap smear secara signifikan menurunkan angka kematian akibat kanker serviks.</li>
+        <li><strong>🍒 Memantau kesehatan serviks secara keseluruhan</strong> <br> Pap smear juga bisa mendeteksi infeksi, peradangan, atau kondisi lain yang memerlukan perhatian medis.</li>
+        <li><strong>🍒 Memberikan ketenangan</strong> <br> Dengan hasil normal, perempuan dapat merasa lebih tenang tentang kondisi kesehatannya.</li>
     </ul><br>
 
     <h2><strong>Bagaimana Persiapan untuk Pap Smear?</strong></h2>
     <p>Agar hasil tes lebih akurat, berikut beberapa hal yang perlu diperhatikan sebelum Pap smear:</p>
     <ul>
-    <li>🧺 Hindari hubungan seksual, penggunaan produk vagina (seperti krim atau obat), dan douching 2–3 hari sebelum tes.</li>
-    <li>🧺 Lakukan pemeriksaan saat tidak sedang menstruasi. Waktu terbaik adalah 10–20 hari setelah hari pertama haid terakhir.</li>
-    <li>🧺 Kosongkan kandung kemih sebelum pemeriksaan agar lebih nyaman.</li>
+        <li>🦋 Hindari hubungan seksual, penggunaan produk vagina (seperti krim atau obat), dan douching 2–3 hari sebelum tes.</li>
+        <li>🦋 Lakukan pemeriksaan saat tidak sedang menstruasi. Waktu terbaik adalah 10–20 hari setelah hari pertama haid terakhir.</li>
+        <li>🦋 Kosongkan kandung kemih sebelum pemeriksaan agar lebih nyaman.</li>
     </ul><br>
 
     <h2><strong>Apakah Pap Smear Menyakitkan?</strong></h2>
@@ -474,10 +474,10 @@ const blogs = [
     <h2><strong>Apa Arti Hasil Pap Smear?</strong></h2>
     <p>Hasil Pap smear biasanya dibagi menjadi beberapa kategori:</p>
     <ul>
-    <li><strong>💐 Normal</strong> <br> Tidak ditemukan sel abnormal. Pemeriksaan bisa diulang sesuai jadwal rutin.</li>
-    <li><strong>💐 Sel abnormal ringan (ASC-US atau LSIL)</strong> <br> Biasanya disebabkan oleh infeksi HPV ringan dan sering hilang sendiri. Dokter bisa menyarankan tes lanjutan atau observasi.</li>
-    <li><strong>💐 Sel abnormal sedang atau berat (HSIL)</strong> <br> Membutuhkan pemeriksaan lanjutan seperti kolposkopi dan biopsi untuk memastikan apakah ada perubahan prakanker.</li>
-    <li><strong>💐 Sel kanker</strong> <br> Jika terdeteksi, dokter akan merujuk untuk pengobatan lebih lanjut.</li>
+        <li><strong>💐 Normal</strong> <br> Tidak ditemukan sel abnormal. Pemeriksaan bisa diulang sesuai jadwal rutin.</li>
+        <li><strong>💐 Sel abnormal ringan (ASC-US atau LSIL)</strong> <br> Biasanya disebabkan oleh infeksi HPV ringan dan sering hilang sendiri. Dokter bisa menyarankan tes lanjutan atau observasi.</li>
+        <li><strong>💐 Sel abnormal sedang atau berat (HSIL)</strong> <br> Membutuhkan pemeriksaan lanjutan seperti kolposkopi dan biopsi untuk memastikan apakah ada perubahan prakanker.</li>
+        <li><strong>💐 Sel kanker</strong> <br> Jika terdeteksi, dokter akan merujuk untuk pengobatan lebih lanjut.</li>
     </ul><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
@@ -498,14 +498,14 @@ const blogs = [
     <h2><strong>Gejala Umum Perimenopause</strong></h2>
     <p>Gejala perimenopause bervariasi pada setiap perempuan, tetapi beberapa yang paling umum meliputi:</p>
     <ul>
-    <li><strong>✨ Siklus menstruasi tidak teratur</strong> <br> Menstruasi bisa menjadi lebih pendek, lebih panjang, lebih ringan, atau lebih berat dari biasanya.</li>
-    <li><strong>✨ Hot flashes (sensasi panas tiba-tiba)</strong> <br> Biasanya disertai keringat malam (night sweats) dan jantung berdebar.</li>
-    <li><strong>✨ Gangguan tidur</strong> <br> Kesulitan tidur atau sering terbangun di malam hari.</li>
-    <li><strong>✨ Perubahan suasana hati</strong> <br> Mudah marah, cemas, atau merasa depresi tanpa sebab yang jelas.</li>
-    <li><strong>✨ Penurunan libido</strong> <br> Hasrat seksual dapat menurun akibat perubahan hormon dan kekeringan vagina.</li>
-    <li><strong>✨ Kekeringan dan ketidaknyamanan pada vagina</strong> <br> Karena menurunnya produksi estrogen.</li>
-    <li><strong>✨ Masalah konsentrasi dan daya ingat</strong> <br> Sering disebut "brain fog".</li>
-    <li><strong>✨ Perubahan berat badan</strong> <br> Penambahan berat badan, terutama di area perut.</li>
+        <li><strong>✨ Siklus menstruasi tidak teratur</strong> <br> Menstruasi bisa menjadi lebih pendek, lebih panjang, lebih ringan, atau lebih berat dari biasanya.</li>
+        <li><strong>✨ Hot flashes (sensasi panas tiba-tiba)</strong> <br> Biasanya disertai keringat malam (night sweats) dan jantung berdebar.</li>
+        <li><strong>✨ Gangguan tidur</strong> <br> Kesulitan tidur atau sering terbangun di malam hari.</li>
+        <li><strong>✨ Perubahan suasana hati</strong> <br> Mudah marah, cemas, atau merasa depresi tanpa sebab yang jelas.</li>
+        <li><strong>✨ Penurunan libido</strong> <br> Hasrat seksual dapat menurun akibat perubahan hormon dan kekeringan vagina.</li>
+        <li><strong>✨ Kekeringan dan ketidaknyamanan pada vagina</strong> <br> Karena menurunnya produksi estrogen.</li>
+        <li><strong>✨ Masalah konsentrasi dan daya ingat</strong> <br> Sering disebut "brain fog".</li>
+        <li><strong>✨ Perubahan berat badan</strong> <br> Penambahan berat badan, terutama di area perut.</li>
     </ul><br>
 
     <h2><strong>Apa Penyebab Gejala Perimenopause?</strong></h2>
@@ -514,21 +514,21 @@ const blogs = [
     <h2><strong>Bagaimana Cara Menghadapi Perimenopause?</strong></h2>
     <p>Meskipun perimenopause adalah proses alami, ada banyak cara yang dapat dilakukan untuk mengelola gejala agar tetap merasa nyaman dan sehat:</p>
     <ul>
-    <li><strong>💖 Pola makan sehat</strong> <br> Konsumsi makanan kaya kalsium, vitamin D, serat, dan antioksidan. Kurangi makanan tinggi gula, lemak jenuh, dan garam.</li>
-    <li><strong>💖 Olahraga teratur</strong> <br> Lakukan aktivitas fisik seperti berjalan, yoga, atau berenang untuk menjaga kesehatan jantung, tulang, dan mood.</li>
-    <li><strong>💖 Tidur cukup</strong> <br> Ciptakan rutinitas tidur yang baik dan hindari kafein atau alkohol di malam hari.</li>
-    <li><strong>💖 Manajemen stres</strong> <br> Latihan pernapasan, meditasi, atau terapi dapat membantu meredakan kecemasan dan perubahan suasana hati.</li>
-    <li><strong>💖 Hindari pemicu hot flashes</strong> <br> Seperti makanan pedas, minuman panas, alkohol, dan suhu ruangan yang terlalu panas.</li>
-    <li><strong>💖 Terapi hormon (HRT)</strong> <br> Bagi sebagian perempuan, dokter dapat merekomendasikan terapi penggantian hormon untuk meredakan gejala berat. Konsultasikan terlebih dahulu risiko dan manfaatnya.</li>
-    <li><strong>💖 Konsultasi dengan dokter</strong> <br> Penting untuk memeriksakan diri secara rutin agar mendapat panduan pengelolaan gejala yang tepat.</li>
+        <li><strong>💖 Pola makan sehat</strong> <br> Konsumsi makanan kaya kalsium, vitamin D, serat, dan antioksidan. Kurangi makanan tinggi gula, lemak jenuh, dan garam.</li>
+        <li><strong>💖 Olahraga teratur</strong> <br> Lakukan aktivitas fisik seperti berjalan, yoga, atau berenang untuk menjaga kesehatan jantung, tulang, dan mood.</li>
+        <li><strong>💖 Tidur cukup</strong> <br> Ciptakan rutinitas tidur yang baik dan hindari kafein atau alkohol di malam hari.</li>
+        <li><strong>💖 Manajemen stres</strong> <br> Latihan pernapasan, meditasi, atau terapi dapat membantu meredakan kecemasan dan perubahan suasana hati.</li>
+        <li><strong>💖 Hindari pemicu hot flashes</strong> <br> Seperti makanan pedas, minuman panas, alkohol, dan suhu ruangan yang terlalu panas.</li>
+        <li><strong>💖 Terapi hormon (HRT)</strong> <br> Bagi sebagian perempuan, dokter dapat merekomendasikan terapi penggantian hormon untuk meredakan gejala berat. Konsultasikan terlebih dahulu risiko dan manfaatnya.</li>
+        <li><strong>💖 Konsultasi dengan dokter</strong> <br> Penting untuk memeriksakan diri secara rutin agar mendapat panduan pengelolaan gejala yang tepat.</li>
     </ul><br>
 
     <h2><strong>Kapan Harus Berkonsultasi ke Dokter?</strong></h2>
     <p>Anda sebaiknya berkonsultasi dengan dokter jika mengalami:</p>
     <ul>
-    <li>🌼 Pendarahan hebat atau sangat tidak teratur.</li>
-    <li>🌼 Nyeri panggul yang tidak biasa.</li>
-    <li>🌼 Gejala yang mengganggu aktivitas sehari-hari.</li>
+        <li>🌙 Pendarahan hebat atau sangat tidak teratur.</li>
+        <li>🌙 Nyeri panggul yang tidak biasa.</li>
+        <li>🌙 Gejala yang mengganggu aktivitas sehari-hari.</li>
     </ul><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
@@ -548,27 +548,27 @@ const blogs = [
 
     <h2><strong>Mengapa Asam Folat Penting bagi Perempuan Usia Subur?</strong></h2>
     <ul>
-    <li><strong>🍒 Menurunkan Risiko Cacat Tabung Saraf (Neural Tube Defects)</strong><br> Asam folat sangat penting untuk mencegah cacat tabung saraf pada janin, seperti spina bifida dan anencephaly, yang terjadi pada awal kehamilan, seringkali sebelum seorang perempuan tahu bahwa dirinya hamil.</li>
-    <li><strong>🍒 Memperbaiki Kesehatan Reproduksi</strong><br> Asam folat berperan dalam mendukung ovulasi yang sehat, memelihara kualitas sel telur, serta meningkatkan kesuburan. Penelitian menunjukkan bahwa perempuan dengan kadar asam folat yang baik memiliki peluang kehamilan yang lebih tinggi.</li>
-    <li><strong>🍒 Mencegah Anemia</strong><br> Asam folat membantu produksi sel darah merah. Kekurangan asam folat dapat menyebabkan anemia megaloblastik, yang membuat perempuan mudah lelah, lemah, dan kurang bertenaga.</li>
-    <li><strong>🍒 Mendukung Pembelahan dan Pertumbuhan Sel</strong><br> Karena perannya dalam pembentukan DNA, asam folat penting dalam proses pembelahan dan pertumbuhan sel yang sehat, baik untuk kesehatan diri sendiri maupun untuk perkembangan janin.</li>
+        <li><strong>🍒 Menurunkan Risiko Cacat Tabung Saraf (Neural Tube Defects)</strong><br> Asam folat sangat penting untuk mencegah cacat tabung saraf pada janin, seperti spina bifida dan anencephaly, yang terjadi pada awal kehamilan, seringkali sebelum seorang perempuan tahu bahwa dirinya hamil.</li>
+        <li><strong>🍒 Memperbaiki Kesehatan Reproduksi</strong><br> Asam folat berperan dalam mendukung ovulasi yang sehat, memelihara kualitas sel telur, serta meningkatkan kesuburan. Penelitian menunjukkan bahwa perempuan dengan kadar asam folat yang baik memiliki peluang kehamilan yang lebih tinggi.</li>
+        <li><strong>🍒 Mencegah Anemia</strong><br> Asam folat membantu produksi sel darah merah. Kekurangan asam folat dapat menyebabkan anemia megaloblastik, yang membuat perempuan mudah lelah, lemah, dan kurang bertenaga.</li>
+        <li><strong>🍒 Mendukung Pembelahan dan Pertumbuhan Sel</strong><br> Karena perannya dalam pembentukan DNA, asam folat penting dalam proses pembelahan dan pertumbuhan sel yang sehat, baik untuk kesehatan diri sendiri maupun untuk perkembangan janin.</li>
     </ul><br>
 
     <h2><strong>Berapa Banyak Asam Folat yang Dibutuhkan?</strong></h2>
     <ul>
-    <li><strong>🕊️ Perempuan usia subur (15–49 tahun)</strong> disarankan mengonsumsi minimal 400 mikrogram (mcg) asam folat per hari.</li>
-    <li><strong>🕊️ Perempuan yang merencanakan kehamilan atau sedang hamil</strong> dianjurkan meningkatkan asupan menjadi 600 mcg per hari.</li>
-    <li><strong>🕊️ Perempuan menyusui</strong> disarankan mengonsumsi sekitar 500 mcg per hari.</li>
+        <li><strong>🕊️ Perempuan usia subur (15–49 tahun)</strong> disarankan mengonsumsi minimal 400 mikrogram (mcg) asam folat per hari.</li>
+        <li><strong>🕊️ Perempuan yang merencanakan kehamilan atau sedang hamil</strong> dianjurkan meningkatkan asupan menjadi 600 mcg per hari.</li>
+        <li><strong>🕊️ Perempuan menyusui</strong> disarankan mengonsumsi sekitar 500 mcg per hari.</li>
     </ul><br>
     <p>Kebutuhan ini bisa dipenuhi melalui kombinasi makanan kaya folat dan suplemen asam folat sesuai anjuran dokter.</p><br>
 
     <h2><strong>Sumber Makanan yang Kaya Asam Folat</strong></h2>
     <ul>
-    <li>🧸 Sayuran berdaun hijau (bayam, brokoli, selada)</li>
-    <li>🧸 Kacang-kacangan (kacang merah, lentil, kacang polong)</li>
-    <li>🧸 Buah-buahan (jeruk, alpukat, pepaya, pisang)</li>
-    <li>🧸 Sereal atau roti yang diperkaya asam folat</li>
-    <li>🧸 Hati sapi atau ayam (dalam jumlah terbatas)</li>
+        <li>🌿 Sayuran berdaun hijau (bayam, brokoli, selada)</li>
+        <li>🌿 Kacang-kacangan (kacang merah, lentil, kacang polong)</li>
+        <li>🌿 Buah-buahan (jeruk, alpukat, pepaya, pisang)</li>
+        <li>🌿 Sereal atau roti yang diperkaya asam folat</li>
+        <li>🌿 Hati sapi atau ayam (dalam jumlah terbatas)</li>
     </ul><br>
 
     <h2><strong>Kapan Sebaiknya Mulai Mengonsumsi Asam Folat?</strong></h2>
@@ -594,31 +594,31 @@ const blogs = [
 
     <h2><strong>Dampak Stres terhadap Kesehatan Reproduksi Perempuan</strong></h2>
     <ul>
-    <li><strong>👛 Gangguan Siklus Menstruasi</strong><br> Stres dapat menyebabkan menstruasi tidak teratur, amenore (tidak menstruasi), atau menorrhagia (menstruasi berlebihan). Stres memengaruhi hipotalamus, pusat pengatur hormon di otak, yang mengontrol ovarium dan kelenjar pituitari.</li>
-    <li><strong>👛 Ovulasi Tidak Teratur atau Terhenti</strong><br> Kadar kortisol yang tinggi dapat menghambat pelepasan LH dan FSH, sehingga ovulasi menjadi tidak teratur atau tidak terjadi (anovulasi). Ini dapat menurunkan peluang kehamilan.</li>
-    <li><strong>👛 Penurunan Kesuburan</strong><br> Stres kronis dikaitkan dengan penurunan kualitas sel telur, penurunan libido, serta perubahan pada lendir serviks yang membuat sperma sulit mencapai sel telur.</li>
-    <li><strong>👛 Peningkatan Risiko Sindrom Polikistik Ovarium (PCOS)</strong><br> Stres yang berkelanjutan dapat memperparah ketidakseimbangan hormon androgen, yang terkait dengan PCOS, salah satu penyebab infertilitas perempuan.</li>
-    <li><strong>👛 Peningkatan Risiko Endometriosis</strong><br> Beberapa studi menunjukkan bahwa stres dapat memperburuk gejala endometriosis, termasuk nyeri panggul dan gangguan menstruasi.</li>
-    <li><strong>👛 Komplikasi Kehamilan</strong><br> Pada perempuan hamil, stres berlebihan meningkatkan risiko kelahiran prematur, berat badan lahir rendah, dan preeklampsia.</li>
+        <li><strong>💎 Gangguan Siklus Menstruasi</strong><br> Stres dapat menyebabkan menstruasi tidak teratur, amenore (tidak menstruasi), atau menorrhagia (menstruasi berlebihan). Stres memengaruhi hipotalamus, pusat pengatur hormon di otak, yang mengontrol ovarium dan kelenjar pituitari.</li>
+        <li><strong>💎 Ovulasi Tidak Teratur atau Terhenti</strong><br> Kadar kortisol yang tinggi dapat menghambat pelepasan LH dan FSH, sehingga ovulasi menjadi tidak teratur atau tidak terjadi (anovulasi). Ini dapat menurunkan peluang kehamilan.</li>
+        <li><strong>💎 Penurunan Kesuburan</strong><br> Stres kronis dikaitkan dengan penurunan kualitas sel telur, penurunan libido, serta perubahan pada lendir serviks yang membuat sperma sulit mencapai sel telur.</li>
+        <li><strong>💎 Peningkatan Risiko Sindrom Polikistik Ovarium (PCOS)</strong><br> Stres yang berkelanjutan dapat memperparah ketidakseimbangan hormon androgen, yang terkait dengan PCOS, salah satu penyebab infertilitas perempuan.</li>
+        <li><strong>💎 Peningkatan Risiko Endometriosis</strong><br> Beberapa studi menunjukkan bahwa stres dapat memperburuk gejala endometriosis, termasuk nyeri panggul dan gangguan menstruasi.</li>
+        <li><strong>💎 Komplikasi Kehamilan</strong><br> Pada perempuan hamil, stres berlebihan meningkatkan risiko kelahiran prematur, berat badan lahir rendah, dan preeklampsia.</li>
     </ul><br>
 
     <h2><strong>Ciri-Ciri Stres yang Mempengaruhi Reproduksi</strong></h2>
     <ul>
-    <li>🌸 Menstruasi tidak teratur atau berhenti</li>
-    <li>🌸 Nyeri haid lebih parah dari biasanya</li>
-    <li>🌸 Kesulitan hamil meskipun memiliki hubungan seksual rutin tanpa kontrasepsi</li>
-    <li>🌸 Penurunan gairah seksual</li>
-    <li>🌸 Kelelahan berlebihan, mudah marah, sulit tidur</li>
+        <li>🌸 Menstruasi tidak teratur atau berhenti</li>
+        <li>🌸 Nyeri haid lebih parah dari biasanya</li>
+        <li>🌸 Kesulitan hamil meskipun memiliki hubungan seksual rutin tanpa kontrasepsi</li>
+        <li>🌸 Penurunan gairah seksual</li>
+        <li>🌸 Kelelahan berlebihan, mudah marah, sulit tidur</li>
     </ul><br>
 
     <h2><strong>Cara Mengelola Stres untuk Menjaga Kesehatan Reproduksi</strong></h2>
     <ul>
-    <li><strong>☁️ Olahraga Teratur</strong><br> Aktivitas fisik seperti yoga, jalan kaki, atau berenang dapat membantu mengurangi hormon stres dan meningkatkan endorfin (hormon kebahagiaan).</li>
-    <li><strong>☁️ Teknik Relaksasi</strong><br> Meditasi, pernapasan dalam, dan mindfulness membantu menenangkan pikiran dan tubuh.</li>
-    <li><strong>☁️ Istirahat yang Cukup</strong><br> Tidur berkualitas minimal 7–8 jam per malam penting untuk menjaga keseimbangan hormon.</li>
-    <li><strong>☁️ Konsultasi Psikolog atau Konselor</strong><br> Jika stres sulit dikendalikan, bantuan profesional dapat membantu menemukan cara efektif mengatasi tekanan.</li>
-    <li><strong>☁️ Menjaga Pola Makan Sehat</strong><br> Asupan gizi seimbang yang kaya vitamin B, magnesium, dan omega-3 membantu mendukung sistem saraf dan hormon.</li>
-    <li><strong>☁️ Bangun Dukungan Sosial</strong><br> Berbicara dengan pasangan, keluarga, atau teman dapat meringankan beban emosional.</li>
+        <li><strong>🦋 Olahraga Teratur</strong><br> Aktivitas fisik seperti yoga, jalan kaki, atau berenang dapat membantu mengurangi hormon stres dan meningkatkan endorfin (hormon kebahagiaan).</li>
+        <li><strong>🦋 Teknik Relaksasi</strong><br> Meditasi, pernapasan dalam, dan mindfulness membantu menenangkan pikiran dan tubuh.</li>
+        <li><strong>🦋 Istirahat yang Cukup</strong><br> Tidur berkualitas minimal 7–8 jam per malam penting untuk menjaga keseimbangan hormon.</li>
+        <li><strong>🦋 Konsultasi Psikolog atau Konselor</strong><br> Jika stres sulit dikendalikan, bantuan profesional dapat membantu menemukan cara efektif mengatasi tekanan.</li>
+        <li><strong>🦋 Menjaga Pola Makan Sehat</strong><br> Asupan gizi seimbang yang kaya vitamin B, magnesium, dan omega-3 membantu mendukung sistem saraf dan hormon.</li>
+        <li><strong>🦋 Bangun Dukungan Sosial</strong><br> Berbicara dengan pasangan, keluarga, atau teman dapat meringankan beban emosional.</li>
     </ul><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
@@ -636,50 +636,50 @@ const blogs = [
     <h2><strong>Mengapa Perempuan Membutuhkan Kalsium Lebih Banyak?</strong></h2>
     <p>Perempuan memiliki risiko lebih tinggi mengalami pengeroposan tulang dibandingkan laki-laki. Hal ini disebabkan oleh beberapa faktor:</p>
     <ul>
-    <li><strong>🩰 Perubahan Hormon</strong><br> Setelah menopause, kadar hormon estrogen menurun drastis. Estrogen berperan penting dalam menjaga kepadatan tulang. Penurunan estrogen mempercepat proses pelepasan kalsium dari tulang, meningkatkan risiko osteoporosis.</li>
-    <li><strong>🩰 Kebutuhan Selama Kehamilan dan Menyusui</strong><br> Saat hamil dan menyusui, tubuh perempuan membutuhkan lebih banyak kalsium untuk mendukung pertumbuhan tulang dan gigi janin serta produksi ASI.</li>
-    <li><strong>🩰 Risiko Osteopenia dan Osteoporosis</strong><br> Osteopenia adalah kondisi awal penurunan kepadatan tulang yang bisa berkembang menjadi osteoporosis jika asupan kalsium tidak mencukupi.</li>
+        <li><strong>🩰 Perubahan Hormon</strong><br> Setelah menopause, kadar hormon estrogen menurun drastis. Estrogen berperan penting dalam menjaga kepadatan tulang. Penurunan estrogen mempercepat proses pelepasan kalsium dari tulang, meningkatkan risiko osteoporosis.</li>
+        <li><strong>🩰 Kebutuhan Selama Kehamilan dan Menyusui</strong><br> Saat hamil dan menyusui, tubuh perempuan membutuhkan lebih banyak kalsium untuk mendukung pertumbuhan tulang dan gigi janin serta produksi ASI.</li>
+        <li><strong>🩰 Risiko Osteopenia dan Osteoporosis</strong><br> Osteopenia adalah kondisi awal penurunan kepadatan tulang yang bisa berkembang menjadi osteoporosis jika asupan kalsium tidak mencukupi.</li>
     </ul><br>
 
     <h2><strong>Fungsi Penting Kalsium dalam Tubuh</strong></h2>
     <ul>
-    <li><strong>💖 Menjaga Kesehatan Tulang dan Gigi</strong><br> Sekitar 99% kalsium dalam tubuh tersimpan di tulang dan gigi. Kalsium mendukung kekuatan dan kepadatan tulang sepanjang hidup.</li>
-    <li><strong>💖 Mendukung Kontraksi Otot</strong><br> Kalsium membantu otot berkontraksi, termasuk otot jantung. Kekurangan kalsium dapat menyebabkan kram atau kejang otot.</li>
-    <li><strong>💖 Membantu Fungsi Saraf</strong><br> Kalsium berperan dalam penghantaran sinyal saraf dari otak ke seluruh tubuh.</li>
-    <li><strong>💖 Mendukung Pembekuan Darah</strong><br> Kalsium membantu proses pembekuan darah saat terjadi luka.</li>
-    <li><strong>💖 Memelihara Keseimbangan Hormon</strong><br> Kalsium berperan dalam pelepasan hormon dan enzim yang berfungsi dalam berbagai proses tubuh.</li>
+        <li><strong>💖 Menjaga Kesehatan Tulang dan Gigi</strong><br> Sekitar 99% kalsium dalam tubuh tersimpan di tulang dan gigi. Kalsium mendukung kekuatan dan kepadatan tulang sepanjang hidup.</li>
+        <li><strong>💖 Mendukung Kontraksi Otot</strong><br> Kalsium membantu otot berkontraksi, termasuk otot jantung. Kekurangan kalsium dapat menyebabkan kram atau kejang otot.</li>
+        <li><strong>💖 Membantu Fungsi Saraf</strong><br> Kalsium berperan dalam penghantaran sinyal saraf dari otak ke seluruh tubuh.</li>
+        <li><strong>💖 Mendukung Pembekuan Darah</strong><br> Kalsium membantu proses pembekuan darah saat terjadi luka.</li>
+        <li><strong>💖 Memelihara Keseimbangan Hormon</strong><br> Kalsium berperan dalam pelepasan hormon dan enzim yang berfungsi dalam berbagai proses tubuh.</li>
     </ul><br>
 
     <h2><strong>Berapa Kebutuhan Kalsium Perempuan?</strong></h2>
     <ul>
-    <li>🦢 Perempuan usia 19–50 tahun: 1000 mg/hari</li>
-    <li>🦢 Perempuan usia >50 tahun: 1200 mg/hari</li>
-    <li>🦢 Ibu hamil dan menyusui: 1000–1300 mg/hari</li>
+        <li>🦢 Perempuan usia 19–50 tahun: 1000 mg/hari</li>
+        <li>🦢 Perempuan usia >50 tahun: 1200 mg/hari</li>
+        <li>🦢 Ibu hamil dan menyusui: 1000–1300 mg/hari</li>
     </ul><br>
 
     <h2><strong>Sumber Makanan Kaya Kalsium</strong></h2>
     <ul>
-    <li>🌼 Susu, yogurt, dan keju</li>
-    <li>🌼 Ikan sarden dan salmon (dengan tulang)</li>
-    <li>🌼 Sayuran hijau seperti bayam, brokoli, dan kale</li>
-    <li>🌼 Kacang almond dan biji wijen</li>
-    <li>🌼 Tahu dan tempe yang diperkaya kalsium</li>
-    <li>🌼 Jus jeruk dan sereal yang difortifikasi kalsium</li>
+        <li>💫 Susu, yogurt, dan keju</li>
+        <li>💫 Ikan sarden dan salmon (dengan tulang)</li>
+        <li>💫 Sayuran hijau seperti bayam, brokoli, dan kale</li>
+        <li>💫 Kacang almond dan biji wijen</li>
+        <li>💫 Tahu dan tempe yang diperkaya kalsium</li>
+        <li>💫 Jus jeruk dan sereal yang difortifikasi kalsium</li>
     </ul><br>
 
     <h2><strong>Tips Memaksimalkan Penyerapan Kalsium</strong></h2>
     <ul>
-    <li><strong>👒 Pastikan Asupan Vitamin D</strong><br> Vitamin D membantu penyerapan kalsium. Paparan sinar matahari pagi dan konsumsi ikan berlemak dapat membantu memenuhi kebutuhan vitamin D.</li>
-    <li><strong>👒 Konsumsi Kalsium dalam Porsi Kecil</strong><br> Tubuh lebih mudah menyerap kalsium dalam jumlah 500–600 mg per kali konsumsi daripada sekaligus dalam jumlah besar.</li>
-    <li><strong>👒 Batasi Konsumsi Kafein dan Garam Berlebih</strong><br> Kafein dan natrium dalam garam dapat meningkatkan ekskresi kalsium melalui urine.</li>
+        <li><strong>👒 Pastikan Asupan Vitamin D</strong><br> Vitamin D membantu penyerapan kalsium. Paparan sinar matahari pagi dan konsumsi ikan berlemak dapat membantu memenuhi kebutuhan vitamin D.</li>
+        <li><strong>👒 Konsumsi Kalsium dalam Porsi Kecil</strong><br> Tubuh lebih mudah menyerap kalsium dalam jumlah 500–600 mg per kali konsumsi daripada sekaligus dalam jumlah besar.</li>
+        <li><strong>👒 Batasi Konsumsi Kafein dan Garam Berlebih</strong><br> Kafein dan natrium dalam garam dapat meningkatkan ekskresi kalsium melalui urine.</li>
     </ul><br>
 
     <h2><strong>Risiko Kekurangan Kalsium</strong></h2>
     <ul>
-    <li>💍 Osteopenia dan osteoporosis (patah tulang lebih mudah)</li>
-    <li>💍 Kram otot, kesemutan, atau mati rasa</li>
-    <li>💍 Detak jantung tidak teratur</li>
-    <li>💍 Gangguan pertumbuhan pada anak dan remaja</li>
+        <li>💍 Osteopenia dan osteoporosis (patah tulang lebih mudah)</li>
+        <li>💍 Kram otot, kesemutan, atau mati rasa</li>
+        <li>💍 Detak jantung tidak teratur</li>
+        <li>💍 Gangguan pertumbuhan pada anak dan remaja</li>
     </ul><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
@@ -699,16 +699,16 @@ const blogs = [
 
     <h2><strong>2. Pilih Pakaian Dalam yang Tepat</strong></h2>
     <ul>
-    <li><strong>🍓 Gunakan bahan katun</strong> — Katun menyerap keringat dan menjaga area tetap kering, sehingga mencegah pertumbuhan jamur.</li>
-    <li><strong>🍓 Hindari celana dalam ketat</strong> — Celana dalam terlalu ketat meningkatkan kelembapan dan risiko iritasi.</li>
-    <li><strong>🍓 Ganti pakaian dalam setiap hari</strong> — Terutama jika berkeringat atau setelah berolahraga.</li>
+        <li><strong>🍓 Gunakan bahan katun</strong> — Katun menyerap keringat dan menjaga area tetap kering, sehingga mencegah pertumbuhan jamur.</li>
+        <li><strong>🍓 Hindari celana dalam ketat</strong> — Celana dalam terlalu ketat meningkatkan kelembapan dan risiko iritasi.</li>
+        <li><strong>🍓 Ganti pakaian dalam setiap hari</strong> — Terutama jika berkeringat atau setelah berolahraga.</li>
     </ul><br>
 
     <h2><strong>3. Konsumsi Makanan Bergizi</strong></h2>
     <ul>
-    <li><strong>✨ Probiotik</strong> — Yogurt dan kefir mengandung lactobacillus yang baik untuk flora vagina.</li>
-    <li><strong>✨ Vitamin C dan antioksidan</strong> — Buah-buahan seperti jeruk, stroberi, dan kiwi membantu memperkuat sistem imun dan mencegah infeksi.</li>
-    <li><strong>✨ Cukupi cairan</strong> — Minum air putih minimal 2 liter per hari untuk menjaga hidrasi dan mendukung produksi cairan vagina yang sehat.</li>
+        <li><strong>✨ Probiotik</strong> — Yogurt dan kefir mengandung lactobacillus yang baik untuk flora vagina.</li>
+        <li><strong>✨ Vitamin C dan antioksidan</strong> — Buah-buahan seperti jeruk, stroberi, dan kiwi membantu memperkuat sistem imun dan mencegah infeksi.</li>
+        <li><strong>✨ Cukupi cairan</strong> — Minum air putih minimal 2 liter per hari untuk menjaga hidrasi dan mendukung produksi cairan vagina yang sehat.</li>
     </ul><br>
 
     <h2><strong>4. Hindari Douching</strong></h2>
@@ -719,8 +719,8 @@ const blogs = [
 
     <h2><strong>6. Jaga Aktivitas Seksual yang Aman</strong></h2>
     <ul>
-    <li><strong>💓 Gunakan kondom</strong> untuk mencegah infeksi menular seksual (IMS).</li>
-    <li><strong>💓 Rutin melakukan pemeriksaan kesehatan reproduksi</strong>, seperti Pap Smear dan tes IMS jika aktif secara seksual.</li>
+        <li><strong>💓 Gunakan kondom</strong> untuk mencegah infeksi menular seksual (IMS).</li>
+        <li><strong>💓 Rutin melakukan pemeriksaan kesehatan reproduksi</strong>, seperti Pap Smear dan tes IMS jika aktif secara seksual.</li>
     </ul><br>
 
     <h2><strong>7. Jangan Tahan Buang Air Kecil</strong></h2>
@@ -728,9 +728,9 @@ const blogs = [
 
     <h2><strong>8. Perhatikan Saat Menstruasi</strong></h2>
     <ul>
-    <li>💅 Ganti pembalut atau tampon setiap 4–6 jam.</li>
-    <li>💅 Pilih pembalut berbahan lembut dan tidak mengandung pewangi.</li>
-    <li>💅 Jika menggunakan menstrual cup, sterilkan secara rutin sesuai petunjuk.</li>
+        <li>💅 Ganti pembalut atau tampon setiap 4–6 jam.</li>
+        <li>💅 Pilih pembalut berbahan lembut dan tidak mengandung pewangi.</li>
+        <li>💅 Jika menggunakan menstrual cup, sterilkan secara rutin sesuai petunjuk.</li>
     </ul><br>
 
     <h2><strong>9. Kelola Stres</strong></h2>
@@ -787,31 +787,31 @@ const blogs = [
         content: `
     <p>Kehamilan adalah fase penting dalam kehidupan seorang perempuan yang membutuhkan perhatian khusus, terutama dalam hal asupan nutrisi. Nutrisi yang tepat tidak hanya berperan dalam menjaga kesehatan ibu, tetapi juga dalam mendukung pertumbuhan dan perkembangan janin. Kekurangan atau ketidakseimbangan nutrisi selama kehamilan dapat berdampak negatif pada kesehatan ibu maupun bayi, baik dalam jangka pendek maupun panjang. Berikut adalah beberapa nutrisi esensial yang perlu diperhatikan selama masa kehamilan.</p><br>
 
-    <h2><strong>1. Asam Folat 🕊️</strong></h2>
+    <h2><strong>1. Asam Folat 🌿</strong></h2>
     <p>Asam folat (vitamin B9) sangat penting terutama pada trimester pertama kehamilan, bahkan dianjurkan sejak perencanaan kehamilan. Asam folat berperan dalam pembentukan tabung saraf bayi, yang nantinya berkembang menjadi otak dan sumsum tulang belakang. Kekurangan asam folat dapat meningkatkan risiko cacat tabung saraf, seperti spina bifida. Sumber asam folat antara lain sayuran berdaun hijau (bayam, brokoli), kacang-kacangan, jeruk, dan suplemen prenatal.</p><br>
 
-    <h2><strong>2. Zat Besi 🕊️</strong></h2>
+    <h2><strong>2. Zat Besi 🌿</strong></h2>
     <p>Selama kehamilan, volume darah meningkat sekitar 50%, sehingga kebutuhan zat besi pun meningkat. Zat besi penting untuk pembentukan hemoglobin, yang mengangkut oksigen ke seluruh tubuh dan janin. Kekurangan zat besi dapat menyebabkan anemia, yang meningkatkan risiko kelahiran prematur dan berat badan lahir rendah. Sumber zat besi yang baik meliputi daging merah tanpa lemak, ayam, ikan, kacang-kacangan, dan sayuran hijau.</p><br>
 
-    <h2><strong>3. Kalsium 🕊️</strong></h2>
+    <h2><strong>3. Kalsium 🌿</strong></h2>
     <p>Kalsium penting untuk perkembangan tulang dan gigi bayi, serta menjaga kesehatan tulang ibu. Jika asupan kalsium ibu tidak mencukupi, tubuh akan mengambil cadangan kalsium dari tulang ibu untuk memenuhi kebutuhan janin, yang dapat meningkatkan risiko osteoporosis di kemudian hari. Sumber kalsium yang baik termasuk susu dan produk olahannya (yogurt, keju), tahu, tempe, kacang almond, dan sayuran berdaun hijau.</p><br>
 
-    <h2><strong>4. DHA (Asam Lemak Omega-3) 🕊️</strong></h2>
+    <h2><strong>4. DHA (Asam Lemak Omega-3) 🌿</strong></h2>
     <p>Docosahexaenoic Acid (DHA) adalah asam lemak omega-3 yang berperan penting dalam perkembangan otak dan mata janin. Asupan DHA yang cukup selama kehamilan dapat meningkatkan perkembangan kognitif dan penglihatan bayi. Sumber DHA antara lain ikan berlemak seperti salmon, sarden, dan tuna, serta suplemen minyak ikan yang aman untuk ibu hamil.</p><br>
 
-    <h2><strong>5. Protein 🕊️</strong></h2>
+    <h2><strong>5. Protein 🌿</strong></h2>
     <p>Protein adalah komponen penting dalam pembentukan jaringan tubuh bayi, termasuk otot, kulit, dan organ. Protein juga berperan dalam produksi hormon dan enzim. Ibu hamil membutuhkan asupan protein yang cukup setiap harinya. Sumber protein yang baik antara lain daging tanpa lemak, ayam, telur, produk susu, kacang-kacangan, dan tahu-tempe.</p><br>
 
-    <h2><strong>6. Vitamin D 🕊️</strong></h2>
+    <h2><strong>6. Vitamin D 🌿</strong></h2>
     <p>Vitamin D membantu penyerapan kalsium dan fosfor, yang penting untuk perkembangan tulang bayi. Selain itu, vitamin D juga berperan dalam sistem kekebalan tubuh ibu dan janin. Kekurangan vitamin D dapat meningkatkan risiko preeklamsia, diabetes gestasional, dan berat badan lahir rendah. Vitamin D bisa diperoleh dari paparan sinar matahari, ikan berlemak, telur, dan suplemen bila diperlukan.</p><br>
 
-    <h2><strong>7. Serat 🕊️</strong></h2>
+    <h2><strong>7. Serat 🌿</strong></h2>
     <p>Masalah pencernaan, seperti sembelit, umum terjadi selama kehamilan karena perubahan hormon dan tekanan dari rahim yang membesar. Serat membantu menjaga kesehatan pencernaan dan mencegah sembelit. Sumber serat yang baik meliputi buah-buahan, sayuran, kacang-kacangan, dan biji-bijian utuh.</p><br>
 
-    <h2><strong>8. Zinc 🕊️</strong></h2>
+    <h2><strong>8. Zinc 🌿</strong></h2>
     <p>Zinc atau seng berperan dalam pembelahan sel, pertumbuhan jaringan, dan sistem kekebalan tubuh. Kekurangan zinc dapat memengaruhi perkembangan janin dan meningkatkan risiko komplikasi kehamilan. Sumber zinc meliputi daging merah, seafood (seperti tiram), kacang-kacangan, dan biji-bijian.</p><br>
 
-    <h2><strong>9. Iodium 🕊️</strong></h2>
+    <h2><strong>9. Iodium 🌿</strong></h2>
     <p>Iodium diperlukan untuk produksi hormon tiroid yang penting bagi perkembangan otak dan sistem saraf janin. Kekurangan iodium selama kehamilan dapat menyebabkan gangguan perkembangan kognitif dan mental pada bayi. Sumber iodium antara lain garam beryodium, produk laut, dan produk susu.</p><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
@@ -819,6 +819,149 @@ const blogs = [
         `,
         date: '08-05-2025',
         image: '/images/blog-16.jpg'
+    },
+    {
+        id: '17',
+        title: 'Memahami Pilihan Metode KB yang Tepat untuk Perempuan',
+        content: `
+    <p>Perencanaan keluarga merupakan bagian penting dalam menjaga kesehatan reproduksi perempuan sekaligus mendukung kesejahteraan keluarga. Salah satu caranya adalah dengan memilih metode kontrasepsi (KB) yang sesuai dengan kebutuhan dan kondisi masing-masing individu. Dengan berbagai pilihan yang tersedia, penting bagi perempuan untuk memahami manfaat, risiko, serta cara kerja masing-masing metode agar dapat mengambil keputusan yang tepat dan bijak. Artikel ini akan membahas berbagai jenis metode KB dan pertimbangannya.</p><br>
+
+    <h2><strong>1. Kontrasepsi Hormonal</strong></h2>
+    <p>Kontrasepsi hormonal bekerja dengan cara mengubah kadar hormon dalam tubuh untuk mencegah ovulasi (pelepasan sel telur) atau mengubah kondisi lendir serviks dan lapisan rahim agar tidak mendukung kehamilan. Jenisnya meliputi:</p>
+    <ul>
+        <li><strong>🧸 Pil KB:</strong> Pil kombinasi (estrogen dan progestin) atau pil progestin saja. Harus diminum setiap hari pada waktu yang sama.</li>
+        <li><strong>🧸 Suntik KB:</strong> Biasanya diberikan setiap 1 atau 3 bulan sekali. Praktis bagi yang sulit mengingat minum pil.</li>
+        <li><strong>🧸 Implan KB:</strong> Batang kecil yang ditanam di bawah kulit lengan dan dapat bekerja hingga 3–5 tahun.</li>
+        <li><strong>🧸 Patch (plester KB):</strong> Ditempel di kulit dan diganti setiap minggu.</li>
+        <li><strong>🧸 Cincin vagina:</strong> Dipasang di dalam vagina selama 3 minggu dan dilepas selama 1 minggu.</li>
+    </ul><br>
+
+    <h2><strong>2. Kontrasepsi Non-Hormonal</strong></h2>
+    <p>Bagi perempuan yang tidak cocok dengan hormon atau memiliki kondisi medis tertentu, kontrasepsi non-hormonal bisa menjadi alternatif:</p>
+    <ul>
+        <li><strong>🌼 IUD (Intrauterine Device) Tembaga:</strong> Alat kecil berbentuk T yang dimasukkan ke dalam rahim dan bisa mencegah kehamilan hingga 10 tahun. Tidak mengandung hormon.</li>
+        <li><strong>🌼 Kondom:</strong> Selain mencegah kehamilan, juga melindungi dari infeksi menular seksual (IMS). Tersedia kondom pria dan kondom wanita.</li>
+        <li><strong>🌼 Metode pengamatan kesuburan:</strong> Mengamati siklus menstruasi, suhu basal tubuh, dan lendir serviks untuk menghindari masa subur.</li>
+        <li><strong>🌼 Spermisida:</strong> Zat kimia yang membunuh sperma. Biasanya digunakan bersama kondom atau diafragma.</li>
+    </ul><br>
+
+    <h2><strong>3. Metode Permanen (Sterilisasi)</strong></h2>
+    <p>Bagi perempuan atau pasangan yang sudah yakin tidak ingin memiliki anak lagi, metode permanen bisa menjadi pilihan:</p>
+    <ul>
+        <li><strong>💓 Tubektomi (Sterilisasi perempuan):</strong> Memotong atau mengikat saluran tuba agar sel telur tidak bertemu sperma. Prosedur permanen yang biasanya tidak bisa dibalikkan.</li>
+        <li><strong>💓 Vasektomi (Sterilisasi pria):</strong> Memotong atau mengikat saluran sperma pada pria. Prosedur ini lebih sederhana dan risiko komplikasinya lebih rendah dibanding tubektomi.</li>
+    </ul><br>
+
+    <h2><strong>4. Faktor yang Perlu Dipertimbangkan</strong></h2>
+    <p>Memilih metode KB tidak hanya soal efektivitas, tetapi juga kenyamanan dan kesehatan. Berikut beberapa hal yang perlu dipertimbangkan:</p>
+    <ul>
+        <li><strong>🍒 Kesehatan:</strong> Riwayat penyakit seperti hipertensi, diabetes, migrain, atau gangguan pembekuan darah bisa memengaruhi pilihan metode.</li>
+        <li><strong>🍒 Efek samping:</strong> Seperti perubahan siklus haid, perubahan berat badan, atau mood swing.</li>
+        <li><strong>🍒 Kenyamanan dan kemudahan penggunaan:</strong> Apakah nyaman digunakan harian, bulanan, atau jangka panjang.</li>
+        <li><strong>🍒 Perlindungan dari IMS:</strong> Hanya kondom yang dapat mencegah infeksi menular seksual.</li>
+        <li><strong>🍒 Rencana kehamilan di masa depan:</strong> Apakah ingin menunda sementara atau tidak ingin hamil sama sekali.</li>
+    </ul><br>
+
+    <h2><strong>💌 Kesimpulan</strong></h2>
+    <p>Setiap perempuan memiliki kebutuhan, preferensi, dan kondisi kesehatan yang unik dalam memilih metode kontrasepsi. Oleh karena itu, konsultasi dengan tenaga kesehatan sangat dianjurkan agar mendapatkan informasi yang tepat dan pilihan yang sesuai. Dengan pemahaman yang baik tentang berbagai pilihan KB, perempuan dapat merencanakan kehamilan dengan lebih sadar dan bertanggung jawab demi kesehatan diri sendiri dan keluarga.</p>
+        `,
+        date: '09-05-2025',
+        image: '/images/blog-17.jpg'
+    },
+    {
+        id: '18',
+        title: 'Peran Vitamin D dalam Kesehatan Tulang dan Kesuburan Perempuan',
+        content: `
+    <p>Vitamin D adalah vitamin larut lemak yang berperan penting dalam penyerapan kalsium dan fosfor, dua mineral utama untuk kesehatan tulang. Selain itu, vitamin D juga berfungsi dalam regulasi sistem kekebalan dan keseimbangan hormon, yang berpengaruh pada kesuburan perempuan.</p><br>
+
+    <h2><strong>Manfaat Vitamin D untuk Tulang</strong></h2>
+    <ul>
+        <li><strong>🌞 Memperkuat Tulang</strong> <br> Vitamin D membantu tubuh menyerap kalsium secara maksimal, mencegah tulang rapuh dan osteoporosis, terutama pada perempuan pasca menopause.</li>
+        <li><strong>🌞 Mencegah Osteomalasia</strong> <br> Kekurangan vitamin D dapat menyebabkan osteomalasia (pelunakan tulang) yang menyebabkan nyeri dan kelemahan otot.</li>
+    </ul><br>
+
+    <h2><strong>Peran Vitamin D dalam Kesuburan Perempuan</strong></h2>
+    <ul>
+        <li><strong>💛 Mendukung Kesehatan Ovarium</strong> <br> Vitamin D berperan dalam pematangan folikel dan ovulasi. Penelitian menunjukkan kadar vitamin D yang optimal berhubungan dengan peluang kehamilan yang lebih baik.</li>
+        <li><strong>💛 Menyeimbangkan Hormon</strong> <br> Vitamin D memengaruhi produksi hormon estrogen dan progesteron yang penting untuk siklus menstruasi yang teratur.</li>
+        <li><strong>💛 Mengurangi Risiko PCOS</strong> <br> Vitamin D dapat membantu mengurangi resistensi insulin dan peradangan yang terkait dengan sindrom ovarium polikistik (PCOS).</li>
+    </ul><br>
+
+    <h2><strong>Sumber Vitamin D</strong></h2>
+    <ul>
+        <li><strong>🌿 Paparan Sinar Matahari</strong> <br> Berjemur selama 10–15 menit pada pagi atau sore hari dapat membantu produksi vitamin D secara alami.</li>
+        <li><strong>🌿 Makanan Kaya Vitamin D</strong> <br> Ikan berlemak (salmon, tuna), kuning telur, hati sapi, dan produk fortifikasi (susu, sereal) adalah sumber yang baik.</li>
+        <li><strong>🌿 Suplemen Vitamin D</strong> <br> Suplemen bisa menjadi pilihan jika asupan dari makanan dan sinar matahari tidak mencukupi, tentunya dengan konsultasi dokter.</li>
+    </ul><br>
+
+    <h2><strong>💡 Tips Menjaga Kadar Vitamin D Optimal</strong></h2>
+    <ol>
+        <li>🌼 Rutin berjemur di pagi/sore hari selama 10–15 menit.</li>
+        <li>🌼 Konsumsi makanan kaya vitamin D minimal 2–3 kali per minggu.</li>
+        <li>🌼 Periksa kadar vitamin D secara berkala, terutama bagi perempuan yang sedang merencanakan kehamilan atau sudah memasuki usia menopause.</li>
+    </ol><br>
+
+    <blockquote>"Vitamin D tidak hanya baik untuk tulang, tetapi juga kunci dalam menjaga kesehatan reproduksi perempuan." — WHO</blockquote><br>
+
+    <h2><strong>💌 Kesimpulan</strong></h2>
+    <p>Vitamin D memainkan peran ganda dalam menjaga kesehatan tulang yang kuat dan mendukung kesuburan perempuan. Pastikan asupan vitamin D tercukupi melalui paparan sinar matahari, makanan bergizi, atau suplemen bila diperlukan. Jangan ragu untuk konsultasi dengan tenaga medis untuk menjaga keseimbangan nutrisi yang optimal.</p>
+        `,
+        date: '09-05-2025',
+        image: '/images/blog-18.jpg'
+    },
+    {
+        id: '19',
+        title: 'Efek Samping Kontrasepsi: Apa yang Normal dan Apa yang Harus Diwaspadai?',
+        content: `
+    
+        `,
+        date: '09-05-2025',
+        image: '/images/blog-19.jpg'
+    },
+    {
+        id: '20',
+        title: 'Manfaat Konsumsi Probiotik bagi Kesehatan Pencernaan dan Vagina',
+        content: `
+    
+        `,
+        date: '09-05-2025',
+        image: '/images/blog-20.jpg'
+    },
+    {
+        id: '21',
+        title: 'Mengapa Konseling Sebelum Memilih KB Itu Penting?',
+        content: `
+    
+        `,
+        date: '09-05-2025',
+        image: '/images/blog-21.jpg'
+    },
+    {
+        id: '22',
+        title: 'Mengenal Fibroid Rahim: Gejala dan Pengobatannya',
+        content: `
+    
+        `,
+        date: '09-05-2025',
+        image: '/images/blog-22.jpg'
+    },
+    {
+        id: '23',
+        title: 'KB Pasca Melahirkan: Pilihan Aman untuk Ibu Menyusui',
+        content: `
+    
+        `,
+        date: '09-05-2025',
+        image: '/images/blog-23.jpg'
+    },
+    {
+        id: '24',
+        title: 'Kesehatan Panggul dan Pencegahan Prolaps Organ Reproduksi',
+        content: `
+    
+        `,
+        date: '09-05-2025',
+        image: '/images/blog-24.jpg'
     },
 ]
   
