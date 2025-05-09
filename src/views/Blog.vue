@@ -132,6 +132,54 @@ const blogs = ref([
     title: 'Nutrisi Penting untuk Kesehatan Kehamilan',
     shortDescription: 'Asupan zat besi, asam folat, dan omega-3 penting selama masa kehamilan.',
     image: '/images/blog-16.jpg'
+  },
+  {
+    id: '17',
+    title: 'Memahami Pilihan Metode KB yang Tepat untuk Perempuan',
+    shortDescription: 'Metode KB (pil KB, IUD, suntik, implan, kondom, dll.) beserta kelebihan, kekurangan, dan siapa yang cocok untuk masing-masing',
+    image: '/images/blog-17.jpg'
+  },
+  {
+    id: '18',
+    title: 'Peran Vitamin D dalam Kesehatan Tulang dan Kesuburan Perempuan',
+    shortDescription: 'Vitamin D berperan penting dalam penyerapan kalsium dan kesehatan reproduksi.',
+    image: '/images/blog-18.jpg'
+  },
+  {
+    id: '19',
+    title: 'Efek Samping Kontrasepsi: Apa yang Normal dan Apa yang Harus Diwaspadai?',
+    shortDescription: 'Ketahui efek samping umum dari berbagai metode kontrasepsi dan kapan harus berkonsultasi dengan dokter.',
+    image: '/images/blog-19.jpg'
+  },
+  {
+    id: '20',
+    title: 'Manfaat Konsumsi Probiotik bagi Kesehatan Pencernaan dan Vagina',
+    shortDescription: 'Bagaimana probiotik membantu menjaga flora usus sekaligus kesehatan vagina.',
+    image: '/images/blog-20.jpg'
+  },
+  {
+    id: '21',
+    title: 'Mengapa Konseling Sebelum Memilih KB Itu Penting?',
+    shortDescription: 'Memilih metode kontrasepsi tidak boleh asal. Konseling membantu memahami pilihan yang aman, efektif, dan sesuai kebutuhan.',
+    image: '/images/blog-21.jpg'
+  },
+  {
+    id: '22',
+    title: 'Mengenal Fibroid Rahim: Gejala dan Pengobatannya',
+    shortDescription: 'Fibroid rahim bisa menyebabkan nyeri dan perdarahan. Kenali gejalanya dan opsi pengobatan untuk kualitas hidup yang lebih baik.',
+    image: '/images/blog-22.jpg'
+  },
+  {
+    id: '23',
+    title: 'KB Pasca Melahirkan: Pilihan Aman untuk Ibu Menyusui',
+    shortDescription: 'Cari tahu metode KB yang aman bagi ibu menyusui, serta kapan waktu yang tepat untuk memulai kontrasepsi pasca persalinan.',
+    image: '/images/blog-23.jpg'
+  },
+  {
+    id: '24',
+    title: 'Kesehatan Panggul dan Pencegahan Prolaps Organ Reproduksi',
+    shortDescription: 'Otot dasar panggul yang kuat penting untuk menopang organ reproduksi. Pelajari cara merawatnya agar terhindar dari prolaps dan inkontinensia.',
+    image: '/images/blog-24.jpg'
   }
 ])
 </script>
