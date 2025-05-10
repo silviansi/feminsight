@@ -6,6 +6,7 @@ import HPLView from '../views/HPL.vue';
 import AboutView from '../views/About.vue';
 import BlogView from '../views/Blog.vue';
 import BlogDetailView from '../views/BlogDetail.vue';
+import TipsView from '../views/Tips.vue';
 
 const routes = [
   { path: '/', component: Home },
@@ -15,6 +16,7 @@ const routes = [
   {  path: '/about-us', component: AboutView },
   {  path: '/blog', component: BlogView },
   { path: '/blog/:id', component: BlogDetailView, props: true },
+  { path: '/tips', component: TipsView },
 ]
 
 const router = createRouter({
