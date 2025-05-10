@@ -676,10 +676,10 @@ const blogs = [
 
     <h2><strong>Risiko Kekurangan Kalsium</strong></h2>
     <ul>
-        <li>💍 Osteopenia dan osteoporosis (patah tulang lebih mudah)</li>
-        <li>💍 Kram otot, kesemutan, atau mati rasa</li>
-        <li>💍 Detak jantung tidak teratur</li>
-        <li>💍 Gangguan pertumbuhan pada anak dan remaja</li>
+        <li>🍮 Osteopenia dan osteoporosis (patah tulang lebih mudah)</li>
+        <li>🍮 Kram otot, kesemutan, atau mati rasa</li>
+        <li>🍮 Detak jantung tidak teratur</li>
+        <li>🍮 Gangguan pertumbuhan pada anak dan remaja</li>
     </ul><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
@@ -913,45 +913,234 @@ const blogs = [
         id: '19',
         title: 'Efek Samping Kontrasepsi: Apa yang Normal dan Apa yang Harus Diwaspadai?',
         content: `
-    
+    <p>Kontrasepsi membantu perempuan dalam perencanaan kehamilan dan menjaga kesehatan reproduksi. Namun, seperti metode medis lainnya, kontrasepsi bisa menimbulkan efek samping. Penting bagi perempuan untuk memahami mana yang tergolong normal dan mana yang harus diwaspadai agar bisa mengambil keputusan yang tepat.</p><br>
+
+    <h2><strong>Efek Samping Kontrasepsi yang Normal</strong></h2>
+    <ul>
+        <li><strong>💕 Perubahan pola haid</strong><br> Haid bisa menjadi lebih ringan, lebih berat, atau tidak teratur, terutama pada penggunaan pil, suntik, implan, atau IUD hormonal.</li>
+        <li><strong>💕 Mual ringan</strong><br> Umumnya terjadi saat awal penggunaan pil kombinasi dan biasanya mereda dalam beberapa minggu.</li>
+        <li><strong>💕 Payudara terasa sensitif</strong><br> Efek ini juga biasanya membaik seiring adaptasi tubuh.</li>
+        <li><strong>💕 Perubahan suasana hati</strong><br> Fluktuasi hormon dapat memengaruhi emosi, namun ini bersifat sementara.</li>
+        <li><strong>💕 Perubahan berat badan</strong><br> Beberapa perempuan mengalami peningkatan nafsu makan atau retensi cairan ringan.</li>
+    </ul><br>
+
+    <h2><strong>Efek Samping Kontrasepsi yang Harus Diwaspadai</strong></h2>
+    <ul>
+        <li><strong>⚠️ Nyeri dada atau sesak napas</strong><br> Dapat menjadi tanda pembekuan darah, terutama pada pengguna pil kombinasi.</li>
+        <li><strong>⚠️ Perdarahan hebat atau nyeri panggul berat</strong><br> Sebaiknya segera konsultasi ke dokter.</li>
+        <li><strong>⚠️ Sakit kepala berat dan mendadak</strong><br> Terutama jika berbeda dari sakit kepala biasanya.</li>
+        <li><strong>⚠️ Penglihatan kabur atau perubahan penglihatan</strong><br> Efek ini jarang, namun perlu dievaluasi segera.</li>
+    </ul><br>
+
+    <h2><strong>Cara Mengurangi Efek Samping Kontrasepsi</strong></h2>
+    <ul>
+        <li><strong>💡 Konsultasi sebelum memilih metode kontrasepsi</strong><br> Pilih metode yang paling sesuai dengan kondisi kesehatan dan gaya hidup Anda.</li>
+        <li><strong>💡 Gunakan sesuai petunjuk</strong><br> Ikuti aturan pakai agar tubuh bisa beradaptasi dengan lebih baik.</li>
+        <li><strong>💡 Berikan waktu adaptasi</strong><br> Banyak efek samping ringan akan hilang dalam 2–3 bulan pertama penggunaan.</li>
+    </ul><br>
+
+    <h2><strong>💌 Kesimpulan</strong></h2>
+    <p>Efek samping ringan dari kontrasepsi umumnya normal dan akan membaik dalam beberapa minggu. Namun, jika Anda mengalami gejala serius seperti nyeri dada, perdarahan hebat, atau perubahan penglihatan, segera periksakan diri ke dokter. Konsultasi rutin dan komunikasi terbuka dengan tenaga medis dapat membantu Anda menemukan metode kontrasepsi yang aman dan nyaman sesuai kebutuhan tubuh Anda.</p>
         `,
-        date: '09-05-2025',
+        date: '10-05-2025',
         image: '/images/blog-19.jpg'
     },
     {
         id: '20',
         title: 'Manfaat Konsumsi Probiotik bagi Kesehatan Pencernaan dan Vagina',
         content: `
-    
+    <p>Probiotik adalah mikroorganisme hidup yang memberikan manfaat kesehatan saat dikonsumsi dalam jumlah yang tepat. Umumnya berupa bakteri baik, probiotik banyak ditemukan dalam makanan fermentasi dan suplemen. Selain terkenal untuk menjaga kesehatan pencernaan, probiotik juga berperan penting dalam menjaga keseimbangan flora di area vagina.</p><br>
+
+    <h2><strong>Manfaat Probiotik untuk Pencernaan</strong></h2>
+    <ul>
+        <li><strong>🍉 Menjaga keseimbangan bakteri usus</strong><br> Probiotik membantu menyeimbangkan jumlah bakteri baik dan jahat di usus, yang penting untuk sistem pencernaan yang sehat.</li>
+        <li><strong>🍉 Membantu mengatasi diare</strong><br> Probiotik dapat mengurangi frekuensi dan durasi diare akibat infeksi, antibiotik, atau kondisi lainnya.</li>
+        <li><strong>🍉 Meredakan gejala sindrom iritasi usus besar (IBS)</strong><br> Beberapa jenis probiotik membantu meredakan kembung, nyeri perut, dan gangguan buang air besar pada penderita IBS.</li>
+        <li><strong>🍉 Mendukung penyerapan nutrisi</strong><br> Probiotik berperan dalam membantu tubuh menyerap vitamin dan mineral dari makanan secara optimal.</li>
+    </ul><br>
+
+    <h2><strong>Manfaat Probiotik untuk Kesehatan Vagina</strong></h2>
+    <ul>
+        <li><strong>🌷 Menjaga keseimbangan flora vagina</strong><br> Probiotik, terutama strain Lactobacillus, membantu menjaga kadar pH vagina agar tetap seimbang dan mencegah pertumbuhan bakteri jahat.</li>
+        <li><strong>🌷 Mencegah infeksi jamur dan bakteri</strong><br> Konsumsi probiotik dapat membantu mencegah infeksi seperti bacterial vaginosis (BV) dan kandidiasis (infeksi jamur).</li>
+        <li><strong>🌷 Mengurangi risiko infeksi saluran kemih (ISK)</strong><br> Dengan menjaga flora vagina tetap seimbang, probiotik juga dapat menurunkan risiko ISK berulang.</li>
+    </ul><br>
+
+    <h2><strong>Sumber Makanan yang Mengandung Probiotik</strong></h2>
+    <ul>
+        <li>🫧 Yogurt dengan kultur hidup aktif</li>
+        <li>🫧 Kefir</li>
+        <li>🫧 Tempe dan tahu fermentasi</li>
+        <li>🫧 Kimchi dan sauerkraut (kubis fermentasi)</li>
+        <li>🫧 Misso dan natto (produk fermentasi kedelai)</li>
+        <li>🫧 Suplemen probiotik dalam bentuk kapsul, tablet, atau serbuk</li>
+    </ul><br>
+
+    <h2><strong>Tips Konsumsi Probiotik Secara Optimal</strong></h2>
+    <ul>
+        <li>🍑 Pilih produk dengan strain probiotik yang teruji secara klinis dan mengandung jumlah bakteri hidup yang memadai.</li>
+        <li>🍑 Konsumsi secara rutin, baik melalui makanan fermentasi maupun suplemen, untuk hasil yang optimal.</li>
+        <li>🍑 Kombinasikan dengan asupan prebiotik (serat pangan) seperti pisang, bawang putih, dan bawang bombay, yang berfungsi sebagai makanan bagi bakteri baik.</li>
+    </ul><br>
+
+    <h2><strong>💌 Kesimpulan</strong></h2>
+    <p>Probiotik memiliki peran penting dalam menjaga kesehatan pencernaan dan keseimbangan flora vagina. Konsumsi probiotik secara rutin, baik dari makanan fermentasi maupun suplemen, dapat membantu memperkuat sistem imun, mencegah infeksi, dan mendukung kesehatan secara keseluruhan. Pastikan memilih produk yang tepat dan konsultasikan dengan tenaga medis jika diperlukan untuk hasil yang maksimal.</p>
         `,
-        date: '09-05-2025',
+        date: '10-05-2025',
         image: '/images/blog-20.jpg'
     },
     {
         id: '21',
         title: 'Mengapa Konseling Sebelum Memilih KB Itu Penting?',
         content: `
-    
+    <p>Kontrasepsi atau alat KB (Keluarga Berencana) adalah metode yang digunakan untuk mencegah kehamilan. Dengan banyaknya pilihan metode kontrasepsi yang tersedia, konseling sebelum memilih KB menjadi langkah penting untuk memastikan metode yang dipilih sesuai dengan kebutuhan, kondisi kesehatan, dan preferensi masing-masing individu atau pasangan.</p><br>
+
+    <h2><strong>Tujuan Konseling KB</strong></h2>
+    <ul>
+        <li><strong>💞 Memberikan informasi yang akurat</strong><br> Konseling membantu memberikan pemahaman yang jelas tentang berbagai jenis kontrasepsi, cara kerja, kelebihan, kekurangan, serta efek sampingnya.</li>
+        <li><strong>💞 Membantu memilih metode yang sesuai</strong><br> Konseling mempertimbangkan kondisi kesehatan, riwayat medis, gaya hidup, serta rencana kehamilan di masa depan untuk menentukan metode KB yang paling tepat.</li>
+        <li><strong>💞 Meningkatkan kepatuhan dan kenyamanan</strong><br> Dengan memahami cara penggunaan dan apa yang diharapkan, individu cenderung lebih nyaman dan konsisten dalam menggunakan metode kontrasepsi yang dipilih.</li>
+    </ul><br>
+
+    <h2><strong>Manfaat Konseling Sebelum Memilih KB</strong></h2>
+    <ul>
+        <li><strong>🌸 Mengurangi risiko efek samping</strong><br> Konselor kesehatan akan meninjau kondisi medis yang dapat mempengaruhi keamanan suatu metode kontrasepsi, sehingga risiko efek samping dapat diminimalkan.</li>
+        <li><strong>🌸 Meningkatkan efektivitas KB</strong><br> Dengan pemahaman yang baik tentang penggunaan yang benar, efektivitas metode kontrasepsi yang dipilih akan lebih optimal.</li>
+        <li><strong>🌸 Mendukung komunikasi dalam pasangan</strong><br> Konseling KB juga mendorong diskusi terbuka antara pasangan mengenai pilihan dan harapan terkait kontrasepsi dan perencanaan keluarga.</li>
+    </ul><br>
+
+    <h2><strong>Hal yang Dibahas dalam Konseling KB</strong></h2>
+    <ul>
+        <li>💫 Kondisi kesehatan dan riwayat medis</li>
+        <li>💫 Kebutuhan dan preferensi terkait rencana kehamilan</li>
+        <li>💫 Jenis-jenis kontrasepsi dan cara kerjanya</li>
+        <li>💫 Efek samping dan cara mengatasinya</li>
+        <li>💫 Faktor keamanan dan efektivitas tiap metode</li>
+    </ul><br>
+
+    <h2><strong>Kapan Sebaiknya Melakukan Konseling KB?</strong></h2>
+    <ul>
+        <li>💕 Sebelum memulai penggunaan kontrasepsi untuk pertama kali</li>
+        <li>💕 Setelah melahirkan atau mengalami keguguran</li>
+        <li>💕 Saat ingin mengganti metode kontrasepsi yang digunakan</li>
+        <li>💕 Jika mengalami efek samping atau masalah dengan metode KB saat ini</li>
+    </ul><br>
+
+    <h2><strong>💌 Kesimpulan</strong></h2>
+    <p>Konseling sebelum memilih metode kontrasepsi sangat penting untuk memastikan pilihan yang aman, efektif, dan sesuai kebutuhan. Dengan mendapatkan informasi yang tepat dan dukungan dari tenaga kesehatan, individu dan pasangan dapat membuat keputusan yang lebih bijaksana terkait perencanaan keluarga dan kesehatan reproduksi.</p>
         `,
-        date: '09-05-2025',
+        date: '10-05-2025',
         image: '/images/blog-21.jpg'
     },
     {
         id: '22',
         title: 'Mengenal Fibroid Rahim: Gejala dan Pengobatannya',
         content: `
-    
+    <p>Fibroid rahim atau mioma uteri adalah tumor jinak yang tumbuh di dalam atau sekitar rahim. Fibroid terbentuk dari jaringan otot dan fibrosa (jaringan ikat) rahim. Meskipun bersifat non-kanker, fibroid dapat memengaruhi kualitas hidup, terutama jika ukurannya besar atau jumlahnya banyak.</p><br>
+
+    <h2><strong>Faktor Risiko Terjadinya Fibroid Rahim</strong></h2>
+    <ul>
+        <li>🍃 Riwayat keluarga dengan fibroid</li>
+        <li>🍃 Usia, lebih sering terjadi pada perempuan usia 30–50 tahun</li>
+        <li>🍃 Kelebihan berat badan atau obesitas</li>
+        <li>🍃 Menstruasi pertama di usia muda</li>
+        <li>🍃 Kadar estrogen dan progesteron yang tinggi</li>
+    </ul><br>
+
+    <h2><strong>Gejala Fibroid Rahim</strong></h2>
+    <ul>
+        <li>🦋 Menstruasi yang berat, berkepanjangan, atau tidak teratur</li>
+        <li>🦋 Nyeri atau tekanan di area panggul</li>
+        <li>🦋 Sering buang air kecil atau kesulitan mengosongkan kandung kemih</li>
+        <li>🦋 Sembelit</li>
+        <li>🦋 Nyeri saat berhubungan seksual</li>
+        <li>🦋 Perut bagian bawah tampak membesar</li>
+        <li>🦋 Kemandulan atau kesulitan hamil (pada beberapa kasus)</li>
+    </ul><br>
+
+    <h2><strong>Jenis Fibroid Berdasarkan Lokasi</strong></h2>
+    <ul>
+        <li>🌙 Fibroid intramural: tumbuh di dalam dinding otot rahim</li>
+        <li>🌙 Fibroid submukosa: tumbuh di lapisan dalam rahim</li>
+        <li>🌙 Fibroid subserosa: tumbuh di permukaan luar rahim</li>
+        <li>🌙 Fibroid bertangkai (pedunkulata): menempel pada rahim melalui tangkai kecil</li>
+    </ul><br>
+
+    <h2><strong>Diagnosa Fibroid Rahim</strong></h2>
+    <ul>
+        <li>🌼 Pemeriksaan panggul fisik oleh dokter</li>
+        <li>🌼 Ultrasonografi (USG) transvaginal atau abdominal</li>
+        <li>🌼 Magnetic Resonance Imaging (MRI) untuk gambaran lebih detail</li>
+        <li>🌼 Histeroskopi untuk melihat bagian dalam rahim</li>
+    </ul><br>
+
+    <h2><strong>Pengobatan Fibroid Rahim</strong></h2>
+    <ul>
+        <li><strong>🍒 Pengobatan konservatif</strong><br> Pemantauan rutin jika gejala ringan dan fibroid tidak membesar signifikan.</li>
+        <li><strong>🍒 Obat-obatan</strong><br> Penggunaan obat hormonal untuk mengecilkan fibroid atau meredakan gejala, seperti pil KB atau agonis GnRH.</li>
+        <li><strong>🍒 Prosedur non-bedah</strong><br> Embolisasi arteri rahim (UAE) untuk memotong suplai darah ke fibroid, atau ablasi endometrium untuk menghancurkan lapisan rahim.</li>
+        <li><strong>🍒 Tindakan bedah</strong><br> Miomektomi (pengangkatan fibroid) atau histerektomi (pengangkatan rahim) jika fibroid sangat besar atau menyebabkan gejala berat.</li>
+    </ul><br>
+
+    <h2><strong>Kapan Harus Berkonsultasi ke Dokter?</strong></h2>
+    <ul>
+        <li>⚠️ Menstruasi sangat berat atau berlangsung lebih dari seminggu</li>
+        <li>⚠️ Nyeri panggul yang menetap atau memburuk</li>
+        <li>⚠️ Sulit buang air kecil atau konstipasi berkepanjangan</li>
+        <li>⚠️ Kesulitan untuk hamil atau mengalami keguguran berulang</li>
+    </ul><br>
+
+    <h2><strong>💌 Kesimpulan</strong></h2>
+    <p>Fibroid rahim adalah kondisi yang umum terjadi dan umumnya jinak. Meski begitu, gejala yang muncul bisa mengganggu aktivitas dan kualitas hidup. Konsultasi dengan dokter sangat penting untuk mendapatkan diagnosis yang tepat dan menentukan pengobatan yang sesuai. Deteksi dini dan penanganan yang tepat dapat membantu mencegah komplikasi yang lebih serius.</p>
         `,
-        date: '09-05-2025',
+        date: '10-05-2025',
         image: '/images/blog-22.jpg'
     },
     {
         id: '23',
         title: 'KB Pasca Melahirkan: Pilihan Aman untuk Ibu Menyusui',
         content: `
-    
+    <p>Setelah melahirkan, banyak ibu yang mulai mempertimbangkan untuk menggunakan kontrasepsi atau alat pengendali kelahiran (KB) untuk merencanakan kehamilan selanjutnya. Namun, bagi ibu yang sedang menyusui, memilih jenis KB yang aman dan tidak mengganggu produksi ASI sangat penting. Artikel ini akan membahas berbagai pilihan KB yang aman bagi ibu menyusui, serta faktor-faktor yang perlu dipertimbangkan.</p>
+
+    <h2><strong>Kenapa Memilih KB Pasca Melahirkan Itu Penting?</strong></h2>
+    <p>Setelah melahirkan, tubuh ibu mengalami perubahan fisik dan hormon. Salah satu perubahan besar adalah proses menyusui, yang dapat membantu ibu dalam proses pemulihan serta menyediakan nutrisi terbaik untuk bayi. Namun, keinginan untuk mengatur jarak kehamilan yang sehat juga sangat penting. Menggunakan KB dapat membantu ibu menghindari kehamilan yang tidak direncanakan dan memberi waktu bagi tubuh untuk pulih sebelum hamil kembali.</p>
+
+    <h2><strong>Jenis Kontrasepsi yang Aman untuk Ibu Menyusui</strong></h2>
+    <h3><strong>1. Pil KB Minipill (Progestin) 💓</strong></h3>
+    <p>Pil KB yang mengandung hanya progestin (minipill) adalah pilihan yang aman untuk ibu menyusui. Pil ini tidak memengaruhi produksi ASI dan tidak menyebabkan penurunan kualitas ASI. Minipill bekerja dengan mengubah lendir serviks untuk menghalangi sperma dan menipiskan lapisan rahim.</p>
+
+    <h3><strong>2. IUD (Intrauterine Device) 💓</strong></h3>
+    <p>IUD adalah alat kontrasepsi yang ditempatkan di dalam rahim. IUD hormon yang mengandung progestin sangat efektif dan tidak mempengaruhi produksi ASI. Selain itu, IUD juga bisa digunakan segera setelah melahirkan, bahkan saat ibu masih menyusui. IUD jenis tembaga juga aman untuk ibu menyusui dan bisa bertahan lama hingga 10 tahun.</p>
+
+    <h3><strong>3. Suntikan KB (Depo Provera) 💓</strong></h3>
+    <p>Suntikan KB yang mengandung progestin (Depo Provera) juga dapat digunakan oleh ibu menyusui. Suntikan ini efektif dalam mencegah kehamilan selama tiga bulan. Meskipun ada kekhawatiran bahwa suntikan KB dapat memengaruhi kualitas ASI, penelitian menunjukkan bahwa progestin dalam suntikan ini tidak memengaruhi produksi ASI secara signifikan pada sebagian besar ibu.</p>
+
+    <h3><strong>4. Implan KB 💓</strong></h3>
+    <p>Implan KB adalah tiang kecil yang diletakkan di bawah kulit lengan ibu. Implan ini mengandung progestin dan dapat bertahan selama 3 hingga 5 tahun. Seperti IUD, implan sangat aman untuk ibu menyusui dan tidak akan mengganggu produksi ASI.</p>
+
+    <h3><strong>5. Metode Laktasi Amenorea (LAM) 💓</strong></h3>
+    <p>Metode ini berfungsi sebagai kontrasepsi alami dengan mengandalkan menyusui eksklusif. Ibu yang menyusui bayi mereka secara penuh (setiap 4 jam pada siang hari dan 6 jam pada malam hari) dapat menggunakan LAM sebagai metode kontrasepsi selama 6 bulan pertama setelah melahirkan. Efektivitasnya sangat tinggi selama periode ini, asalkan kriteria yang tepat dipenuhi.</p>
+
+    <h2><strong>Kontrasepsi yang Harus Dihindari</strong></h2>
+    <p>Ada beberapa metode kontrasepsi yang sebaiknya dihindari selama menyusui, terutama yang mengandung estrogen. Pil KB kombinasi yang mengandung estrogen bisa menurunkan produksi ASI, jadi metode ini tidak disarankan untuk ibu menyusui dalam waktu 6 bulan pertama setelah melahirkan. Beberapa pilihan yang harus dihindari termasuk:</p>
+    <ul>
+        <li>⚠️ Pil KB kombinasi (mengandung estrogen dan progestin)</li>
+        <li>⚠️ Patch KB</li>
+        <li>⚠️ Vaginal ring (cincin kontrasepsi)</li>
+    </ul>
+
+    <h2><strong>Faktor yang Perlu Dipertimbangkan dalam Memilih KB</strong></h2>
+    <ul>
+        <li><strong>🔑 Waktu Setelah Melahirkan:</strong> Beberapa metode kontrasepsi lebih cocok digunakan segera setelah melahirkan, sementara yang lain lebih baik digunakan setelah beberapa bulan.</li>
+        <li><strong>🔑 Keinginan untuk Menyusui:</strong> Pastikan pilihan kontrasepsi tidak mengganggu produksi ASI. Pilih metode yang aman dan efektif bagi ibu menyusui.</li>
+        <li><strong>🔑 Efektivitas:</strong> Pilih kontrasepsi yang memiliki tingkat kegagalan rendah agar dapat mencegah kehamilan yang tidak direncanakan.</li>
+        <li><strong>🔑 Kesehatan Umum:</strong> Konsultasikan dengan dokter mengenai kondisi kesehatan ibu, seperti adanya riwayat penyakit tertentu, yang mungkin memengaruhi pilihan kontrasepsi.</li>
+    </ul>
+
+    <h2><strong>💌 Kesimpulan</strong></h2>
+    <p>Pemilihan kontrasepsi pasca melahirkan untuk ibu menyusui harus dilakukan dengan hati-hati, mengingat pengaruhnya terhadap kualitas ASI dan kesehatan ibu secara keseluruhan. Ada berbagai pilihan yang aman, seperti pil minipill, IUD, implan, dan suntikan KB yang mengandung progestin, yang terbukti efektif dan tidak mengganggu produksi ASI. Selalu berkonsultasi dengan dokter untuk menentukan metode yang paling sesuai dengan kebutuhan ibu.</p>
         `,
-        date: '09-05-2025',
+        date: '10-05-2025',
         image: '/images/blog-23.jpg'
     },
     {
@@ -960,7 +1149,7 @@ const blogs = [
         content: `
     
         `,
-        date: '09-05-2025',
+        date: '10-05-2025',
         image: '/images/blog-24.jpg'
     },
 ]
