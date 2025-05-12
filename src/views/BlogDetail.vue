@@ -1,27 +1,27 @@
 <template>
-    <div class="max-w-6xl py-12 px-4 mt-8 mx-auto">
-        <div v-if="blog">
-            <!-- Header dengan gambar -->
-            <div class="mb-8 text-center">
-            <img :src="blog.image" alt="Blog Image" class="h-64 object-cover rounded-lg shadow-lg mb-6 max-w-3xl mx-auto w-full" />
-  
-            <!-- Breadcrumb -->
-            <div class="mb-4 text-gray-600">
-                <span class="cursor-pointer hover:underline" @click="goBlog">Blog</span> &gt;
-                <span>{{ blog.title }}</span>
-            </div>
-  
-            <h1 class="text-3xl font-extrabold text-[#6a4c46] mb-4">{{ blog.title }}</h1>
-            <p class="text-base text-pink-500 mb-6">{{ blog.date }}</p>
-            </div>
-  
-            <!-- Content -->
-            <div v-html="blog.content" class="prose lg:prose-xl text-gray-700 max-w-3xl mx-auto px-3"></div>
-        </div>
-        <div v-else class="text-center">
-            <p>Loading...</p>
-        </div>
+  <div class="max-w-6xl py-12 px-4 mt-8 mx-auto">
+    <div v-if="blog">
+      <!-- Blog header: image, breadcrumb, title, date -->
+      <header class="mb-8 text-center">
+        <img :src="blog.image" alt="Blog Image" class="h-64 object-cover rounded-lg shadow-lg mb-6 max-w-3xl mx-auto w-full" />
+        
+        <nav class="mb-4 text-gray-600">
+          <span class="cursor-pointer hover:underline" @click="goBlog">Blog</span> &gt;
+          <span>{{ blog.title }}</span>
+        </nav>
+
+        <h1 class="text-3xl font-extrabold text-[#6a4c46] mb-4">{{ blog.title }}</h1>
+        <p class="text-base text-pink-500 mb-6">{{ blog.date }}</p>
+      </header>
+
+      <!-- Blog content -->
+      <article v-html="blog.content" class="prose lg:prose-xl text-gray-700 max-w-3xl mx-auto px-3"></article>
     </div>
+
+    <div v-else class="text-center">
+      <p>Loading...</p>
+    </div>
+  </div>
 </template>
   
 <script setup>
@@ -33,21 +33,22 @@ const router = useRouter()
 const blogId = route.params.id
 const blog = ref(null)
   
-// Kategori statis
-const category = "Kesehatan Wanita"
-  
-// Contoh data blog dengan gambar
+// Isi content blog
 const blogs = [
     {
         id: '1',
         title: 'Pentingnya Menjaga Kesehatan Reproduksi Wanita',
         content: `
-    <p>Kesehatan reproduksi wanita adalah aspek penting dalam kehidupan setiap perempuan yang sering kali terabaikan. Memahami bagaimana merawat organ reproduksi dapat membantu mencegah berbagai penyakit dan menjaga kualitas hidup.</p><br>
+    <p>Kesehatan reproduksi wanita adalah aspek penting dalam kehidupan setiap perempuan yang sering kali terabaikan. 
+        Memahami bagaimana merawat organ reproduksi dapat membantu mencegah berbagai penyakit dan menjaga kualitas hidup.</p><br>
 
     <h2><strong>Apa itu Kesehatan Reproduksi?</strong></h2>
-    <p>Kesehatan reproduksi merujuk pada kondisi fisik, mental, dan sosial yang berhubungan dengan sistem reproduksi pada semua tahap kehidupan. Hal ini mencakup kesehatan menstruasi, kesuburan, kehamilan, dan menopause.</p><br>
+    <p>Kesehatan reproduksi merujuk pada kondisi fisik, mental, dan sosial yang berhubungan dengan sistem reproduksi pada semua tahap kehidupan. 
+        Hal ini mencakup kesehatan menstruasi, kesuburan, kehamilan, dan menopause.</p><br>
 
-    <p>Organ reproduksi wanita meliputi ovarium, tuba falopi, rahim, serviks, dan vagina. Setiap bagian memiliki peran penting dalam proses reproduksi, mulai dari produksi sel telur hingga kehamilan dan kelahiran. Oleh karena itu, memahami cara kerja sistem ini menjadi dasar untuk menjaga kesehatannya.</p><br>
+    <p>Organ reproduksi wanita meliputi ovarium, tuba falopi, rahim, serviks, dan vagina. 
+        Setiap bagian memiliki peran penting dalam proses reproduksi, mulai dari produksi sel telur hingga kehamilan dan kelahiran. 
+        Oleh karena itu, memahami cara kerja sistem ini menjadi dasar untuk menjaga kesehatannya.</p><br>
 
     <h2><strong>Mengapa Kesehatan Reproduksi Penting?</strong></h2>
     <ul>
@@ -79,10 +80,13 @@ const blogs = [
     <blockquote>“Kesehatan reproduksi adalah kunci untuk hidup sehat dan bahagia bagi setiap wanita.” — WHO</blockquote><br>
 
     <h2><strong>🕊️ Peran Kesehatan Mental dalam Reproduksi</strong></h2>
-    <p>Kesehatan mental dan reproduksi saling berkaitan erat. Stres berlebihan dapat memengaruhi siklus menstruasi, menurunkan kesuburan, dan memperburuk gejala PMS atau menopause. Oleh karena itu, menjaga keseimbangan emosional juga merupakan bagian dari merawat kesehatan reproduksi.</p><br>
+    <p>Kesehatan mental dan reproduksi saling berkaitan erat. 
+        Stres berlebihan dapat memengaruhi siklus menstruasi, menurunkan kesuburan, dan memperburuk gejala PMS atau menopause. 
+        Oleh karena itu, menjaga keseimbangan emosional juga merupakan bagian dari merawat kesehatan reproduksi.</p><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Dengan menjaga kesehatan reproduksi, wanita dapat meningkatkan kualitas hidup, merencanakan keluarga dengan lebih baik, dan mencegah berbagai gangguan kesehatan di masa depan. Jangan ragu untuk berkonsultasi dengan tenaga medis jika mengalami keluhan atau membutuhkan informasi lebih lanjut.</p>
+    <p>Dengan menjaga kesehatan reproduksi, wanita dapat meningkatkan kualitas hidup, merencanakan keluarga dengan lebih baik, dan mencegah berbagai gangguan kesehatan di masa depan. 
+        Jangan ragu untuk berkonsultasi dengan tenaga medis jika mengalami keluhan atau membutuhkan informasi lebih lanjut.</p>
         `,
         date: '06-05-2025',
         image: '/images/blog-1.jpg'
@@ -91,10 +95,13 @@ const blogs = [
         id: '2',
         title: 'Kaitan Endometriosis dengan Kesuburan Perempuan',
         content: `
-    <p>Endometriosis adalah kondisi kesehatan yang memengaruhi jutaan perempuan di seluruh dunia, namun sering kali tidak disadari hingga gejala menjadi parah. Salah satu dampak serius dari endometriosis adalah gangguan pada kesuburan. Memahami hubungan antara endometriosis dan kesuburan sangat penting agar perempuan dapat mengambil langkah pencegahan dan penanganan yang tepat.</p><br>
+    <p>Endometriosis adalah kondisi kesehatan yang memengaruhi jutaan perempuan di seluruh dunia, namun sering kali tidak disadari hingga gejala menjadi parah. 
+        Salah satu dampak serius dari endometriosis adalah gangguan pada kesuburan. 
+        Memahami hubungan antara endometriosis dan kesuburan sangat penting agar perempuan dapat mengambil langkah pencegahan dan penanganan yang tepat.</p><br>
 
     <h2><strong>Apa itu Endometriosis?</strong></h2>
-    <p>Endometriosis adalah kondisi di mana jaringan yang mirip dengan lapisan dalam rahim (endometrium) tumbuh di luar rahim, seperti di ovarium, tuba falopi, dan organ panggul lainnya. Jaringan ini tetap bereaksi terhadap siklus menstruasi — menebal, luruh, dan berdarah — namun tidak bisa keluar dari tubuh sehingga menyebabkan peradangan, nyeri, dan pembentukan jaringan parut.</p><br>
+    <p>Endometriosis adalah kondisi di mana jaringan yang mirip dengan lapisan dalam rahim (endometrium) tumbuh di luar rahim, seperti di ovarium, tuba falopi, dan organ panggul lainnya. 
+        Jaringan ini tetap bereaksi terhadap siklus menstruasi — menebal, luruh, dan berdarah — namun tidak bisa keluar dari tubuh sehingga menyebabkan peradangan, nyeri, dan pembentukan jaringan parut.</p><br>
 
     <h2><strong>Gejala Umum Endometriosis</strong></h2>
     <ul>
@@ -129,7 +136,9 @@ const blogs = [
     </ul><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Endometriosis adalah kondisi yang kompleks namun dapat dikelola dengan diagnosis dan penanganan yang tepat. Bagi perempuan yang mengalami gejala atau kesulitan hamil, penting untuk segera berkonsultasi dengan dokter spesialis. Penanganan dini tidak hanya mengurangi nyeri, tetapi juga meningkatkan peluang untuk hamil dan menjalani hidup berkualitas.</p>
+    <p>Endometriosis adalah kondisi yang kompleks namun dapat dikelola dengan diagnosis dan penanganan yang tepat. 
+        Bagi perempuan yang mengalami gejala atau kesulitan hamil, penting untuk segera berkonsultasi dengan dokter spesialis. 
+        Penanganan dini tidak hanya mengurangi nyeri, tetapi juga meningkatkan peluang untuk hamil dan menjalani hidup berkualitas.</p>
         `,
         date: '06-05-2025',
         image: '/images/blog-2.jpg'
@@ -138,10 +147,13 @@ const blogs = [
         id: '3',
         title: 'Mengapa Pemeriksaan Payudara Secara Rutin Penting?',
         content: `
-    <p>Pemeriksaan payudara secara rutin merupakan salah satu langkah penting dalam menjaga kesehatan perempuan. Deteksi dini terhadap perubahan atau kelainan pada payudara dapat meningkatkan peluang pengobatan yang berhasil dan mengurangi risiko komplikasi serius. Meskipun kesadaran tentang kanker payudara semakin meningkat, masih banyak perempuan yang belum rutin melakukan pemeriksaan sendiri maupun pemeriksaan medis.</p><br>
+    <p>Pemeriksaan payudara secara rutin merupakan salah satu langkah penting dalam menjaga kesehatan perempuan. 
+        Deteksi dini terhadap perubahan atau kelainan pada payudara dapat meningkatkan peluang pengobatan yang berhasil dan mengurangi risiko komplikasi serius. 
+        Meskipun kesadaran tentang kanker payudara semakin meningkat, masih banyak perempuan yang belum rutin melakukan pemeriksaan sendiri maupun pemeriksaan medis.</p><br>
 
     <h2><strong>Apa Itu Pemeriksaan Payudara?</strong></h2>
-    <p>Pemeriksaan payudara adalah serangkaian langkah untuk mendeteksi adanya benjolan, perubahan bentuk, atau gejala tidak normal pada jaringan payudara. Pemeriksaan ini bisa dilakukan secara mandiri (SADARI) maupun oleh tenaga medis (SADANIS).</p><br>
+    <p>Pemeriksaan payudara adalah serangkaian langkah untuk mendeteksi adanya benjolan, perubahan bentuk, atau gejala tidak normal pada jaringan payudara. 
+        Pemeriksaan ini bisa dilakukan secara mandiri (SADARI) maupun oleh tenaga medis (SADANIS).</p><br>
 
     <h2><strong>Jenis Pemeriksaan Payudara</strong></h2>
     <ul>
@@ -170,7 +182,9 @@ const blogs = [
     <p>Perempuan disarankan memulai pemeriksaan SADARI sejak usia 20 tahun, dan SADANIS setiap 1–3 tahun pada usia 20–40 tahun. Setelah usia 40 tahun, pemeriksaan SADANIS dan mammografi sebaiknya dilakukan setiap tahun atau sesuai anjuran dokter.</p><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Pemeriksaan payudara secara rutin adalah investasi penting bagi kesehatan jangka panjang perempuan. Dengan mengenali tubuh sendiri dan rutin berkonsultasi dengan tenaga medis, kita dapat meningkatkan peluang deteksi dini dan pengobatan yang efektif. Jangan ragu untuk menjadikan pemeriksaan payudara sebagai bagian dari rutinitas kesehatan pribadi.</p>
+    <p>Pemeriksaan payudara secara rutin adalah investasi penting bagi kesehatan jangka panjang perempuan. 
+        Dengan mengenali tubuh sendiri dan rutin berkonsultasi dengan tenaga medis, kita dapat meningkatkan peluang deteksi dini dan pengobatan yang efektif. 
+        Jangan ragu untuk menjadikan pemeriksaan payudara sebagai bagian dari rutinitas kesehatan pribadi.</p>
         `,
         date: '07-05-2025',
         image: '/images/blog-3.jpg'
@@ -179,10 +193,13 @@ const blogs = [
         id: '4',
         title: 'Peran Hormon Estrogen dalam Kesehatan Perempuan',
         content: `
-    <p>Hormon estrogen memainkan peran krusial dalam menjaga kesehatan perempuan sepanjang hidupnya. Sebagai salah satu hormon seks utama, estrogen memengaruhi berbagai sistem tubuh, mulai dari reproduksi hingga kesehatan tulang dan jantung. Memahami bagaimana hormon ini bekerja dapat membantu perempuan lebih peduli terhadap keseimbangan hormonal dan kesehatannya secara keseluruhan.</p><br>
+    <p>Hormon estrogen memainkan peran krusial dalam menjaga kesehatan perempuan sepanjang hidupnya. 
+        Sebagai salah satu hormon seks utama, estrogen memengaruhi berbagai sistem tubuh, mulai dari reproduksi hingga kesehatan tulang dan jantung. 
+        Memahami bagaimana hormon ini bekerja dapat membantu perempuan lebih peduli terhadap keseimbangan hormonal dan kesehatannya secara keseluruhan.</p><br>
 
     <h2><strong>Apa Itu Estrogen?</strong></h2>
-    <p>Estrogen adalah hormon yang diproduksi terutama di ovarium, meskipun dalam jumlah kecil juga dihasilkan oleh kelenjar adrenal dan jaringan lemak. Hormon ini bertanggung jawab atas perkembangan ciri-ciri seksual sekunder perempuan dan mengatur siklus menstruasi.</p><br>
+    <p>Estrogen adalah hormon yang diproduksi terutama di ovarium, meskipun dalam jumlah kecil juga dihasilkan oleh kelenjar adrenal dan jaringan lemak. 
+        Hormon ini bertanggung jawab atas perkembangan ciri-ciri seksual sekunder perempuan dan mengatur siklus menstruasi.</p><br>
 
     <h2><strong>Fungsi Utama Estrogen</strong></h2>
     <ul>
@@ -212,7 +229,9 @@ const blogs = [
     </ol><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Estrogen adalah hormon vital yang memengaruhi hampir semua aspek kesehatan perempuan. Menjaga keseimbangan hormon ini dapat meningkatkan kualitas hidup dan mencegah berbagai masalah kesehatan. Jika Anda mengalami gejala ketidakseimbangan hormon, konsultasikan dengan tenaga medis untuk mendapatkan penanganan yang tepat.</p>
+    <p>Estrogen adalah hormon vital yang memengaruhi hampir semua aspek kesehatan perempuan. 
+        Menjaga keseimbangan hormon ini dapat meningkatkan kualitas hidup dan mencegah berbagai masalah kesehatan. 
+        Jika Anda mengalami gejala ketidakseimbangan hormon, konsultasikan dengan tenaga medis untuk mendapatkan penanganan yang tepat.</p>
         `,
         date: '07-05-2025',
         image: '/images/blog-4.jpg'
@@ -221,10 +240,14 @@ const blogs = [
         id: '5',
         title: 'Bagaimana Anemia Bisa Memengaruhi Kesehatan Reproduksi?',
         content: `
-    <p>Anemia adalah kondisi ketika tubuh kekurangan sel darah merah yang sehat atau hemoglobin yang cukup untuk mengangkut oksigen ke seluruh tubuh. Pada perempuan, anemia bisa berdampak besar pada kesehatan reproduksi, terutama jika tidak ditangani dengan baik. Mengetahui lebih dalam tentang penyebab dan dampaknya dapat membantu perempuan mengelola kesehatan mereka dengan lebih efektif.</p><br>
+    <p>Anemia adalah kondisi ketika tubuh kekurangan sel darah merah yang sehat atau hemoglobin yang cukup untuk mengangkut oksigen ke seluruh tubuh. 
+        Pada perempuan, anemia bisa berdampak besar pada kesehatan reproduksi, terutama jika tidak ditangani dengan baik. 
+        Mengetahui lebih dalam tentang penyebab dan dampaknya dapat membantu perempuan mengelola kesehatan mereka dengan lebih efektif.</p><br>
 
     <h2><strong>Apa itu Anemia?</strong></h2>
-    <p>Anemia terjadi ketika jumlah sel darah merah atau kadar hemoglobin dalam darah lebih rendah dari normal. Hemoglobin, komponen dalam sel darah merah yang mengikat oksigen, berfungsi untuk mengangkut oksigen ke seluruh tubuh. Jika kadar hemoglobin rendah, tubuh akan kesulitan mendapatkan oksigen yang cukup, yang memengaruhi banyak organ dan fungsi tubuh.</p><br>
+    <p>Anemia terjadi ketika jumlah sel darah merah atau kadar hemoglobin dalam darah lebih rendah dari normal. 
+        Hemoglobin, komponen dalam sel darah merah yang mengikat oksigen, berfungsi untuk mengangkut oksigen ke seluruh tubuh. 
+        Jika kadar hemoglobin rendah, tubuh akan kesulitan mendapatkan oksigen yang cukup, yang memengaruhi banyak organ dan fungsi tubuh.</p><br>
 
     <h2><strong>Jenis-Jenis Anemia</strong></h2>
     <ul>
@@ -235,7 +258,9 @@ const blogs = [
     </ul><br>
 
     <h2><strong>Anemia dan Kesehatan Reproduksi</strong></h2>
-    <p>Anemia dapat memengaruhi kesehatan reproduksi perempuan dengan berbagai cara. Dalam jangka panjang, anemia yang tidak ditangani dapat mengganggu kemampuan tubuh untuk mendukung kehamilan yang sehat. Beberapa efek yang dapat timbul akibat anemia pada perempuan termasuk:</p>
+    <p>Anemia dapat memengaruhi kesehatan reproduksi perempuan dengan berbagai cara. 
+        Dalam jangka panjang, anemia yang tidak ditangani dapat mengganggu kemampuan tubuh untuk mendukung kehamilan yang sehat. 
+        Beberapa efek yang dapat timbul akibat anemia pada perempuan termasuk:</p>
     <ul>
         <li><strong>🍑 Kemandulan</strong> <br> Anemia berat dapat memengaruhi kesuburan, mengurangi kemampuan tubuh untuk ovulasi secara normal, dan menghambat proses pembuahan.</li>
         <li><strong>🍑 Keguguran</strong> <br> Kekurangan oksigen dan nutrisi akibat anemia dapat meningkatkan risiko keguguran pada trimester pertama kehamilan.</li>
@@ -261,7 +286,8 @@ const blogs = [
     </ol><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Anemia adalah kondisi yang perlu diperhatikan, terutama bagi perempuan yang sedang berencana hamil atau yang sudah berada dalam usia reproduksi. Dengan pemahaman yang tepat dan pengelolaan yang baik, anemia dapat diatasi untuk menjaga kesehatan reproduksi yang optimal.</p>
+    <p>Anemia adalah kondisi yang perlu diperhatikan, terutama bagi perempuan yang sedang berencana hamil atau yang sudah berada dalam usia reproduksi. 
+        Dengan pemahaman yang tepat dan pengelolaan yang baik, anemia dapat diatasi untuk menjaga kesehatan reproduksi yang optimal.</p>
         `,
         date: '07-05-2025',
         image: '/images/blog-5.jpg'
@@ -270,10 +296,14 @@ const blogs = [
         id: '6',
         title: 'Mengapa Polycystic Ovary Syndrome (PCOS) Perlu Diwaspadai?',
         content: `
-    <p>Polycystic Ovary Syndrome (PCOS) adalah gangguan hormonal yang mempengaruhi banyak perempuan di seluruh dunia. PCOS sering kali tidak terdiagnosis hingga gejalanya menjadi cukup parah. Pemahaman tentang PCOS dapat membantu perempuan mengelola kondisi ini dengan lebih baik dan mencegah dampaknya terhadap kesehatan jangka panjang, terutama pada kesuburan dan kesehatan metabolik.</p><br>
+    <p>Polycystic Ovary Syndrome (PCOS) adalah gangguan hormonal yang mempengaruhi banyak perempuan di seluruh dunia. 
+        PCOS sering kali tidak terdiagnosis hingga gejalanya menjadi cukup parah. 
+        Pemahaman tentang PCOS dapat membantu perempuan mengelola kondisi ini dengan lebih baik dan mencegah dampaknya terhadap kesehatan jangka panjang, terutama pada kesuburan dan kesehatan metabolik.</p><br>
 
     <h2><strong>Apa itu Polycystic Ovary Syndrome (PCOS)?</strong></h2>
-    <p>PCOS adalah kondisi di mana ovarium perempuan menghasilkan lebih banyak hormon laki-laki (androgen) daripada yang seharusnya. Hormon berlebih ini mengganggu proses ovulasi dan dapat menyebabkan pembentukan kista di ovarium. PCOS dapat memengaruhi siklus menstruasi, kesuburan, penampilan fisik, dan kesehatan metabolik secara keseluruhan.</p><br>
+    <p>PCOS adalah kondisi di mana ovarium perempuan menghasilkan lebih banyak hormon laki-laki (androgen) daripada yang seharusnya. 
+        Hormon berlebih ini mengganggu proses ovulasi dan dapat menyebabkan pembentukan kista di ovarium. 
+        PCOS dapat memengaruhi siklus menstruasi, kesuburan, penampilan fisik, dan kesehatan metabolik secara keseluruhan.</p><br>
 
     <h2><strong>Gejala PCOS</strong></h2>
     <p>Gejala PCOS dapat bervariasi antar individu, namun beberapa gejala yang paling umum meliputi:</p>
@@ -311,7 +341,9 @@ const blogs = [
     </ol><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>PCOS adalah kondisi medis yang dapat memengaruhi banyak aspek kehidupan seorang perempuan, termasuk kesuburan, metabolisme, dan kesehatan mental. Dengan diagnosis dini dan pengelolaan yang tepat, perempuan dengan PCOS dapat menjalani hidup yang sehat dan produktif. Jika Anda mengalami gejala yang mencurigakan, sangat penting untuk berkonsultasi dengan dokter untuk mendapatkan perawatan yang sesuai.</p>
+    <p>PCOS adalah kondisi medis yang dapat memengaruhi banyak aspek kehidupan seorang perempuan, termasuk kesuburan, metabolisme, dan kesehatan mental. 
+        Dengan diagnosis dini dan pengelolaan yang tepat, perempuan dengan PCOS dapat menjalani hidup yang sehat dan produktif. 
+        Jika Anda mengalami gejala yang mencurigakan, sangat penting untuk berkonsultasi dengan dokter untuk mendapatkan perawatan yang sesuai.</p>
         `,
         date: '07-05-2025',
         image: '/images/blog-6.jpg'
@@ -320,13 +352,19 @@ const blogs = [
         id: '7',
         title: 'Fakta tentang Infeksi Saluran Kemih (ISK) pada Perempuan',
         content: `
-    <p>Infeksi Saluran Kemih (ISK) adalah salah satu infeksi bakteri yang paling umum terjadi, terutama pada perempuan. Diperkirakan bahwa sekitar 50–60% perempuan akan mengalami setidaknya satu episode ISK dalam hidup mereka. Memahami penyebab, gejala, pencegahan, dan pengobatan ISK sangat penting agar kondisi ini tidak berkembang menjadi lebih serius.</p><br>
+    <p>Infeksi Saluran Kemih (ISK) adalah salah satu infeksi bakteri yang paling umum terjadi, terutama pada perempuan. 
+        Diperkirakan bahwa sekitar 50–60% perempuan akan mengalami setidaknya satu episode ISK dalam hidup mereka. 
+        Memahami penyebab, gejala, pencegahan, dan pengobatan ISK sangat penting agar kondisi ini tidak berkembang menjadi lebih serius.</p><br>
 
     <h2><strong>Apa Itu Infeksi Saluran Kemih (ISK)?</strong></h2>
-    <p>ISK adalah infeksi yang terjadi di bagian mana pun dari sistem kemih, yaitu ginjal, ureter, kandung kemih, dan uretra. Infeksi paling sering terjadi di saluran bawah, yaitu kandung kemih (sistitis) dan uretra (uretritis). Jika tidak diobati, ISK dapat menyebar ke ginjal (pielonefritis) dan menyebabkan komplikasi serius.</p><br>
+    <p>ISK adalah infeksi yang terjadi di bagian mana pun dari sistem kemih, yaitu ginjal, ureter, kandung kemih, dan uretra. 
+        Infeksi paling sering terjadi di saluran bawah, yaitu kandung kemih (sistitis) dan uretra (uretritis). 
+        Jika tidak diobati, ISK dapat menyebar ke ginjal (pielonefritis) dan menyebabkan komplikasi serius.</p><br>
 
     <h2><strong>Mengapa Perempuan Lebih Rentan Terhadap ISK?</strong></h2>
-    <p>Anatomi tubuh perempuan berperan besar dalam kerentanan terhadap ISK. Uretra perempuan lebih pendek dibandingkan laki-laki, sehingga bakteri lebih mudah mencapai kandung kemih. Selain itu, letak uretra yang dekat dengan anus memudahkan bakteri dari area rektal, seperti <em>Escherichia coli</em> (E. coli), masuk ke saluran kemih.</p><br>
+    <p>Anatomi tubuh perempuan berperan besar dalam kerentanan terhadap ISK. 
+        Uretra perempuan lebih pendek dibandingkan laki-laki, sehingga bakteri lebih mudah mencapai kandung kemih. 
+        Selain itu, letak uretra yang dekat dengan anus memudahkan bakteri dari area rektal, seperti <em>Escherichia coli</em> (E. coli), masuk ke saluran kemih.</p><br>
 
     <h2><strong>Gejala ISK pada Perempuan</strong></h2>
     <p>Gejala ISK dapat muncul secara tiba-tiba dan biasanya meliputi:</p>
@@ -339,7 +377,8 @@ const blogs = [
     </ul><br>
 
     <h2><strong>Penyebab ISK</strong></h2>
-    <p>Penyebab utama ISK adalah bakteri, terutama <em>E. coli</em>, yang biasanya hidup di usus besar dan sekitar anus. Faktor risiko yang meningkatkan kemungkinan ISK antara lain:</p>
+    <p>Penyebab utama ISK adalah bakteri, terutama <em>E. coli</em>, yang biasanya hidup di usus besar dan sekitar anus. 
+        Faktor risiko yang meningkatkan kemungkinan ISK antara lain:</p>
     <ul>
         <li><strong>🕊️ Aktivitas seksual</strong> <br> Hubungan seksual dapat mendorong bakteri masuk ke uretra.</li>
         <li><strong>🕊️ Menahan buang air kecil</strong> <br> Menahan urine terlalu lama memungkinkan pertumbuhan bakteri dalam kandung kemih.</li>
@@ -367,10 +406,13 @@ const blogs = [
     </ol><br>
 
     <h2><strong>📜 Pengobatan ISK</strong></h2>
-    <p>ISK biasanya diobati dengan antibiotik yang diresepkan oleh dokter. Penting untuk menghabiskan seluruh dosis antibiotik meskipun gejala membaik untuk mencegah infeksi berulang atau resistensi antibiotik. Untuk meringankan gejala, disarankan juga untuk minum banyak air, mengonsumsi obat pereda nyeri bila perlu, dan beristirahat cukup.</p><br>
+    <p>ISK biasanya diobati dengan antibiotik yang diresepkan oleh dokter. Penting untuk menghabiskan seluruh dosis antibiotik meskipun gejala membaik untuk mencegah infeksi berulang atau resistensi antibiotik. 
+        Untuk meringankan gejala, disarankan juga untuk minum banyak air, mengonsumsi obat pereda nyeri bila perlu, dan beristirahat cukup.</p><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Infeksi Saluran Kemih adalah kondisi umum yang dapat menyebabkan ketidaknyamanan signifikan jika tidak ditangani dengan tepat. Dengan memahami faktor risiko, gejala, pencegahan, dan pengobatannya, perempuan dapat menjaga kesehatan saluran kemih dan mencegah komplikasi yang lebih serius. Jika Anda mengalami gejala ISK, segera konsultasikan dengan tenaga medis untuk penanganan yang tepat.</p>
+    <p>Infeksi Saluran Kemih adalah kondisi umum yang dapat menyebabkan ketidaknyamanan signifikan jika tidak ditangani dengan tepat. 
+        Dengan memahami faktor risiko, gejala, pencegahan, dan pengobatannya, perempuan dapat menjaga kesehatan saluran kemih dan mencegah komplikasi yang lebih serius. 
+        Jika Anda mengalami gejala ISK, segera konsultasikan dengan tenaga medis untuk penanganan yang tepat.</p>
         `,
         date: '07-05-2025',
         image: '/images/blog-7.jpg'
@@ -379,20 +421,27 @@ const blogs = [
         id: '8',
         title: 'Mengapa Vaksin HPV Penting untuk Perempuan?',
         content: `
-    <p>Human Papillomavirus (HPV) adalah salah satu virus menular seksual yang paling umum di dunia. Meskipun sebagian besar infeksi HPV bersifat sementara dan tidak bergejala, beberapa jenis HPV dapat menyebabkan kanker serviks, kanker vulva, kanker vagina, kanker anus, serta kutil kelamin. Vaksinasi HPV menjadi langkah penting dalam pencegahan penyakit-penyakit ini, terutama bagi perempuan.</p><br>
+    <p>Human Papillomavirus (HPV) adalah salah satu virus menular seksual yang paling umum di dunia. 
+        Meskipun sebagian besar infeksi HPV bersifat sementara dan tidak bergejala, beberapa jenis HPV dapat menyebabkan kanker serviks, kanker vulva, kanker vagina, kanker anus, serta kutil kelamin. 
+        Vaksinasi HPV menjadi langkah penting dalam pencegahan penyakit-penyakit ini, terutama bagi perempuan.</p><br>
 
     <h2><strong>Apa Itu HPV?</strong></h2>
-    <p>HPV adalah kelompok virus yang terdiri dari lebih dari 100 jenis. Sekitar 40 jenis di antaranya dapat menginfeksi area genital. HPV dibagi menjadi dua kategori utama:</p>
+    <p>HPV adalah kelompok virus yang terdiri dari lebih dari 100 jenis. Sekitar 40 jenis di antaranya dapat menginfeksi area genital. 
+        HPV dibagi menjadi dua kategori utama:</p>
     <ul>
         <li><strong>🫧 HPV risiko rendah</strong> <br> Menyebabkan kutil kelamin dan lesi jinak pada serviks.</li>
         <li><strong>🫧 HPV risiko tinggi</strong> <br> Dapat menyebabkan kanker serviks, kanker anus, kanker tenggorokan, serta kanker lainnya.</li>
     </ul><br>
 
     <h2><strong>Bagaimana HPV Menular?</strong></h2>
-    <p>HPV menular melalui kontak kulit ke kulit, terutama saat hubungan seksual (vaginal, anal, maupun oral). Virus juga dapat menular meskipun orang yang terinfeksi tidak menunjukkan gejala. Karena itu, hampir semua orang yang aktif secara seksual berisiko terpapar HPV di suatu waktu dalam hidup mereka.</p><br>
+    <p>HPV menular melalui kontak kulit ke kulit, terutama saat hubungan seksual (vaginal, anal, maupun oral). 
+        Virus juga dapat menular meskipun orang yang terinfeksi tidak menunjukkan gejala. 
+        Karena itu, hampir semua orang yang aktif secara seksual berisiko terpapar HPV di suatu waktu dalam hidup mereka.</p><br>
 
     <h2><strong>Hubungan HPV dan Kanker Serviks</strong></h2>
-    <p>Kanker serviks adalah salah satu kanker paling mematikan bagi perempuan, terutama di negara berkembang. Hampir 99% kasus kanker serviks disebabkan oleh infeksi HPV, terutama tipe 16 dan 18 yang merupakan jenis risiko tinggi. Infeksi HPV yang menetap dalam jangka panjang dapat menyebabkan perubahan sel abnormal pada serviks yang berkembang menjadi kanker.</p><br>
+    <p>Kanker serviks adalah salah satu kanker paling mematikan bagi perempuan, terutama di negara berkembang. 
+        Hampir 99% kasus kanker serviks disebabkan oleh infeksi HPV, terutama tipe 16 dan 18 yang merupakan jenis risiko tinggi. 
+        Infeksi HPV yang menetap dalam jangka panjang dapat menyebabkan perubahan sel abnormal pada serviks yang berkembang menjadi kanker.</p><br>
 
     <h2><strong>Manfaat Vaksin HPV</strong></h2>
     <p>Vaksin HPV telah terbukti sangat efektif dalam mencegah infeksi dari tipe HPV yang paling berbahaya. Manfaat utamanya meliputi:</p>
@@ -420,13 +469,18 @@ const blogs = [
     </ul><br>
 
     <h2><strong>Efektivitas dan Keamanan Vaksin HPV</strong></h2>
-    <p>Penelitian menunjukkan bahwa vaksin HPV memberikan perlindungan jangka panjang minimal 10–12 tahun setelah vaksinasi, dan belum ada bukti bahwa dosis tambahan (booster) diperlukan. Vaksin HPV juga sangat aman. Efek samping yang paling umum adalah nyeri, kemerahan, dan bengkak di tempat suntikan, serta demam ringan atau sakit kepala.</p><br>
+    <p>Penelitian menunjukkan bahwa vaksin HPV memberikan perlindungan jangka panjang minimal 10–12 tahun setelah vaksinasi, dan belum ada bukti bahwa dosis tambahan (booster) diperlukan. 
+        Vaksin HPV juga sangat aman. Efek samping yang paling umum adalah nyeri, kemerahan, dan bengkak di tempat suntikan, serta demam ringan atau sakit kepala.</p><br>
 
     <h2><strong>Apakah Vaksin HPV Menggantikan Pap Smear?</strong></h2>
-    <p>Tidak. Vaksin HPV tidak menggantikan kebutuhan skrining rutin seperti Pap smear atau tes HPV. Vaksin hanya mencegah infeksi tipe HPV tertentu, tetapi tidak melindungi terhadap semua jenis HPV penyebab kanker serviks. Oleh karena itu, perempuan yang sudah divaksin tetap disarankan menjalani skrining secara berkala sesuai anjuran dokter.</p><br>
+    <p>Tidak. Vaksin HPV tidak menggantikan kebutuhan skrining rutin seperti Pap smear atau tes HPV. 
+        Vaksin hanya mencegah infeksi tipe HPV tertentu, tetapi tidak melindungi terhadap semua jenis HPV penyebab kanker serviks. 
+        Oleh karena itu, perempuan yang sudah divaksin tetap disarankan menjalani skrining secara berkala sesuai anjuran dokter.</p><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Vaksin HPV adalah salah satu inovasi paling efektif dalam pencegahan kanker serviks dan penyakit terkait HPV lainnya. Vaksin ini aman, efektif, dan memberikan perlindungan jangka panjang. Memberikan vaksinasi sejak usia muda, sebelum terpapar virus, adalah langkah terbaik dalam menjaga kesehatan reproduksi perempuan. Jangan ragu untuk berkonsultasi dengan dokter untuk mengetahui apakah Anda atau anak Anda memenuhi syarat untuk mendapatkan vaksin HPV.</p>
+    <p>Vaksin HPV adalah salah satu inovasi paling efektif dalam pencegahan kanker serviks dan penyakit terkait HPV lainnya. 
+        Vaksin ini aman, efektif, dan memberikan perlindungan jangka panjang. Memberikan vaksinasi sejak usia muda, sebelum terpapar virus, adalah langkah terbaik dalam menjaga kesehatan reproduksi perempuan. 
+        Jangan ragu untuk berkonsultasi dengan dokter untuk mengetahui apakah Anda atau anak Anda memenuhi syarat untuk mendapatkan vaksin HPV.</p>
         `,
         date: '08-05-2025',
         image: '/images/blog-8.jpg'
@@ -435,13 +489,18 @@ const blogs = [
         id: '9',
         title: 'Manfaat Pap Smear untuk Deteksi Dini Kanker Serviks',
         content: `
-    <p>Kanker serviks merupakan salah satu kanker paling mematikan bagi perempuan di seluruh dunia, terutama di negara berkembang. Di Indonesia sendiri, kanker serviks menjadi penyebab kematian nomor dua akibat kanker pada perempuan setelah kanker payudara. Salah satu cara paling efektif untuk mencegah dan mendeteksi kanker serviks sejak dini adalah melalui pemeriksaan Pap smear.</p><br>
+    <p>Kanker serviks merupakan salah satu kanker paling mematikan bagi perempuan di seluruh dunia, terutama di negara berkembang. 
+        Di Indonesia sendiri, kanker serviks menjadi penyebab kematian nomor dua akibat kanker pada perempuan setelah kanker payudara. 
+        Salah satu cara paling efektif untuk mencegah dan mendeteksi kanker serviks sejak dini adalah melalui pemeriksaan Pap smear.</p><br>
 
     <h2><strong>Apa Itu Pap Smear?</strong></h2>
-    <p>Pap smear adalah prosedur medis sederhana yang digunakan untuk mendeteksi perubahan sel-sel abnormal pada leher rahim (serviks) sebelum berkembang menjadi kanker. Dalam prosedur ini, dokter mengambil sampel sel dari serviks menggunakan alat kecil seperti spatula atau sikat, lalu sel tersebut diperiksa di laboratorium untuk mendeteksi adanya kelainan.</p><br>
+    <p>Pap smear adalah prosedur medis sederhana yang digunakan untuk mendeteksi perubahan sel-sel abnormal pada leher rahim (serviks) sebelum berkembang menjadi kanker. 
+        Dalam prosedur ini, dokter mengambil sampel sel dari serviks menggunakan alat kecil seperti spatula atau sikat, lalu sel tersebut diperiksa di laboratorium untuk mendeteksi adanya kelainan.</p><br>
 
     <h2><strong>Bagaimana Pap Smear Bekerja?</strong></h2>
-    <p>Sel-sel abnormal yang ditemukan melalui Pap smear biasanya merupakan tanda awal dari infeksi Human Papillomavirus (HPV) atau perubahan prakanker. Dengan mendeteksi perubahan ini lebih awal, pengobatan bisa dilakukan sebelum sel berkembang menjadi kanker serviks. Pap smear juga dapat mendeteksi infeksi atau peradangan pada serviks.</p><br>
+    <p>Sel-sel abnormal yang ditemukan melalui Pap smear biasanya merupakan tanda awal dari infeksi Human Papillomavirus (HPV) atau perubahan prakanker. 
+        Dengan mendeteksi perubahan ini lebih awal, pengobatan bisa dilakukan sebelum sel berkembang menjadi kanker serviks. 
+        Pap smear juga dapat mendeteksi infeksi atau peradangan pada serviks.</p><br>
 
     <h2><strong>Siapa yang Perlu Melakukan Pap Smear?</strong></h2>
     <p>Rekomendasi umum dari WHO dan Ikatan Dokter Indonesia menyarankan:</p>
@@ -469,7 +528,8 @@ const blogs = [
     </ul><br>
 
     <h2><strong>Apakah Pap Smear Menyakitkan?</strong></h2>
-    <p>Prosedur Pap smear umumnya tidak menyakitkan, namun beberapa perempuan mungkin merasa sedikit tidak nyaman atau tekanan ringan saat alat spekulum dimasukkan ke dalam vagina. Proses pengambilan sampel hanya memakan waktu beberapa menit.</p><br>
+    <p>Prosedur Pap smear umumnya tidak menyakitkan, namun beberapa perempuan mungkin merasa sedikit tidak nyaman atau tekanan ringan saat alat spekulum dimasukkan ke dalam vagina. 
+        Proses pengambilan sampel hanya memakan waktu beberapa menit.</p><br>
 
     <h2><strong>Apa Arti Hasil Pap Smear?</strong></h2>
     <p>Hasil Pap smear biasanya dibagi menjadi beberapa kategori:</p>
@@ -481,7 +541,9 @@ const blogs = [
     </ul><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Pap smear adalah alat deteksi dini yang sangat penting dan efektif dalam mencegah kanker serviks. Dengan melakukan pemeriksaan secara rutin, perempuan dapat mendeteksi perubahan sel sejak awal dan mendapatkan penanganan yang tepat sebelum berkembang menjadi kanker. Jangan tunda pemeriksaan, dan konsultasikan dengan dokter untuk mengetahui kapan saat terbaik melakukan Pap smear bagi Anda.</p>
+    <p>Pap smear adalah alat deteksi dini yang sangat penting dan efektif dalam mencegah kanker serviks. 
+        Dengan melakukan pemeriksaan secara rutin, perempuan dapat mendeteksi perubahan sel sejak awal dan mendapatkan penanganan yang tepat sebelum berkembang menjadi kanker. 
+        Jangan tunda pemeriksaan, dan konsultasikan dengan dokter untuk mengetahui kapan saat terbaik melakukan Pap smear bagi Anda.</p>
         `,
         date: '08-05-2025',
         image: '/images/blog-9.jpg'
@@ -490,10 +552,14 @@ const blogs = [
         id: '10',
         title: 'Perimenopause: Gejala Awal dan Cara Menghadapinya',
         content: `
-    <p>Perimenopause adalah fase transisi alami dalam kehidupan perempuan yang terjadi sebelum memasuki menopause. Pada masa ini, tubuh mulai mengalami perubahan hormonal yang signifikan, khususnya penurunan kadar estrogen dan progesteron. Perimenopause dapat dimulai sejak usia akhir 30-an atau awal 40-an dan berlangsung selama beberapa tahun sebelum menstruasi berhenti sepenuhnya.</p><br>
+    <p>Perimenopause adalah fase transisi alami dalam kehidupan perempuan yang terjadi sebelum memasuki menopause. 
+        Pada masa ini, tubuh mulai mengalami perubahan hormonal yang signifikan, khususnya penurunan kadar estrogen dan progesteron. 
+        Perimenopause dapat dimulai sejak usia akhir 30-an atau awal 40-an dan berlangsung selama beberapa tahun sebelum menstruasi berhenti sepenuhnya.</p><br>
 
     <h2><strong>Apa Itu Perimenopause?</strong></h2>
-    <p>Perimenopause berasal dari kata "peri" yang berarti "sekitar" atau "menjelang", dan "menopause", yaitu berhentinya menstruasi secara permanen. Masa perimenopause menandai dimulainya fluktuasi hormon yang menyebabkan berbagai gejala fisik dan emosional. Masa ini biasanya berlangsung sekitar 4 hingga 10 tahun sebelum menopause resmi terjadi, yang ditandai dengan tidak adanya menstruasi selama 12 bulan berturut-turut.</p><br>
+    <p>Perimenopause berasal dari kata "peri" yang berarti "sekitar" atau "menjelang", dan "menopause", yaitu berhentinya menstruasi secara permanen. 
+        Masa perimenopause menandai dimulainya fluktuasi hormon yang menyebabkan berbagai gejala fisik dan emosional. 
+        Masa ini biasanya berlangsung sekitar 4 hingga 10 tahun sebelum menopause resmi terjadi, yang ditandai dengan tidak adanya menstruasi selama 12 bulan berturut-turut.</p><br>
 
     <h2><strong>Gejala Umum Perimenopause</strong></h2>
     <p>Gejala perimenopause bervariasi pada setiap perempuan, tetapi beberapa yang paling umum meliputi:</p>
@@ -509,7 +575,8 @@ const blogs = [
     </ul><br>
 
     <h2><strong>Apa Penyebab Gejala Perimenopause?</strong></h2>
-    <p>Fluktuasi kadar hormon estrogen dan progesteron adalah penyebab utama gejala perimenopause. Penurunan estrogen mempengaruhi berbagai sistem tubuh, termasuk sistem reproduksi, kardiovaskular, tulang, dan sistem saraf.</p><br>
+    <p>Fluktuasi kadar hormon estrogen dan progesteron adalah penyebab utama gejala perimenopause. 
+        Penurunan estrogen mempengaruhi berbagai sistem tubuh, termasuk sistem reproduksi, kardiovaskular, tulang, dan sistem saraf.</p><br>
 
     <h2><strong>Bagaimana Cara Menghadapi Perimenopause?</strong></h2>
     <p>Meskipun perimenopause adalah proses alami, ada banyak cara yang dapat dilakukan untuk mengelola gejala agar tetap merasa nyaman dan sehat:</p>
@@ -532,7 +599,9 @@ const blogs = [
     </ul><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Perimenopause adalah bagian alami dari kehidupan perempuan yang menandai transisi menuju menopause. Dengan memahami gejalanya dan menerapkan pola hidup sehat, masa perimenopause bisa dijalani dengan nyaman dan tenang. Jangan ragu untuk berkonsultasi dengan tenaga medis jika gejala terasa berat atau mengganggu kualitas hidup Anda.</p>
+    <p>Perimenopause adalah bagian alami dari kehidupan perempuan yang menandai transisi menuju menopause. 
+        Dengan memahami gejalanya dan menerapkan pola hidup sehat, masa perimenopause bisa dijalani dengan nyaman dan tenang. 
+        Jangan ragu untuk berkonsultasi dengan tenaga medis jika gejala terasa berat atau mengganggu kualitas hidup Anda.</p>
         `,
         date: '08-05-2025',
         image: '/images/blog-10.jpg'
@@ -541,10 +610,14 @@ const blogs = [
         id: '11',
         title: 'Pentingnya Konsumsi Asam Folat bagi Perempuan Usia Subur',
         content: `
-    <p>Asam folat adalah salah satu vitamin B (vitamin B9) yang memiliki peranan sangat penting bagi kesehatan, terutama bagi perempuan usia subur. Konsumsi asam folat yang cukup tidak hanya mendukung kesehatan umum, tetapi juga sangat berperan dalam kesehatan reproduksi dan perkembangan janin saat kehamilan. Memahami manfaat asam folat serta kebutuhan asupannya adalah langkah penting bagi setiap perempuan yang merencanakan kehamilan atau berada dalam usia subur.</p><br>
+    <p>Asam folat adalah salah satu vitamin B (vitamin B9) yang memiliki peranan sangat penting bagi kesehatan, terutama bagi perempuan usia subur. 
+        Konsumsi asam folat yang cukup tidak hanya mendukung kesehatan umum, tetapi juga sangat berperan dalam kesehatan reproduksi dan perkembangan janin saat kehamilan. 
+        Memahami manfaat asam folat serta kebutuhan asupannya adalah langkah penting bagi setiap perempuan yang merencanakan kehamilan atau berada dalam usia subur.</p><br>
 
     <h2><strong>Apa Itu Asam Folat?</strong></h2>
-    <p>Asam folat adalah bentuk sintetis dari folat, vitamin B9 yang secara alami terdapat dalam makanan seperti sayuran hijau, kacang-kacangan, dan buah-buahan. Asam folat diperlukan tubuh untuk membentuk DNA, mendukung pembelahan sel, serta memproduksi sel darah merah yang sehat. Karena tubuh tidak dapat menyimpan asam folat dalam jumlah besar, asupan harian yang cukup sangat penting untuk menjaga keseimbangan tubuh.</p><br>
+    <p>Asam folat adalah bentuk sintetis dari folat, vitamin B9 yang secara alami terdapat dalam makanan seperti sayuran hijau, kacang-kacangan, dan buah-buahan. 
+        Asam folat diperlukan tubuh untuk membentuk DNA, mendukung pembelahan sel, serta memproduksi sel darah merah yang sehat. 
+        Karena tubuh tidak dapat menyimpan asam folat dalam jumlah besar, asupan harian yang cukup sangat penting untuk menjaga keseimbangan tubuh.</p><br>
 
     <h2><strong>Mengapa Asam Folat Penting bagi Perempuan Usia Subur?</strong></h2>
     <ul>
@@ -572,13 +645,17 @@ const blogs = [
     </ul><br>
 
     <h2><strong>Kapan Sebaiknya Mulai Mengonsumsi Asam Folat?</strong></h2>
-    <p>Idealnya, perempuan mulai mengonsumsi asam folat sejak memasuki usia subur, bahkan jauh sebelum merencanakan kehamilan. Karena cacat tabung saraf terjadi pada 28 hari pertama kehamilan, seringkali sebelum kehamilan terdeteksi, maka asupan asam folat yang cukup sejak awal sangat penting.</p><br>
+    <p>Idealnya, perempuan mulai mengonsumsi asam folat sejak memasuki usia subur, bahkan jauh sebelum merencanakan kehamilan. 
+        Karena cacat tabung saraf terjadi pada 28 hari pertama kehamilan, seringkali sebelum kehamilan terdeteksi, maka asupan asam folat yang cukup sejak awal sangat penting.</p><br>
 
     <h2><strong>Apakah Terlalu Banyak Asam Folat Berbahaya?</strong></h2>
-    <p>Meskipun asam folat umumnya aman, konsumsi dalam dosis sangat tinggi (lebih dari 1000 mcg/hari) dalam jangka panjang bisa menyamarkan gejala kekurangan vitamin B12 atau menyebabkan efek samping seperti gangguan pencernaan. Oleh karena itu, sebaiknya konsumsi sesuai anjuran dokter atau petunjuk suplemen.</p><br>
+    <p>Meskipun asam folat umumnya aman, konsumsi dalam dosis sangat tinggi (lebih dari 1000 mcg/hari) dalam jangka panjang bisa menyamarkan gejala kekurangan vitamin B12 atau menyebabkan efek samping seperti gangguan pencernaan. 
+        Oleh karena itu, sebaiknya konsumsi sesuai anjuran dokter atau petunjuk suplemen.</p><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Asam folat adalah nutrisi esensial yang tidak boleh diabaikan oleh perempuan usia subur. Manfaatnya dalam mendukung kesuburan, kesehatan reproduksi, serta mencegah cacat lahir pada janin menjadikan asupan asam folat yang cukup sebagai investasi penting untuk masa depan. Pastikan Anda mengonsumsi makanan bergizi seimbang yang kaya folat, dan konsultasikan dengan dokter jika perlu suplemen tambahan, terutama saat merencanakan kehamilan.</p>
+    <p>Asam folat adalah nutrisi esensial yang tidak boleh diabaikan oleh perempuan usia subur. 
+        Manfaatnya dalam mendukung kesuburan, kesehatan reproduksi, serta mencegah cacat lahir pada janin menjadikan asupan asam folat yang cukup sebagai investasi penting untuk masa depan. 
+        Pastikan Anda mengonsumsi makanan bergizi seimbang yang kaya folat, dan konsultasikan dengan dokter jika perlu suplemen tambahan, terutama saat merencanakan kehamilan.</p>
         `,
         date: '08-05-2025',
         image: '/images/blog-11.jpg'
@@ -587,10 +664,15 @@ const blogs = [
         id: '12',
         title: 'Dampak Stres pada Kesehatan Reproduksi Perempuan',
         content: `
-    <p>Stres adalah bagian dari kehidupan modern yang tidak bisa sepenuhnya dihindari. Namun, jika tidak dikelola dengan baik, stres kronis dapat memberikan dampak serius terhadap kesehatan, termasuk kesehatan reproduksi perempuan. Memahami bagaimana stres memengaruhi sistem reproduksi membantu perempuan lebih waspada dalam menjaga keseimbangan mental dan fisik.</p><br>
+    <p>Stres adalah bagian dari kehidupan modern yang tidak bisa sepenuhnya dihindari. 
+        Namun, jika tidak dikelola dengan baik, stres kronis dapat memberikan dampak serius terhadap kesehatan, termasuk kesehatan reproduksi perempuan. 
+        Memahami bagaimana stres memengaruhi sistem reproduksi membantu perempuan lebih waspada dalam menjaga keseimbangan mental dan fisik.</p><br>
 
     <h2><strong>Bagaimana Stres Memengaruhi Sistem Reproduksi?</strong></h2>
-    <p>Saat tubuh mengalami stres, kelenjar adrenal melepaskan hormon stres seperti kortisol dan adrenalin. Dalam jangka pendek, hormon ini membantu tubuh merespons situasi berbahaya. Namun, stres kronis menyebabkan kadar kortisol terus meningkat, yang dapat mengganggu keseimbangan hormon reproduksi seperti estrogen, progesteron, luteinizing hormone (LH), dan follicle-stimulating hormone (FSH). Ketidakseimbangan ini dapat berdampak pada siklus menstruasi, ovulasi, hingga kesuburan.</p><br>
+    <p>Saat tubuh mengalami stres, kelenjar adrenal melepaskan hormon stres seperti kortisol dan adrenalin. 
+        Dalam jangka pendek, hormon ini membantu tubuh merespons situasi berbahaya. 
+        Namun, stres kronis menyebabkan kadar kortisol terus meningkat, yang dapat mengganggu keseimbangan hormon reproduksi seperti estrogen, progesteron, luteinizing hormone (LH), dan follicle-stimulating hormone (FSH). 
+        Ketidakseimbangan ini dapat berdampak pada siklus menstruasi, ovulasi, hingga kesuburan.</p><br>
 
     <h2><strong>Dampak Stres terhadap Kesehatan Reproduksi Perempuan</strong></h2>
     <ul>
@@ -622,7 +704,9 @@ const blogs = [
     </ul><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Stres yang berkepanjangan tidak hanya berdampak pada kesehatan mental, tetapi juga dapat mengganggu keseimbangan hormon dan fungsi reproduksi perempuan. Mengelola stres secara efektif adalah bagian penting dari menjaga kesehatan reproduksi, baik bagi yang merencanakan kehamilan maupun yang ingin menjaga keseimbangan siklus menstruasi. Jangan ragu mencari bantuan profesional jika stres mulai mengganggu keseharian atau kesehatan tubuh Anda.</p>
+    <p>Stres yang berkepanjangan tidak hanya berdampak pada kesehatan mental, tetapi juga dapat mengganggu keseimbangan hormon dan fungsi reproduksi perempuan. 
+        Mengelola stres secara efektif adalah bagian penting dari menjaga kesehatan reproduksi, baik bagi yang merencanakan kehamilan maupun yang ingin menjaga keseimbangan siklus menstruasi. 
+        Jangan ragu mencari bantuan profesional jika stres mulai mengganggu keseharian atau kesehatan tubuh Anda.</p>
         `,
         date: '08-05-2025',
         image: '/images/blog-12.jpg'
@@ -631,7 +715,9 @@ const blogs = [
         id: '13',
         title: 'Mengapa Asupan Kalsium Penting bagi Perempuan?',
         content: `
-    <p>Kalsium adalah mineral esensial yang memainkan peran penting dalam menjaga kesehatan tulang dan gigi. Bagi perempuan, kebutuhan kalsium menjadi semakin krusial seiring bertambahnya usia, terutama untuk mencegah penyakit tulang seperti osteoporosis. Selain itu, kalsium juga memiliki fungsi penting dalam sistem saraf, otot, dan pembekuan darah.</p><br>
+    <p>Kalsium adalah mineral esensial yang memainkan peran penting dalam menjaga kesehatan tulang dan gigi. 
+        Bagi perempuan, kebutuhan kalsium menjadi semakin krusial seiring bertambahnya usia, terutama untuk mencegah penyakit tulang seperti osteoporosis. 
+        Selain itu, kalsium juga memiliki fungsi penting dalam sistem saraf, otot, dan pembekuan darah.</p><br>
 
     <h2><strong>Mengapa Perempuan Membutuhkan Kalsium Lebih Banyak?</strong></h2>
     <p>Perempuan memiliki risiko lebih tinggi mengalami pengeroposan tulang dibandingkan laki-laki. Hal ini disebabkan oleh beberapa faktor:</p>
@@ -683,7 +769,9 @@ const blogs = [
     </ul><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Asupan kalsium yang cukup sangat penting untuk menjaga kesehatan tulang, gigi, dan fungsi tubuh lainnya. Perempuan, terutama yang memasuki usia menopause atau sedang hamil dan menyusui, perlu memastikan kebutuhan kalsium harian tercukupi. Pola makan seimbang yang kaya kalsium dan vitamin D, ditambah gaya hidup sehat, akan membantu menjaga kualitas hidup dan mencegah penyakit tulang di kemudian hari.</p>
+    <p>Asupan kalsium yang cukup sangat penting untuk menjaga kesehatan tulang, gigi, dan fungsi tubuh lainnya. 
+        Perempuan, terutama yang memasuki usia menopause atau sedang hamil dan menyusui, perlu memastikan kebutuhan kalsium harian tercukupi. 
+        Pola makan seimbang yang kaya kalsium dan vitamin D, ditambah gaya hidup sehat, akan membantu menjaga kualitas hidup dan mencegah penyakit tulang di kemudian hari.</p>
         `,
         date: '08-05-2025',
         image: '/images/blog-13.jpg'
@@ -692,10 +780,15 @@ const blogs = [
         id: '14',
         title: 'Cara Menjaga Kesehatan Vagina secara Alami',
         content: `
-    <p>Menjaga kesehatan vagina merupakan bagian penting dari kesehatan reproduksi perempuan secara keseluruhan. Vagina adalah organ yang memiliki kemampuan membersihkan dirinya sendiri, namun tetap membutuhkan perawatan yang tepat agar keseimbangan flora alami dan tingkat pH tetap terjaga. Perawatan yang salah justru bisa menyebabkan infeksi, iritasi, atau ketidakseimbangan mikroorganisme. Berikut panduan cara merawat kesehatan vagina secara alami tanpa bahan kimia berlebihan.</p><br>
+    <p>Menjaga kesehatan vagina merupakan bagian penting dari kesehatan reproduksi perempuan secara keseluruhan. 
+        Vagina adalah organ yang memiliki kemampuan membersihkan dirinya sendiri, namun tetap membutuhkan perawatan yang tepat agar keseimbangan flora alami dan tingkat pH tetap terjaga. 
+        Perawatan yang salah justru bisa menyebabkan infeksi, iritasi, atau ketidakseimbangan mikroorganisme. 
+        Berikut panduan cara merawat kesehatan vagina secara alami tanpa bahan kimia berlebihan.</p><br>
 
     <h2><strong>1. Jaga Kebersihan dengan Air Bersih</strong></h2>
-    <p>Mencuci area kewanitaan cukup dengan air bersih tanpa sabun berpewangi. Vagina memiliki keseimbangan bakteri baik (lactobacillus) yang menjaga keasaman dan mencegah pertumbuhan bakteri jahat. Penggunaan sabun wangi atau antiseptik berlebihan dapat mengganggu keseimbangan ini.</p><br>
+    <p>Mencuci area kewanitaan cukup dengan air bersih tanpa sabun berpewangi. 
+        Vagina memiliki keseimbangan bakteri baik (lactobacillus) yang menjaga keasaman dan mencegah pertumbuhan bakteri jahat. 
+        Penggunaan sabun wangi atau antiseptik berlebihan dapat mengganggu keseimbangan ini.</p><br>
 
     <h2><strong>2. Pilih Pakaian Dalam yang Tepat</strong></h2>
     <ul>
@@ -712,7 +805,8 @@ const blogs = [
     </ul><br>
 
     <h2><strong>4. Hindari Douching</strong></h2>
-    <p>Douching atau membilas bagian dalam vagina dengan cairan tertentu tidak disarankan. Kebiasaan ini dapat merusak flora normal vagina dan meningkatkan risiko infeksi seperti bacterial vaginosis atau infeksi jamur.</p><br>
+    <p>Douching atau membilas bagian dalam vagina dengan cairan tertentu tidak disarankan. 
+        Kebiasaan ini dapat merusak flora normal vagina dan meningkatkan risiko infeksi seperti bacterial vaginosis atau infeksi jamur.</p><br>
 
     <h2><strong>5. Bersihkan dengan Arah yang Benar</strong></h2>
     <p>Setelah buang air kecil atau besar, selalu bersihkan area kewanitaan dari arah depan ke belakang (vagina ke anus) untuk mencegah perpindahan bakteri dari anus ke vagina atau saluran kemih.</p><br>
@@ -724,7 +818,8 @@ const blogs = [
     </ul><br>
 
     <h2><strong>7. Jangan Tahan Buang Air Kecil</strong></h2>
-    <p>Kebiasaan menahan kencing terlalu lama dapat meningkatkan risiko infeksi saluran kemih (ISK). Biasakan buang air kecil setelah berhubungan intim untuk membantu membuang bakteri yang mungkin masuk ke saluran kemih.</p><br>
+    <p>Kebiasaan menahan kencing terlalu lama dapat meningkatkan risiko infeksi saluran kemih (ISK). 
+        Biasakan buang air kecil setelah berhubungan intim untuk membantu membuang bakteri yang mungkin masuk ke saluran kemih.</p><br>
 
     <h2><strong>8. Perhatikan Saat Menstruasi</strong></h2>
     <ul>
@@ -734,13 +829,17 @@ const blogs = [
     </ul><br>
 
     <h2><strong>9. Kelola Stres</strong></h2>
-    <p>Stres berlebihan dapat memengaruhi keseimbangan hormon dan menurunkan daya tahan tubuh, yang berdampak pada kesehatan vagina. Lakukan aktivitas relaksasi seperti meditasi, yoga, atau olahraga teratur.</p><br>
+    <p>Stres berlebihan dapat memengaruhi keseimbangan hormon dan menurunkan daya tahan tubuh, yang berdampak pada kesehatan vagina. 
+        Lakukan aktivitas relaksasi seperti meditasi, yoga, atau olahraga teratur.</p><br>
 
     <h2><strong>10. Konsultasi dengan Dokter Jika Ada Keluhan</strong></h2>
-    <p>Jika mengalami gejala seperti keputihan berwarna dan berbau tidak sedap, gatal, atau nyeri, segera konsultasikan ke dokter untuk pemeriksaan lebih lanjut. Jangan mencoba mengobati sendiri tanpa diagnosis yang tepat.</p><br>
+    <p>Jika mengalami gejala seperti keputihan berwarna dan berbau tidak sedap, gatal, atau nyeri, segera konsultasikan ke dokter untuk pemeriksaan lebih lanjut. 
+        Jangan mencoba mengobati sendiri tanpa diagnosis yang tepat.</p><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Perawatan vagina yang sehat sebenarnya sederhana dan alami. Dengan menjaga kebersihan, memilih pakaian yang tepat, menerapkan pola makan bergizi, dan melakukan pemeriksaan rutin, perempuan dapat menjaga keseimbangan flora vagina dan mencegah berbagai masalah kesehatan. Ingat, vagina adalah organ yang mampu membersihkan dirinya sendiri — cukup dukung dengan gaya hidup sehat tanpa perlu intervensi berlebihan.</p>
+    <p>Perawatan vagina yang sehat sebenarnya sederhana dan alami. 
+        Dengan menjaga kebersihan, memilih pakaian yang tepat, menerapkan pola makan bergizi, dan melakukan pemeriksaan rutin, perempuan dapat menjaga keseimbangan flora vagina dan mencegah berbagai masalah kesehatan. 
+        Ingat, vagina adalah organ yang mampu membersihkan dirinya sendiri — cukup dukung dengan gaya hidup sehat tanpa perlu intervensi berlebihan.</p>
         `,
         date: '08-05-2025',
         image: '/images/blog-14.jpg'
@@ -749,34 +848,54 @@ const blogs = [
         id: '15',
         title: 'Manfaat Yoga untuk Kesehatan Hormonal Perempuan',
         content: `
-    <p>Yoga bukan hanya untuk kebugaran fisik, tetapi juga memiliki banyak manfaat bagi kesehatan hormonal perempuan. Keseimbangan hormon memainkan peran penting dalam berbagai aspek kesehatan, seperti kesehatan reproduksi, suasana hati, dan metabolisme. Beberapa pose yoga dapat membantu meredakan gejala terkait ketidakseimbangan hormon, serta meningkatkan sirkulasi darah, mengurangi stres, dan memperbaiki kualitas tidur. Berikut adalah beberapa manfaat yoga yang dapat mendukung keseimbangan hormonal pada perempuan.</p><br>
+    <p>Yoga bukan hanya untuk kebugaran fisik, tetapi juga memiliki banyak manfaat bagi kesehatan hormonal perempuan. 
+        Keseimbangan hormon memainkan peran penting dalam berbagai aspek kesehatan, seperti kesehatan reproduksi, suasana hati, dan metabolisme. 
+        Beberapa pose yoga dapat membantu meredakan gejala terkait ketidakseimbangan hormon, serta meningkatkan sirkulasi darah, mengurangi stres, dan memperbaiki kualitas tidur. 
+        Berikut adalah beberapa manfaat yoga yang dapat mendukung keseimbangan hormonal pada perempuan.</p><br>
 
     <h2><strong>1. Mengurangi Stres dan Meningkatkan Keseimbangan Hormon Stres 🧸</strong></h2>
-    <p>Stres berlebihan dapat memengaruhi kadar hormon kortisol, yang dapat mengganggu keseimbangan hormon lainnya, seperti estrogen dan progesteron. Yoga dengan teknik pernapasan dan meditasi dapat membantu menenangkan sistem saraf, menurunkan kadar kortisol, dan membantu tubuh kembali ke kondisi seimbang. Posisi yoga seperti <em>Child's Pose</em> dan <em>Forward Bend</em> dapat meredakan ketegangan dan stres.</p><br>
+    <p>Stres berlebihan dapat memengaruhi kadar hormon kortisol, yang dapat mengganggu keseimbangan hormon lainnya, seperti estrogen dan progesteron. 
+        Yoga dengan teknik pernapasan dan meditasi dapat membantu menenangkan sistem saraf, menurunkan kadar kortisol, dan membantu tubuh kembali ke kondisi seimbang. 
+        Posisi yoga seperti <em>Child's Pose</em> dan <em>Forward Bend</em> dapat meredakan ketegangan dan stres.</p><br>
 
     <h2><strong>2. Menstimulasi Fungsi Kelenjar Endokrin 🧸</strong></h2>
-    <p>Kelenjar endokrin, seperti tiroid, pankreas, dan adrenal, berfungsi mengatur produksi hormon di tubuh. Beberapa pose yoga, seperti <em>Shoulder Stand</em> dan <em>Plow Pose</em>, dapat merangsang kelenjar tiroid dan meningkatkan metabolisme tubuh. Peningkatan fungsi kelenjar ini juga dapat memperbaiki kualitas tidur, memperbaiki mood, dan menstabilkan kadar gula darah.</p><br>
+    <p>Kelenjar endokrin, seperti tiroid, pankreas, dan adrenal, berfungsi mengatur produksi hormon di tubuh. 
+        Beberapa pose yoga, seperti <em>Shoulder Stand</em> dan <em>Plow Pose</em>, dapat merangsang kelenjar tiroid dan meningkatkan metabolisme tubuh. 
+        Peningkatan fungsi kelenjar ini juga dapat memperbaiki kualitas tidur, memperbaiki mood, dan menstabilkan kadar gula darah.</p><br>
 
     <h2><strong>3. Menyeimbangkan Hormon Reproduksi 🧸</strong></h2>
-    <p>Yoga dapat membantu menyeimbangkan hormon reproduksi pada perempuan, seperti estrogen dan progesteron. Beberapa pose, seperti <em>Bridge Pose</em> dan <em>Legs Up the Wall</em>, dapat membantu meredakan gejala PMS, seperti kram perut dan perubahan suasana hati. Selain itu, yoga juga dapat membantu mengatur siklus menstruasi, memperbaiki kesehatan ovarium, dan meningkatkan kesuburan.</p><br>
+    <p>Yoga dapat membantu menyeimbangkan hormon reproduksi pada perempuan, seperti estrogen dan progesteron. 
+        Beberapa pose, seperti <em>Bridge Pose</em> dan <em>Legs Up the Wall</em>, dapat membantu meredakan gejala PMS, seperti kram perut dan perubahan suasana hati. 
+        Selain itu, yoga juga dapat membantu mengatur siklus menstruasi, memperbaiki kesehatan ovarium, dan meningkatkan kesuburan.</p><br>
 
     <h2><strong>4. Meningkatkan Sirkulasi Darah ke Organ Reproduksi 🧸</strong></h2>
-    <p>Posisi yoga terbalik, seperti <em>Headstand</em> dan <em>Downward Dog</em>, dapat meningkatkan aliran darah ke organ reproduksi, yang membantu meningkatkan keseimbangan hormon. Sirkulasi darah yang baik mendukung pembuangan racun dan meningkatkan fungsi organ reproduksi, seperti rahim dan ovarium. Hal ini dapat membantu mencegah masalah kesehatan reproduksi, seperti fibroid atau endometriosis.</p><br>
+    <p>Posisi yoga terbalik, seperti <em>Headstand</em> dan <em>Downward Dog</em>, dapat meningkatkan aliran darah ke organ reproduksi, yang membantu meningkatkan keseimbangan hormon. 
+        Sirkulasi darah yang baik mendukung pembuangan racun dan meningkatkan fungsi organ reproduksi, seperti rahim dan ovarium. Hal ini dapat membantu mencegah masalah kesehatan reproduksi, seperti fibroid atau endometriosis.</p><br>
 
     <h2><strong>5. Menyelaraskan Hormon Tiroid 🧸</strong></h2>
-    <p>Yoga dapat mendukung pengaturan hormon tiroid, yang berperan dalam pengaturan metabolisme tubuh. Pose yoga seperti <em>Fish Pose</em> atau <em>Neck Rolls</em> dapat membantu merangsang kelenjar tiroid, yang penting bagi metabolisme dan produksi energi tubuh. Menjaga tiroid tetap sehat juga berhubungan dengan pengaturan berat badan dan tingkat energi yang optimal.</p><br>
+    <p>Yoga dapat mendukung pengaturan hormon tiroid, yang berperan dalam pengaturan metabolisme tubuh. 
+        Pose yoga seperti <em>Fish Pose</em> atau <em>Neck Rolls</em> dapat membantu merangsang kelenjar tiroid, yang penting bagi metabolisme dan produksi energi tubuh. 
+        Menjaga tiroid tetap sehat juga berhubungan dengan pengaturan berat badan dan tingkat energi yang optimal.</p><br>
 
     <h2><strong>6. Meningkatkan Kesehatan Mental dan Emosional 🧸</strong></h2>
-    <p>Yoga tidak hanya bermanfaat untuk fisik, tetapi juga kesehatan mental. Beberapa latihan yoga yang melibatkan meditasi dan pernapasan, seperti <em>Pranayama</em>, dapat membantu mengurangi kecemasan, depresi, dan perasaan cemas yang berhubungan dengan ketidakseimbangan hormon. Menjaga kesehatan mental penting untuk keseimbangan hormon, karena hormon stres yang tinggi dapat mengganggu produksi hormon lainnya.</p><br>
+    <p>Yoga tidak hanya bermanfaat untuk fisik, tetapi juga kesehatan mental. 
+        Beberapa latihan yoga yang melibatkan meditasi dan pernapasan, seperti <em>Pranayama</em>, dapat membantu mengurangi kecemasan, depresi, dan perasaan cemas yang berhubungan dengan ketidakseimbangan hormon. 
+        Menjaga kesehatan mental penting untuk keseimbangan hormon, karena hormon stres yang tinggi dapat mengganggu produksi hormon lainnya.</p><br>
 
     <h2><strong>7. Meningkatkan Kualitas Tidur 🧸</strong></h2>
-    <p>Yoga membantu menenangkan tubuh dan pikiran, yang sangat bermanfaat untuk tidur yang lebih nyenyak. Tidur yang cukup adalah faktor penting untuk menjaga keseimbangan hormon, terutama hormon yang terkait dengan metabolisme dan stres. Beberapa pose relaksasi, seperti <em>Savasana</em> dan <em>Corpse Pose</em>, dapat membantu tubuh dan pikiran untuk beristirahat sepenuhnya dan memulihkan diri secara alami.</p><br>
+    <p>Yoga membantu menenangkan tubuh dan pikiran, yang sangat bermanfaat untuk tidur yang lebih nyenyak. 
+        Tidur yang cukup adalah faktor penting untuk menjaga keseimbangan hormon, terutama hormon yang terkait dengan metabolisme dan stres. 
+        Beberapa pose relaksasi, seperti <em>Savasana</em> dan <em>Corpse Pose</em>, dapat membantu tubuh dan pikiran untuk beristirahat sepenuhnya dan memulihkan diri secara alami.</p><br>
 
     <h2><strong>8. Membantu Mengurangi Gejala Menopause 🧸</strong></h2>
-    <p>Yoga dapat membantu meredakan gejala menopause, seperti hot flashes, kecemasan, dan gangguan tidur. Beberapa pose seperti <em>Cat-Cow Pose</em> dan <em>Cobber Pose</em> dapat membantu menyeimbangkan hormon estrogen dan progesteron yang berfluktuasi selama menopause. Yoga juga dapat membantu menjaga fleksibilitas tubuh dan mengurangi rasa sakit yang sering terjadi pada perempuan yang memasuki usia menopause.</p><br>
+    <p>Yoga dapat membantu meredakan gejala menopause, seperti hot flashes, kecemasan, dan gangguan tidur. 
+        Beberapa pose seperti <em>Cat-Cow Pose</em> dan <em>Cobber Pose</em> dapat membantu menyeimbangkan hormon estrogen dan progesteron yang berfluktuasi selama menopause. 
+        Yoga juga dapat membantu menjaga fleksibilitas tubuh dan mengurangi rasa sakit yang sering terjadi pada perempuan yang memasuki usia menopause.</p><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Yoga dapat menjadi alat yang efektif untuk menjaga kesehatan hormonal perempuan dengan mengurangi stres, menyeimbangkan kadar hormon, meningkatkan sirkulasi darah, serta mendukung keseimbangan fisik dan mental. Dengan melibatkan yoga dalam rutinitas harian, perempuan dapat merasakan manfaat besar dalam hal kesehatan hormon, kesuburan, dan kualitas hidup secara keseluruhan. Mulailah dengan pose dasar dan secara bertahap tingkatkan latihan untuk merasakan manfaatnya dalam jangka panjang.</p>
+    <p>Yoga dapat menjadi alat yang efektif untuk menjaga kesehatan hormonal perempuan dengan mengurangi stres, menyeimbangkan kadar hormon, meningkatkan sirkulasi darah, serta mendukung keseimbangan fisik dan mental. 
+        Dengan melibatkan yoga dalam rutinitas harian, perempuan dapat merasakan manfaat besar dalam hal kesehatan hormon, kesuburan, dan kualitas hidup secara keseluruhan. 
+        Mulailah dengan pose dasar dan secara bertahap tingkatkan latihan untuk merasakan manfaatnya dalam jangka panjang.</p>
         `,
         date: '08-05-2025',
         image: '/images/blog-15.jpg'
@@ -785,37 +904,64 @@ const blogs = [
         id: '16',
         title: 'Nutrisi Penting untuk Kesehatan Kehamilan',
         content: `
-    <p>Kehamilan adalah fase penting dalam kehidupan seorang perempuan yang membutuhkan perhatian khusus, terutama dalam hal asupan nutrisi. Nutrisi yang tepat tidak hanya berperan dalam menjaga kesehatan ibu, tetapi juga dalam mendukung pertumbuhan dan perkembangan janin. Kekurangan atau ketidakseimbangan nutrisi selama kehamilan dapat berdampak negatif pada kesehatan ibu maupun bayi, baik dalam jangka pendek maupun panjang. Berikut adalah beberapa nutrisi esensial yang perlu diperhatikan selama masa kehamilan.</p><br>
+    <p>Kehamilan adalah fase penting dalam kehidupan seorang perempuan yang membutuhkan perhatian khusus, terutama dalam hal asupan nutrisi. 
+        Nutrisi yang tepat tidak hanya berperan dalam menjaga kesehatan ibu, tetapi juga dalam mendukung pertumbuhan dan perkembangan janin. 
+        Kekurangan atau ketidakseimbangan nutrisi selama kehamilan dapat berdampak negatif pada kesehatan ibu maupun bayi, baik dalam jangka pendek maupun panjang. 
+        Berikut adalah beberapa nutrisi esensial yang perlu diperhatikan selama masa kehamilan.</p><br>
 
     <h2><strong>1. Asam Folat 🌿</strong></h2>
-    <p>Asam folat (vitamin B9) sangat penting terutama pada trimester pertama kehamilan, bahkan dianjurkan sejak perencanaan kehamilan. Asam folat berperan dalam pembentukan tabung saraf bayi, yang nantinya berkembang menjadi otak dan sumsum tulang belakang. Kekurangan asam folat dapat meningkatkan risiko cacat tabung saraf, seperti spina bifida. Sumber asam folat antara lain sayuran berdaun hijau (bayam, brokoli), kacang-kacangan, jeruk, dan suplemen prenatal.</p><br>
+    <p>Asam folat (vitamin B9) sangat penting terutama pada trimester pertama kehamilan, bahkan dianjurkan sejak perencanaan kehamilan. 
+        Asam folat berperan dalam pembentukan tabung saraf bayi, yang nantinya berkembang menjadi otak dan sumsum tulang belakang. 
+        Kekurangan asam folat dapat meningkatkan risiko cacat tabung saraf, seperti spina bifida. 
+        Sumber asam folat antara lain sayuran berdaun hijau (bayam, brokoli), kacang-kacangan, jeruk, dan suplemen prenatal.</p><br>
 
     <h2><strong>2. Zat Besi 🌿</strong></h2>
-    <p>Selama kehamilan, volume darah meningkat sekitar 50%, sehingga kebutuhan zat besi pun meningkat. Zat besi penting untuk pembentukan hemoglobin, yang mengangkut oksigen ke seluruh tubuh dan janin. Kekurangan zat besi dapat menyebabkan anemia, yang meningkatkan risiko kelahiran prematur dan berat badan lahir rendah. Sumber zat besi yang baik meliputi daging merah tanpa lemak, ayam, ikan, kacang-kacangan, dan sayuran hijau.</p><br>
+    <p>Selama kehamilan, volume darah meningkat sekitar 50%, sehingga kebutuhan zat besi pun meningkat. 
+        Zat besi penting untuk pembentukan hemoglobin, yang mengangkut oksigen ke seluruh tubuh dan janin. 
+        Kekurangan zat besi dapat menyebabkan anemia, yang meningkatkan risiko kelahiran prematur dan berat badan lahir rendah. 
+        Sumber zat besi yang baik meliputi daging merah tanpa lemak, ayam, ikan, kacang-kacangan, dan sayuran hijau.</p><br>
 
     <h2><strong>3. Kalsium 🌿</strong></h2>
-    <p>Kalsium penting untuk perkembangan tulang dan gigi bayi, serta menjaga kesehatan tulang ibu. Jika asupan kalsium ibu tidak mencukupi, tubuh akan mengambil cadangan kalsium dari tulang ibu untuk memenuhi kebutuhan janin, yang dapat meningkatkan risiko osteoporosis di kemudian hari. Sumber kalsium yang baik termasuk susu dan produk olahannya (yogurt, keju), tahu, tempe, kacang almond, dan sayuran berdaun hijau.</p><br>
+    <p>Kalsium penting untuk perkembangan tulang dan gigi bayi, serta menjaga kesehatan tulang ibu. 
+        Jika asupan kalsium ibu tidak mencukupi, tubuh akan mengambil cadangan kalsium dari tulang ibu untuk memenuhi kebutuhan janin, yang dapat meningkatkan risiko osteoporosis di kemudian hari. 
+        Sumber kalsium yang baik termasuk susu dan produk olahannya (yogurt, keju), tahu, tempe, kacang almond, dan sayuran berdaun hijau.</p><br>
 
     <h2><strong>4. DHA (Asam Lemak Omega-3) 🌿</strong></h2>
-    <p>Docosahexaenoic Acid (DHA) adalah asam lemak omega-3 yang berperan penting dalam perkembangan otak dan mata janin. Asupan DHA yang cukup selama kehamilan dapat meningkatkan perkembangan kognitif dan penglihatan bayi. Sumber DHA antara lain ikan berlemak seperti salmon, sarden, dan tuna, serta suplemen minyak ikan yang aman untuk ibu hamil.</p><br>
+    <p>Docosahexaenoic Acid (DHA) adalah asam lemak omega-3 yang berperan penting dalam perkembangan otak dan mata janin. 
+        Asupan DHA yang cukup selama kehamilan dapat meningkatkan perkembangan kognitif dan penglihatan bayi. 
+        Sumber DHA antara lain ikan berlemak seperti salmon, sarden, dan tuna, serta suplemen minyak ikan yang aman untuk ibu hamil.</p><br>
 
     <h2><strong>5. Protein 🌿</strong></h2>
-    <p>Protein adalah komponen penting dalam pembentukan jaringan tubuh bayi, termasuk otot, kulit, dan organ. Protein juga berperan dalam produksi hormon dan enzim. Ibu hamil membutuhkan asupan protein yang cukup setiap harinya. Sumber protein yang baik antara lain daging tanpa lemak, ayam, telur, produk susu, kacang-kacangan, dan tahu-tempe.</p><br>
+    <p>Protein adalah komponen penting dalam pembentukan jaringan tubuh bayi, termasuk otot, kulit, dan organ. 
+        Protein juga berperan dalam produksi hormon dan enzim. Ibu hamil membutuhkan asupan protein yang cukup setiap harinya. 
+        Sumber protein yang baik antara lain daging tanpa lemak, ayam, telur, produk susu, kacang-kacangan, dan tahu-tempe.</p><br>
 
     <h2><strong>6. Vitamin D 🌿</strong></h2>
-    <p>Vitamin D membantu penyerapan kalsium dan fosfor, yang penting untuk perkembangan tulang bayi. Selain itu, vitamin D juga berperan dalam sistem kekebalan tubuh ibu dan janin. Kekurangan vitamin D dapat meningkatkan risiko preeklamsia, diabetes gestasional, dan berat badan lahir rendah. Vitamin D bisa diperoleh dari paparan sinar matahari, ikan berlemak, telur, dan suplemen bila diperlukan.</p><br>
+    <p>Vitamin D membantu penyerapan kalsium dan fosfor, yang penting untuk perkembangan tulang bayi. 
+        Selain itu, vitamin D juga berperan dalam sistem kekebalan tubuh ibu dan janin. 
+        Kekurangan vitamin D dapat meningkatkan risiko preeklamsia, diabetes gestasional, dan berat badan lahir rendah. 
+        Vitamin D bisa diperoleh dari paparan sinar matahari, ikan berlemak, telur, dan suplemen bila diperlukan.</p><br>
 
     <h2><strong>7. Serat 🌿</strong></h2>
-    <p>Masalah pencernaan, seperti sembelit, umum terjadi selama kehamilan karena perubahan hormon dan tekanan dari rahim yang membesar. Serat membantu menjaga kesehatan pencernaan dan mencegah sembelit. Sumber serat yang baik meliputi buah-buahan, sayuran, kacang-kacangan, dan biji-bijian utuh.</p><br>
+    <p>Masalah pencernaan, seperti sembelit, umum terjadi selama kehamilan karena perubahan hormon dan tekanan dari rahim yang membesar. 
+        Serat membantu menjaga kesehatan pencernaan dan mencegah sembelit. 
+        Sumber serat yang baik meliputi buah-buahan, sayuran, kacang-kacangan, dan biji-bijian utuh.</p><br>
 
     <h2><strong>8. Zinc 🌿</strong></h2>
-    <p>Zinc atau seng berperan dalam pembelahan sel, pertumbuhan jaringan, dan sistem kekebalan tubuh. Kekurangan zinc dapat memengaruhi perkembangan janin dan meningkatkan risiko komplikasi kehamilan. Sumber zinc meliputi daging merah, seafood (seperti tiram), kacang-kacangan, dan biji-bijian.</p><br>
+    <p>Zinc atau seng berperan dalam pembelahan sel, pertumbuhan jaringan, dan sistem kekebalan tubuh. 
+        Kekurangan zinc dapat memengaruhi perkembangan janin dan meningkatkan risiko komplikasi kehamilan. 
+        Sumber zinc meliputi daging merah, seafood (seperti tiram), kacang-kacangan, dan biji-bijian.</p><br>
 
     <h2><strong>9. Iodium 🌿</strong></h2>
-    <p>Iodium diperlukan untuk produksi hormon tiroid yang penting bagi perkembangan otak dan sistem saraf janin. Kekurangan iodium selama kehamilan dapat menyebabkan gangguan perkembangan kognitif dan mental pada bayi. Sumber iodium antara lain garam beryodium, produk laut, dan produk susu.</p><br>
+    <p>Iodium diperlukan untuk produksi hormon tiroid yang penting bagi perkembangan otak dan sistem saraf janin. 
+        Kekurangan iodium selama kehamilan dapat menyebabkan gangguan perkembangan kognitif dan mental pada bayi. 
+        Sumber iodium antara lain garam beryodium, produk laut, dan produk susu.</p><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Memenuhi kebutuhan nutrisi selama kehamilan sangat penting untuk mendukung kesehatan ibu dan perkembangan optimal janin. Ibu hamil disarankan untuk mengonsumsi makanan bergizi seimbang yang mencakup berbagai nutrisi esensial. Konsultasi dengan tenaga kesehatan atau ahli gizi sangat dianjurkan untuk memastikan kebutuhan nutrisi terpenuhi dengan baik. Dengan asupan nutrisi yang tepat, kehamilan yang sehat dan persalinan yang aman dapat tercapai.</p>
+    <p>Memenuhi kebutuhan nutrisi selama kehamilan sangat penting untuk mendukung kesehatan ibu dan perkembangan optimal janin. 
+        Ibu hamil disarankan untuk mengonsumsi makanan bergizi seimbang yang mencakup berbagai nutrisi esensial. 
+        Konsultasi dengan tenaga kesehatan atau ahli gizi sangat dianjurkan untuk memastikan kebutuhan nutrisi terpenuhi dengan baik. 
+        Dengan asupan nutrisi yang tepat, kehamilan yang sehat dan persalinan yang aman dapat tercapai.</p>
         `,
         date: '08-05-2025',
         image: '/images/blog-16.jpg'
@@ -824,10 +970,14 @@ const blogs = [
         id: '17',
         title: 'Memahami Pilihan Metode KB yang Tepat untuk Perempuan',
         content: `
-    <p>Perencanaan keluarga merupakan bagian penting dalam menjaga kesehatan reproduksi perempuan sekaligus mendukung kesejahteraan keluarga. Salah satu caranya adalah dengan memilih metode kontrasepsi (KB) yang sesuai dengan kebutuhan dan kondisi masing-masing individu. Dengan berbagai pilihan yang tersedia, penting bagi perempuan untuk memahami manfaat, risiko, serta cara kerja masing-masing metode agar dapat mengambil keputusan yang tepat dan bijak. Artikel ini akan membahas berbagai jenis metode KB dan pertimbangannya.</p><br>
+    <p>Perencanaan keluarga merupakan bagian penting dalam menjaga kesehatan reproduksi perempuan sekaligus mendukung kesejahteraan keluarga. 
+        Salah satu caranya adalah dengan memilih metode kontrasepsi (KB) yang sesuai dengan kebutuhan dan kondisi masing-masing individu. 
+        Dengan berbagai pilihan yang tersedia, penting bagi perempuan untuk memahami manfaat, risiko, serta cara kerja masing-masing metode agar dapat mengambil keputusan yang tepat dan bijak. 
+        Artikel ini akan membahas berbagai jenis metode KB dan pertimbangannya.</p><br>
 
     <h2><strong>1. Kontrasepsi Hormonal</strong></h2>
-    <p>Kontrasepsi hormonal bekerja dengan cara mengubah kadar hormon dalam tubuh untuk mencegah ovulasi (pelepasan sel telur) atau mengubah kondisi lendir serviks dan lapisan rahim agar tidak mendukung kehamilan. Jenisnya meliputi:</p>
+    <p>Kontrasepsi hormonal bekerja dengan cara mengubah kadar hormon dalam tubuh untuk mencegah ovulasi (pelepasan sel telur) atau mengubah kondisi lendir serviks dan lapisan rahim agar tidak mendukung kehamilan. 
+        Jenisnya meliputi:</p>
     <ul>
         <li><strong>🧸 Pil KB:</strong> Pil kombinasi (estrogen dan progestin) atau pil progestin saja. Harus diminum setiap hari pada waktu yang sama.</li>
         <li><strong>🧸 Suntik KB:</strong> Biasanya diberikan setiap 1 atau 3 bulan sekali. Praktis bagi yang sulit mengingat minum pil.</li>
@@ -863,7 +1013,9 @@ const blogs = [
     </ul><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Setiap perempuan memiliki kebutuhan, preferensi, dan kondisi kesehatan yang unik dalam memilih metode kontrasepsi. Oleh karena itu, konsultasi dengan tenaga kesehatan sangat dianjurkan agar mendapatkan informasi yang tepat dan pilihan yang sesuai. Dengan pemahaman yang baik tentang berbagai pilihan KB, perempuan dapat merencanakan kehamilan dengan lebih sadar dan bertanggung jawab demi kesehatan diri sendiri dan keluarga.</p>
+    <p>Setiap perempuan memiliki kebutuhan, preferensi, dan kondisi kesehatan yang unik dalam memilih metode kontrasepsi. 
+        Oleh karena itu, konsultasi dengan tenaga kesehatan sangat dianjurkan agar mendapatkan informasi yang tepat dan pilihan yang sesuai. 
+        Dengan pemahaman yang baik tentang berbagai pilihan KB, perempuan dapat merencanakan kehamilan dengan lebih sadar dan bertanggung jawab demi kesehatan diri sendiri dan keluarga.</p>
         `,
         date: '09-05-2025',
         image: '/images/blog-17.jpg'
@@ -872,7 +1024,8 @@ const blogs = [
         id: '18',
         title: 'Peran Vitamin D dalam Kesehatan Tulang dan Kesuburan Perempuan',
         content: `
-    <p>Vitamin D adalah vitamin larut lemak yang berperan penting dalam penyerapan kalsium dan fosfor, dua mineral utama untuk kesehatan tulang. Selain itu, vitamin D juga berfungsi dalam regulasi sistem kekebalan dan keseimbangan hormon, yang berpengaruh pada kesuburan perempuan.</p><br>
+    <p>Vitamin D adalah vitamin larut lemak yang berperan penting dalam penyerapan kalsium dan fosfor, dua mineral utama untuk kesehatan tulang. 
+        Selain itu, vitamin D juga berfungsi dalam regulasi sistem kekebalan dan keseimbangan hormon, yang berpengaruh pada kesuburan perempuan.</p><br>
 
     <h2><strong>Manfaat Vitamin D untuk Tulang</strong></h2>
     <ul>
@@ -904,7 +1057,9 @@ const blogs = [
     <blockquote>"Vitamin D tidak hanya baik untuk tulang, tetapi juga kunci dalam menjaga kesehatan reproduksi perempuan." — WHO</blockquote><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Vitamin D memainkan peran ganda dalam menjaga kesehatan tulang yang kuat dan mendukung kesuburan perempuan. Pastikan asupan vitamin D tercukupi melalui paparan sinar matahari, makanan bergizi, atau suplemen bila diperlukan. Jangan ragu untuk konsultasi dengan tenaga medis untuk menjaga keseimbangan nutrisi yang optimal.</p>
+    <p>Vitamin D memainkan peran ganda dalam menjaga kesehatan tulang yang kuat dan mendukung kesuburan perempuan. 
+        Pastikan asupan vitamin D tercukupi melalui paparan sinar matahari, makanan bergizi, atau suplemen bila diperlukan. 
+        Jangan ragu untuk konsultasi dengan tenaga medis untuk menjaga keseimbangan nutrisi yang optimal.</p>
         `,
         date: '09-05-2025',
         image: '/images/blog-18.jpg'
@@ -913,7 +1068,9 @@ const blogs = [
         id: '19',
         title: 'Efek Samping Kontrasepsi: Apa yang Normal dan Apa yang Harus Diwaspadai?',
         content: `
-    <p>Kontrasepsi membantu perempuan dalam perencanaan kehamilan dan menjaga kesehatan reproduksi. Namun, seperti metode medis lainnya, kontrasepsi bisa menimbulkan efek samping. Penting bagi perempuan untuk memahami mana yang tergolong normal dan mana yang harus diwaspadai agar bisa mengambil keputusan yang tepat.</p><br>
+    <p>Kontrasepsi membantu perempuan dalam perencanaan kehamilan dan menjaga kesehatan reproduksi. 
+        Namun, seperti metode medis lainnya, kontrasepsi bisa menimbulkan efek samping. 
+        Penting bagi perempuan untuk memahami mana yang tergolong normal dan mana yang harus diwaspadai agar bisa mengambil keputusan yang tepat.</p><br>
 
     <h2><strong>Efek Samping Kontrasepsi yang Normal</strong></h2>
     <ul>
@@ -940,7 +1097,9 @@ const blogs = [
     </ul><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Efek samping ringan dari kontrasepsi umumnya normal dan akan membaik dalam beberapa minggu. Namun, jika Anda mengalami gejala serius seperti nyeri dada, perdarahan hebat, atau perubahan penglihatan, segera periksakan diri ke dokter. Konsultasi rutin dan komunikasi terbuka dengan tenaga medis dapat membantu Anda menemukan metode kontrasepsi yang aman dan nyaman sesuai kebutuhan tubuh Anda.</p>
+    <p>Efek samping ringan dari kontrasepsi umumnya normal dan akan membaik dalam beberapa minggu. 
+        Namun, jika Anda mengalami gejala serius seperti nyeri dada, perdarahan hebat, atau perubahan penglihatan, segera periksakan diri ke dokter. 
+        Konsultasi rutin dan komunikasi terbuka dengan tenaga medis dapat membantu Anda menemukan metode kontrasepsi yang aman dan nyaman sesuai kebutuhan tubuh Anda.</p>
         `,
         date: '10-05-2025',
         image: '/images/blog-19.jpg'
@@ -949,7 +1108,9 @@ const blogs = [
         id: '20',
         title: 'Manfaat Konsumsi Probiotik bagi Kesehatan Pencernaan dan Vagina',
         content: `
-    <p>Probiotik adalah mikroorganisme hidup yang memberikan manfaat kesehatan saat dikonsumsi dalam jumlah yang tepat. Umumnya berupa bakteri baik, probiotik banyak ditemukan dalam makanan fermentasi dan suplemen. Selain terkenal untuk menjaga kesehatan pencernaan, probiotik juga berperan penting dalam menjaga keseimbangan flora di area vagina.</p><br>
+    <p>Probiotik adalah mikroorganisme hidup yang memberikan manfaat kesehatan saat dikonsumsi dalam jumlah yang tepat. 
+        Umumnya berupa bakteri baik, probiotik banyak ditemukan dalam makanan fermentasi dan suplemen. 
+        Selain terkenal untuk menjaga kesehatan pencernaan, probiotik juga berperan penting dalam menjaga keseimbangan flora di area vagina.</p><br>
 
     <h2><strong>Manfaat Probiotik untuk Pencernaan</strong></h2>
     <ul>
@@ -984,7 +1145,9 @@ const blogs = [
     </ul><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Probiotik memiliki peran penting dalam menjaga kesehatan pencernaan dan keseimbangan flora vagina. Konsumsi probiotik secara rutin, baik dari makanan fermentasi maupun suplemen, dapat membantu memperkuat sistem imun, mencegah infeksi, dan mendukung kesehatan secara keseluruhan. Pastikan memilih produk yang tepat dan konsultasikan dengan tenaga medis jika diperlukan untuk hasil yang maksimal.</p>
+    <p>Probiotik memiliki peran penting dalam menjaga kesehatan pencernaan dan keseimbangan flora vagina. 
+        Konsumsi probiotik secara rutin, baik dari makanan fermentasi maupun suplemen, dapat membantu memperkuat sistem imun, mencegah infeksi, dan mendukung kesehatan secara keseluruhan. 
+        Pastikan memilih produk yang tepat dan konsultasikan dengan tenaga medis jika diperlukan untuk hasil yang maksimal.</p>
         `,
         date: '10-05-2025',
         image: '/images/blog-20.jpg'
@@ -1027,7 +1190,8 @@ const blogs = [
     </ul><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Konseling sebelum memilih metode kontrasepsi sangat penting untuk memastikan pilihan yang aman, efektif, dan sesuai kebutuhan. Dengan mendapatkan informasi yang tepat dan dukungan dari tenaga kesehatan, individu dan pasangan dapat membuat keputusan yang lebih bijaksana terkait perencanaan keluarga dan kesehatan reproduksi.</p>
+    <p>Konseling sebelum memilih metode kontrasepsi sangat penting untuk memastikan pilihan yang aman, efektif, dan sesuai kebutuhan. 
+        Dengan mendapatkan informasi yang tepat dan dukungan dari tenaga kesehatan, individu dan pasangan dapat membuat keputusan yang lebih bijaksana terkait perencanaan keluarga dan kesehatan reproduksi.</p>
         `,
         date: '10-05-2025',
         image: '/images/blog-21.jpg'
@@ -1036,7 +1200,9 @@ const blogs = [
         id: '22',
         title: 'Mengenal Fibroid Rahim: Gejala dan Pengobatannya',
         content: `
-    <p>Fibroid rahim atau mioma uteri adalah tumor jinak yang tumbuh di dalam atau sekitar rahim. Fibroid terbentuk dari jaringan otot dan fibrosa (jaringan ikat) rahim. Meskipun bersifat non-kanker, fibroid dapat memengaruhi kualitas hidup, terutama jika ukurannya besar atau jumlahnya banyak.</p><br>
+    <p>Fibroid rahim atau mioma uteri adalah tumor jinak yang tumbuh di dalam atau sekitar rahim. 
+        Fibroid terbentuk dari jaringan otot dan fibrosa (jaringan ikat) rahim. 
+        Meskipun bersifat non-kanker, fibroid dapat memengaruhi kualitas hidup, terutama jika ukurannya besar atau jumlahnya banyak.</p><br>
 
     <h2><strong>Faktor Risiko Terjadinya Fibroid Rahim</strong></h2>
     <ul>
@@ -1091,7 +1257,9 @@ const blogs = [
     </ul><br>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Fibroid rahim adalah kondisi yang umum terjadi dan umumnya jinak. Meski begitu, gejala yang muncul bisa mengganggu aktivitas dan kualitas hidup. Konsultasi dengan dokter sangat penting untuk mendapatkan diagnosis yang tepat dan menentukan pengobatan yang sesuai. Deteksi dini dan penanganan yang tepat dapat membantu mencegah komplikasi yang lebih serius.</p>
+    <p>Fibroid rahim adalah kondisi yang umum terjadi dan umumnya jinak. Meski begitu, gejala yang muncul bisa mengganggu aktivitas dan kualitas hidup. 
+        Konsultasi dengan dokter sangat penting untuk mendapatkan diagnosis yang tepat dan menentukan pengobatan yang sesuai. 
+        Deteksi dini dan penanganan yang tepat dapat membantu mencegah komplikasi yang lebih serius.</p>
         `,
         date: '10-05-2025',
         image: '/images/blog-22.jpg'
@@ -1100,29 +1268,39 @@ const blogs = [
         id: '23',
         title: 'KB Pasca Melahirkan: Pilihan Aman untuk Ibu Menyusui',
         content: `
-    <p>Setelah melahirkan, banyak ibu yang mulai mempertimbangkan untuk menggunakan kontrasepsi atau alat pengendali kelahiran (KB) untuk merencanakan kehamilan selanjutnya. Namun, bagi ibu yang sedang menyusui, memilih jenis KB yang aman dan tidak mengganggu produksi ASI sangat penting. Artikel ini akan membahas berbagai pilihan KB yang aman bagi ibu menyusui, serta faktor-faktor yang perlu dipertimbangkan.</p>
+    <p>Setelah melahirkan, banyak ibu yang mulai mempertimbangkan untuk menggunakan kontrasepsi atau alat pengendali kelahiran (KB) untuk merencanakan kehamilan selanjutnya. 
+        Namun, bagi ibu yang sedang menyusui, memilih jenis KB yang aman dan tidak mengganggu produksi ASI sangat penting. Artikel ini akan membahas berbagai pilihan KB yang aman bagi ibu menyusui, serta faktor-faktor yang perlu dipertimbangkan.</p>
 
     <h2><strong>Kenapa Memilih KB Pasca Melahirkan Itu Penting?</strong></h2>
-    <p>Setelah melahirkan, tubuh ibu mengalami perubahan fisik dan hormon. Salah satu perubahan besar adalah proses menyusui, yang dapat membantu ibu dalam proses pemulihan serta menyediakan nutrisi terbaik untuk bayi. Namun, keinginan untuk mengatur jarak kehamilan yang sehat juga sangat penting. Menggunakan KB dapat membantu ibu menghindari kehamilan yang tidak direncanakan dan memberi waktu bagi tubuh untuk pulih sebelum hamil kembali.</p>
+    <p>Setelah melahirkan, tubuh ibu mengalami perubahan fisik dan hormon. Salah satu perubahan besar adalah proses menyusui, yang dapat membantu ibu dalam proses pemulihan serta menyediakan nutrisi terbaik untuk bayi. 
+        Namun, keinginan untuk mengatur jarak kehamilan yang sehat juga sangat penting. Menggunakan KB dapat membantu ibu menghindari kehamilan yang tidak direncanakan dan memberi waktu bagi tubuh untuk pulih sebelum hamil kembali.</p>
 
     <h2><strong>Jenis Kontrasepsi yang Aman untuk Ibu Menyusui</strong></h2>
     <h3><strong>1. Pil KB Minipill (Progestin) 💓</strong></h3>
-    <p>Pil KB yang mengandung hanya progestin (minipill) adalah pilihan yang aman untuk ibu menyusui. Pil ini tidak memengaruhi produksi ASI dan tidak menyebabkan penurunan kualitas ASI. Minipill bekerja dengan mengubah lendir serviks untuk menghalangi sperma dan menipiskan lapisan rahim.</p>
+    <p>Pil KB yang mengandung hanya progestin (minipill) adalah pilihan yang aman untuk ibu menyusui. Pil ini tidak memengaruhi produksi ASI dan tidak menyebabkan penurunan kualitas ASI. 
+        Minipill bekerja dengan mengubah lendir serviks untuk menghalangi sperma dan menipiskan lapisan rahim.</p>
 
     <h3><strong>2. IUD (Intrauterine Device) 💓</strong></h3>
-    <p>IUD adalah alat kontrasepsi yang ditempatkan di dalam rahim. IUD hormon yang mengandung progestin sangat efektif dan tidak mempengaruhi produksi ASI. Selain itu, IUD juga bisa digunakan segera setelah melahirkan, bahkan saat ibu masih menyusui. IUD jenis tembaga juga aman untuk ibu menyusui dan bisa bertahan lama hingga 10 tahun.</p>
+    <p>IUD adalah alat kontrasepsi yang ditempatkan di dalam rahim. IUD hormon yang mengandung progestin sangat efektif dan tidak mempengaruhi produksi ASI. 
+        Selain itu, IUD juga bisa digunakan segera setelah melahirkan, bahkan saat ibu masih menyusui. IUD jenis tembaga juga aman untuk ibu menyusui dan bisa bertahan lama hingga 10 tahun.</p>
 
     <h3><strong>3. Suntikan KB (Depo Provera) 💓</strong></h3>
-    <p>Suntikan KB yang mengandung progestin (Depo Provera) juga dapat digunakan oleh ibu menyusui. Suntikan ini efektif dalam mencegah kehamilan selama tiga bulan. Meskipun ada kekhawatiran bahwa suntikan KB dapat memengaruhi kualitas ASI, penelitian menunjukkan bahwa progestin dalam suntikan ini tidak memengaruhi produksi ASI secara signifikan pada sebagian besar ibu.</p>
+    <p>Suntikan KB yang mengandung progestin (Depo Provera) juga dapat digunakan oleh ibu menyusui. Suntikan ini efektif dalam mencegah kehamilan selama tiga bulan. 
+        Meskipun ada kekhawatiran bahwa suntikan KB dapat memengaruhi kualitas ASI, penelitian menunjukkan bahwa progestin dalam suntikan ini tidak memengaruhi produksi ASI secara signifikan pada sebagian besar ibu.</p>
 
     <h3><strong>4. Implan KB 💓</strong></h3>
-    <p>Implan KB adalah tiang kecil yang diletakkan di bawah kulit lengan ibu. Implan ini mengandung progestin dan dapat bertahan selama 3 hingga 5 tahun. Seperti IUD, implan sangat aman untuk ibu menyusui dan tidak akan mengganggu produksi ASI.</p>
+    <p>Implan KB adalah tiang kecil yang diletakkan di bawah kulit lengan ibu. Implan ini mengandung progestin dan dapat bertahan selama 3 hingga 5 tahun. 
+        Seperti IUD, implan sangat aman untuk ibu menyusui dan tidak akan mengganggu produksi ASI.</p>
 
     <h3><strong>5. Metode Laktasi Amenorea (LAM) 💓</strong></h3>
-    <p>Metode ini berfungsi sebagai kontrasepsi alami dengan mengandalkan menyusui eksklusif. Ibu yang menyusui bayi mereka secara penuh (setiap 4 jam pada siang hari dan 6 jam pada malam hari) dapat menggunakan LAM sebagai metode kontrasepsi selama 6 bulan pertama setelah melahirkan. Efektivitasnya sangat tinggi selama periode ini, asalkan kriteria yang tepat dipenuhi.</p>
+    <p>Metode ini berfungsi sebagai kontrasepsi alami dengan mengandalkan menyusui eksklusif. 
+        Ibu yang menyusui bayi mereka secara penuh (setiap 4 jam pada siang hari dan 6 jam pada malam hari) dapat menggunakan LAM sebagai metode kontrasepsi selama 6 bulan pertama setelah melahirkan. 
+        Efektivitasnya sangat tinggi selama periode ini, asalkan kriteria yang tepat dipenuhi.</p>
 
     <h2><strong>Kontrasepsi yang Harus Dihindari</strong></h2>
-    <p>Ada beberapa metode kontrasepsi yang sebaiknya dihindari selama menyusui, terutama yang mengandung estrogen. Pil KB kombinasi yang mengandung estrogen bisa menurunkan produksi ASI, jadi metode ini tidak disarankan untuk ibu menyusui dalam waktu 6 bulan pertama setelah melahirkan. Beberapa pilihan yang harus dihindari termasuk:</p>
+    <p>Ada beberapa metode kontrasepsi yang sebaiknya dihindari selama menyusui, terutama yang mengandung estrogen. 
+        Pil KB kombinasi yang mengandung estrogen bisa menurunkan produksi ASI, jadi metode ini tidak disarankan untuk ibu menyusui dalam waktu 6 bulan pertama setelah melahirkan. 
+        Beberapa pilihan yang harus dihindari termasuk:</p>
     <ul>
         <li>⚠️ Pil KB kombinasi (mengandung estrogen dan progestin)</li>
         <li>⚠️ Patch KB</li>
@@ -1138,7 +1316,9 @@ const blogs = [
     </ul>
 
     <h2><strong>💌 Kesimpulan</strong></h2>
-    <p>Pemilihan kontrasepsi pasca melahirkan untuk ibu menyusui harus dilakukan dengan hati-hati, mengingat pengaruhnya terhadap kualitas ASI dan kesehatan ibu secara keseluruhan. Ada berbagai pilihan yang aman, seperti pil minipill, IUD, implan, dan suntikan KB yang mengandung progestin, yang terbukti efektif dan tidak mengganggu produksi ASI. Selalu berkonsultasi dengan dokter untuk menentukan metode yang paling sesuai dengan kebutuhan ibu.</p>
+    <p>Pemilihan kontrasepsi pasca melahirkan untuk ibu menyusui harus dilakukan dengan hati-hati, mengingat pengaruhnya terhadap kualitas ASI dan kesehatan ibu secara keseluruhan. 
+        Ada berbagai pilihan yang aman, seperti pil minipill, IUD, implan, dan suntikan KB yang mengandung progestin, yang terbukti efektif dan tidak mengganggu produksi ASI. 
+        Selalu berkonsultasi dengan dokter untuk menentukan metode yang paling sesuai dengan kebutuhan ibu.</p>
         `,
         date: '10-05-2025',
         image: '/images/blog-23.jpg'
@@ -1147,7 +1327,81 @@ const blogs = [
         id: '24',
         title: 'Kesehatan Panggul dan Pencegahan Prolaps Organ Reproduksi',
         content: `
-    
+    <p>Kesehatan panggul merupakan aspek penting dalam menjaga keseimbangan tubuh wanita. Salah satu masalah yang dapat terjadi pada area ini adalah prolaps organ reproduksi. 
+        Prolaps terjadi ketika salah satu atau lebih organ dalam panggul (seperti rahim, kandung kemih, atau rektum) turun atau bergeser dari posisi normalnya. 
+        Dalam artikel ini, kita akan membahas tentang pentingnya menjaga kesehatan panggul serta cara mencegah prolaps organ reproduksi.</p><br>
+
+    <h2><strong>Apa Itu Prolaps Organ Reproduksi?</strong></h2>
+    <p>Prolaps organ reproduksi adalah kondisi medis di mana salah satu atau lebih organ dalam panggul bergerak ke bawah atau keluar dari posisi normalnya. 
+        Ini terjadi ketika otot dan ligamen yang mendukung organ-organ panggul menjadi lemah atau meregang. 
+        Prolaps paling sering terjadi pada wanita, terutama setelah melahirkan, usia lanjut, atau setelah menopause. Organ yang bisa terpengaruh meliputi:</p>
+    <ul>
+        <li><strong>💖 Rahim (Uterus)</strong>: Rahim dapat turun ke dalam vagina, yang dikenal dengan sebutan prolaps uterus.</li>
+        <li><strong>💖 Kandung Kemih</strong>: Prolaps kandung kemih menyebabkan inkontinensia urin atau kesulitan buang air kecil.</li>
+        <li><strong>💖 Rektum</strong>: Prolaps rektum menyebabkan kesulitan dalam buang air besar dan seringkali disertai rasa tidak nyaman.</li>
+    </ul><br>
+
+    <h2><strong>Faktor Risiko Prolaps Organ Reproduksi</strong></h2>
+    <p>Beberapa faktor risiko dapat meningkatkan kemungkinan terjadinya prolaps organ reproduksi, antara lain:</p>
+    <ul>
+        <li><strong>🌹 Melahirkan secara normal</strong>: Proses persalinan yang melibatkan pembukaan lebar pada jalan lahir dapat menekan dan melemahkan otot panggul.</li>
+        <li><strong>🌹 Usia lanjut</strong>: Seiring bertambahnya usia, otot dan jaringan panggul cenderung melemah.</li>
+        <li><strong>🌹 Obesitas</strong>: Berat badan yang berlebih dapat memberikan tekanan ekstra pada organ panggul, memperburuk kemungkinan prolaps.</li>
+        <li><strong>🌹 Menopause</strong>: Penurunan kadar estrogen selama menopause dapat mengurangi elastisitas jaringan panggul.</li>
+        <li><strong>🌹 Genetik</strong>: Riwayat keluarga dengan prolaps organ reproduksi juga dapat meningkatkan risiko.</li>
+    </ul><br>
+
+    <h2><strong>Cara Mencegah Prolaps Organ Reproduksi</strong></h2>
+    <p>Walaupun prolaps organ reproduksi tidak selalu bisa dihindari, ada beberapa cara untuk mengurangi risikonya:</p>
+
+    <h3><strong>1. Latihan Kegel ✨</strong></h3>
+    <p>Latihan Kegel adalah latihan penguatan otot dasar panggul yang dapat membantu menjaga organ-organ panggul tetap berada di posisi yang benar. 
+        Dengan cara ini, otot-otot panggul menjadi lebih kuat dan mendukung organ-organ reproduksi dengan lebih baik. 
+        Cobalah untuk melakukan latihan Kegel beberapa kali sehari untuk hasil yang optimal.</p>
+
+    <h3><strong>2. Menjaga Berat Badan Sehat ✨</strong></h3>
+    <p>Obesitas adalah salah satu faktor yang dapat meningkatkan tekanan pada organ panggul, sehingga menjaga berat badan sehat dapat membantu mencegah prolaps. 
+        Diet sehat dan olahraga rutin bisa membantu mempertahankan berat badan yang ideal.</p>
+
+    <h3><strong>3. Hindari Mengangkat Beban Berat ✨</strong></h3>
+    <p>Sering mengangkat beban berat dapat memberikan tekanan berlebih pada organ panggul dan menyebabkan prolaps. 
+        Jika Anda perlu mengangkat benda berat, pastikan untuk melakukannya dengan posisi tubuh yang benar dan menggunakan otot kaki, bukan otot punggung atau perut.</p>
+
+    <h3><strong>4. Perawatan Setelah Melahirkan ✨</strong></h3>
+    <p>Setelah melahirkan, tubuh membutuhkan waktu untuk pulih. 
+        Melakukan latihan panggul yang disarankan oleh dokter, serta menghindari aktivitas fisik yang terlalu berat, dapat membantu mencegah prolaps pasca persalinan. 
+        Jangan ragu untuk berkonsultasi dengan dokter jika merasa ada keluhan terkait organ panggul setelah melahirkan.</p>
+
+    <h3><strong>5. Jaga Kesehatan Usus ✨</strong></h3>
+    <p>Konstipasi kronis yang mengharuskan Anda untuk mengejan terlalu keras saat buang air besar dapat meningkatkan risiko prolaps. 
+        Makan makanan kaya serat, minum banyak air, dan berolahraga secara teratur untuk menjaga kesehatan usus dan menghindari konstipasi.</p>
+
+    <h3><strong>6. Hormon Pengganti Setelah Menopause ✨</strong></h3>
+    <p>Setelah menopause, kadar estrogen menurun yang dapat memengaruhi elastisitas jaringan panggul. 
+        Konsultasikan dengan dokter mengenai terapi hormon pengganti (HRT) yang dapat membantu menjaga kekuatan jaringan panggul.</p><br>
+
+    <h2><strong>Gejala Prolaps Organ Reproduksi</strong></h2>
+    <p>Prolaps organ reproduksi bisa terjadi secara perlahan, dan gejalanya bisa berbeda-beda tergantung pada tingkat keparahan prolaps. Beberapa gejala yang umum meliputi:</p>
+    <ul>
+        <li>☁️ Rasa berat atau penuh di panggul</li>
+        <li>☁️ Kesulitan atau rasa sakit saat buang air kecil atau besar</li>
+        <li>☁️ Pendarahan atau keluarnya cairan dari vagina</li>
+        <li>☁️ Rasa tidak nyaman atau nyeri saat berhubungan intim</li>
+        <li>☁️ Vagina terasa terisi atau melorot</li>
+    </ul><br>
+
+    <h2><strong>Pengobatan Prolaps Organ Reproduksi</strong></h2>
+    <p>Pada tahap awal, prolaps organ reproduksi dapat dikelola dengan perubahan gaya hidup dan latihan panggul. 
+        Namun, jika gejala semakin memburuk, dokter mungkin akan merekomendasikan prosedur medis. Beberapa pengobatan meliputi:</p>
+    <ul>
+        <li><strong>💐 Penopang Panggul (Pessary)</strong>: Sebuah alat yang dimasukkan ke dalam vagina untuk mendukung organ panggul yang turun.</li>
+        <li><strong>💐 Operasi</strong>: Pada kasus prolaps yang lebih parah, prosedur pembedahan mungkin diperlukan untuk mengangkat atau memperbaiki organ yang turun.</li>
+    </ul><br>
+
+    <h2><strong>💌 Kesimpulan</strong></h2>
+    <p>Kesehatan panggul adalah bagian penting dari kesehatan wanita secara keseluruhan. 
+        Prolaps organ reproduksi dapat dicegah dengan langkah-langkah pencegahan seperti latihan Kegel, menjaga berat badan sehat, dan menghindari kebiasaan buruk seperti mengangkat beban berat. 
+        Jika Anda mengalami gejala prolaps atau memiliki kekhawatiran tentang kesehatan panggul, segera berkonsultasi dengan dokter untuk mendapatkan pengobatan yang tepat.</p>
         `,
         date: '10-05-2025',
         image: '/images/blog-24.jpg'
@@ -1166,7 +1420,6 @@ const goBlog = () => {
 </script>
   
 <style scoped>
-/* Style untuk teks yang lebih rapih di bagian detail */
 .prose {
     font-family: "Arial", sans-serif;
     font-size: 1.125rem;
