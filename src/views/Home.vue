@@ -4,12 +4,12 @@
     <div class="absolute lace-border w-full h-12 top-2"></div>
 
     <!-- Ribbon -->
-    <div class="absolute top-14 left-5 w-28 md:w-40 rotate-[-12deg] opacity-40">
+    <div class="absolute top-24 md:top-14 left-5 w-28 md:w-40 rotate-[-12deg] opacity-40">
       <img src="/images/ribbon-1.png" alt="Health & Wellness" class="w-full h-auto object-cover" />
     </div>
 
     <!-- Section: Jumbotron -->
-    <section class="relative py-16 px-4 sm:px-6 md:px-20 w-full max-w-7xl mt-8">
+    <section class="relative py-28 md:py-16 px-8 sm:px-6 md:px-20 w-full max-w-7xl mt-8">
       <div class="flex flex-col-reverse md:flex-row items-center gap-8">
         <!-- Text content -->
         <div class="w-full md:w-1/2 text-center md:text-left">
@@ -21,7 +21,7 @@
           </p>
           <button
             @click="scrollToFeatures"
-            class="px-6 py-3 bg-[#f8bbd0] text-[#6a4c46] font-medium rounded-full transition-all hover:scale-105 hover:bg-[#f4a6c6] shadow-lg">
+            class="px-6 py-3 bg-[#f8bbd0] text-[#6a4c46] font-medium rounded-full transition-all hover:scale-105 hover:bg-[#f4a6c6] shadow-lg focus-visible:outline focus-visible:outline-pink-400">
             Ayo Mulai! 💗
           </button>
           <p class="text-gray-500 text-sm mt-4">Dapatkan informasi lebih lanjut tentang fitur kami.</p> 
@@ -31,21 +31,21 @@
         <div class="relative w-full md:w-1/2 h-[350px] sm:h-[400px] hidden md:block">
           <!-- Polaroid 1 -->
           <div class="absolute top-8 left-6 sm:left-10 w-40 rotate-[-10deg] bg-white shadow-lg p-2 border rounded-lg">
-            <img src="/images/polaroid-1.png" alt="Polaroid 1" class="w-full h-28 sm:h-32 object-cover rounded" />
+            <img src="/images/polaroid-1.png" alt="Self Care" loading="lazy" class="w-full h-28 sm:h-32 object-cover rounded" />
             <p class="text-xs text-center mt-1 text-gray-600">Self-care 💅</p>
             <div class="absolute top-[-10px] left-1/2 -translate-x-1/2 w-12 sm:w-16 h-4 bg-yellow-300/70 rounded rotate-[5deg]"></div>
           </div>
 
           <!-- Polaroid 2 -->
           <div class="absolute top-8 right-0 w-36 rotate-[8deg] bg-white shadow-lg p-2 border rounded-lg">
-            <img src="/images/polaroid-2.png" alt="Polaroid 2" class="w-full h-24 sm:h-28 object-cover rounded" />
+            <img src="/images/polaroid-2.png" alt="Fem Power" loading="lazy" class="w-full h-24 sm:h-28 object-cover rounded" />
             <p class="text-xs text-center mt-1 text-gray-600">FemPower 💪</p>
             <div class="absolute top-[-10px] left-1/2 -translate-x-1/2 w-12 sm:w-14 h-4 bg-pink-300/70 rounded rotate-[3deg]"></div>
           </div>
 
           <!-- Polaroid 3 -->
           <div class="absolute top-28 right-36 w-40 rotate-[-3deg] bg-white shadow-lg p-2 border rounded-lg">
-            <img src="/images/polaroid-3.png" alt="Polaroid 2" class="w-full h-24 sm:h-28 object-cover rounded" />
+            <img src="/images/polaroid-3.png" alt="Body Awareness" loading="lazy" class="w-full h-24 sm:h-28 object-cover rounded" />
             <p class="text-xs text-center mt-1 text-gray-600">Body Awareness 🧘🏻‍♀️</p>
             <div class="absolute top-[-10px] left-1/2 -translate-x-1/2 w-12 sm:w-14 h-4 bg-fuchsia-300/70 rounded rotate-[3deg]"></div>
           </div>
@@ -63,79 +63,37 @@
           <div class="absolute bottom-20 right-4 w-20 rotate-[10deg]">
             <img src="/images/stamp-2.png" alt="Stamp" class="w-full h-auto object-cover opacity-80" />
           </div>
-
         </div>
       </div>
     </section>
 
     <!-- Section Fitur Unggulan FemInsight -->
-    <section id="features" class="w-full max-w-6xl py-16 px-4 text-center">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] mb-4">Fitur Unggulan FemInsight</h2>
-      <p class="text-base sm:text-lg text-gray-600 mb-12 max-w-2xl mx-auto">FemInsight hadir untuk membantu perempuan memahami dan menjaga kesehatannya dengan alat dan informasi terpercaya.</p>
+    <section id="features" class="w-full max-w-6xl py-16 px-4 text-center mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] mb-4">
+        Fitur Unggulan FemInsight
+      </h2>
+      <p class="text-base sm:text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+        FemInsight hadir untuk membantu perempuan memahami dan menjaga kesehatannya dengan alat dan informasi terpercaya.
+      </p>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        <!-- Fitur 1 -->
-        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300">
+        <div
+          v-for="(fitur, i) in fiturList"
+          :key="i"
+          class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300"
+        >
           <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-pink-200 text-[#6a4c46] rounded-full text-3xl">
-              📆
+            {{ fitur.icon }}
           </div>
-          <h3 class="text-lg font-semibold text-[#6a4c46] mb-2">Pelacak Siklus Menstruasi</h3>
-          <p class="text-gray-600 text-sm">Lacak dan prediksi siklus menstruasi dengan mudah, sehingga kamu bisa lebih memahami tubuhmu setiap bulan.</p>
+          <h3 class="text-lg font-semibold text-[#6a4c46] mb-2">{{ fitur.judul }}</h3>
+          <p class="text-gray-600 text-sm">{{ fitur.deskripsi }}</p>
         </div>
-
-        <!-- Fitur 2 -->
-        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300">
-          <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-pink-200 text-[#6a4c46] rounded-full text-3xl">
-            ⚖️
-          </div>
-          <h3 class="text-lg font-semibold text-[#6a4c46] mb-2">Kalkulator BMI</h3>
-          <p class="text-gray-600 text-sm">Hitung Indeks Massa Tubuh (BMI) untuk memantau status berat badan dan kesehatan secara umum.</p>
-        </div>
-
-        <!-- Fitur 3 -->
-        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300">
-          <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-pink-200 text-[#6a4c46] rounded-full text-3xl">
-            🤰
-          </div>
-          <h3 class="text-lg font-semibold text-[#6a4c46] mb-2">Kalkulator HPL</h3>
-          <p class="text-gray-600 text-sm">Prediksi Hari Perkiraan Lahir (HPL) dengan memasukkan tanggal menstruasi terakhir untuk perencanaan kehamilan yang lebih baik.</p>
-        </div>
-
-        <!-- Fitur 4 -->
-        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300">
-          <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-pink-200 text-[#6a4c46] rounded-full text-3xl">
-            ✨
-          </div>
-          <h3 class="text-lg font-semibold text-[#6a4c46] mb-2">Inspirasi & Quotes Positif</h3>
-          <p class="text-gray-600 text-sm">Dapatkan inspirasi dan afirmasi positif untuk mendukung kesehatan mental Anda, dengan kata-kata yang menenangkan dan membangkitkan semangat.</p>
-        </div>
-
-        <!-- Fitur 5 -->
-        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300">
-          <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-pink-200 text-[#6a4c46] rounded-full text-3xl">
-            🥗
-          </div>
-          <h3 class="text-lg font-semibold text-[#6a4c46] mb-2">Rekomendasi Nutrisi untuk Siklus</h3>
-          <p class="text-gray-600 text-sm">Temukan rekomendasi makanan yang sesuai dengan fase siklus menstruasi Anda untuk mendukung kesehatan tubuh secara optimal sepanjang bulan.</p>
-        </div>
-
-        <!-- Fitur 6 -->
-        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300">
-          <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-pink-200 text-[#6a4c46] rounded-full text-3xl">
-            🧘‍♀️
-          </div>
-          <h3 class="text-lg font-semibold text-[#6a4c46] mb-2">Tips Kesehatan & Relaksasi</h3>
-          <p class="text-gray-600 text-sm">Pelajari tips relaksasi dan teknik perawatan diri untuk menjaga keseimbangan serta kesehatan tubuh dan pikiran.</p>
-        </div>
-
       </div>
     </section>
 
     <!-- Section: Kalkulator -->
     <section class="w-full max-w-6xl py-12 px-4 text-center">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] mb-6">
-        Kalkulator Kesehatan & Kebugaran
-      </h2>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] mb-6">Kalkulator Kesehatan & Kebugaran</h2>
       <p class="text-base sm:text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
         Solusi mudah untuk melacak kesehatan dan merencanakan masa depan Anda dengan percaya diri.
       </p>
@@ -215,7 +173,7 @@
           </div>
         </div>
 
-        <!-- Tombol Lihat Semua Artikel (tanpa card) -->
+        <!-- Button: Lihat Semua Artikel -->
         <div class="flex justify-center items-center p-4">
           <a href="/blog" class="bg-transparent text-[#6a4c46] border-2 border-[#6a4c46] py-2 px-6 rounded-full text-sm font-semibold hover:bg-[#f8bbd0] hover:text-[#6a4c46] transition duration-300">Lihat Semua Artikel</a>
         </div>
@@ -224,9 +182,7 @@
 
       <!-- Section: FAQ -->
       <section class="w-full max-w-6xl py-12 px-4">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] text-center mb-10">
-          Pertanyaan yang Sering Diajukan (FAQ)
-        </h2>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] text-center mb-10">Pertanyaan yang Sering Diajukan (FAQ)</h2>
 
         <div class="space-y-4">
           <div v-for="(faq, index) in faqs" :key="index" class="bg-white border border-pink-100 rounded-xl shadow hover:shadow-md transition">
@@ -272,6 +228,39 @@ const scrollToFeatures = () => {
     element.scrollIntoView({ behavior: 'smooth' })
   }
 }
+
+const fiturList = [
+  {
+    icon: '📆',
+    judul: 'Pelacak Siklus Menstruasi',
+    deskripsi: 'Lacak dan prediksi siklus menstruasi dengan mudah, sehingga kamu bisa lebih memahami tubuhmu setiap bulan.'
+  },
+  {
+    icon: '⚖️',
+    judul: 'Kalkulator BMI',
+    deskripsi: 'Hitung Indeks Massa Tubuh (BMI) untuk memantau status berat badan dan kesehatan secara umum.'
+  },
+  {
+    icon: '🤰',
+    judul: 'Kalkulator HPL',
+    deskripsi: 'Prediksi Hari Perkiraan Lahir (HPL) dengan memasukkan tanggal menstruasi terakhir untuk perencanaan kehamilan yang lebih baik.'
+  },
+  {
+    icon: '✨',
+    judul: 'Inspirasi & Quotes Positif',
+    deskripsi: 'Dapatkan inspirasi dan afirmasi positif untuk mendukung kesehatan mental Anda.'
+  },
+  {
+    icon: '❓',
+    judul: 'Mitos dan Fakta Perempuan',
+    deskripsi: 'Ketahui kebenaran di balik berbagai mitos seputar kesehatan perempuan agar Anda bisa lebih memahami diri.'
+  },
+  {
+    icon: '🧘‍♀️',
+    judul: 'Tips Kesehatan & Relaksasi',
+    deskripsi: 'Pelajari tips relaksasi dan teknik perawatan diri untuk menjaga keseimbangan tubuh dan pikiran.'
+  }
+]
 
 const faqs = [
   {
