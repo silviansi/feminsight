@@ -1,27 +1,27 @@
 <template>
-  <div class="max-w-6xl py-12 px-4 mt-8 mx-auto">
-    <div v-if="blog">
-      <!-- Blog header: image, breadcrumb, title, date -->
-      <header class="mb-8 text-center">
-        <img :src="blog.image" alt="Blog Image" class="h-64 object-cover rounded-lg shadow-lg mb-6 max-w-3xl mx-auto w-full" />
-        
-        <nav class="mb-4 text-gray-600">
-          <span class="cursor-pointer hover:underline" @click="goBlog">Blog</span> &gt;
-          <span>{{ blog.title }}</span>
-        </nav>
+    <div class="max-w-6xl py-12 px-4 mt-8 mx-auto">
+        <div v-if="blog">
+        <!-- Blog header: image, breadcrumb, title, date -->
+        <header class="mb-8 text-center">
+            <img :src="blog.image" alt="Blog Image" class="h-64 object-cover rounded-lg shadow-lg mb-6 max-w-3xl mx-auto w-full" />
+            
+            <nav class="mb-4 text-gray-600">
+                <span class="cursor-pointer hover:underline" @click="goBlog">Blog</span> &gt;
+                <span>{{ blog.title }}</span>
+            </nav>
 
-        <h1 class="text-3xl font-extrabold text-[#6a4c46] mb-4">{{ blog.title }}</h1>
-        <p class="text-base text-pink-500 mb-6">{{ blog.date }}</p>
-      </header>
+            <h1 class="text-3xl font-extrabold text-[#6a4c46] mb-4">{{ blog.title }}</h1>
+            <p class="text-base text-pink-500 mb-6">{{ blog.date }}</p>
+        </header>
 
-      <!-- Blog content -->
-      <article v-html="blog.content" class="prose lg:prose-xl text-gray-700 max-w-3xl mx-auto px-3"></article>
+        <!-- Blog content -->
+        <article v-html="blog.content" class="prose lg:prose-xl text-gray-700 max-w-3xl mx-auto px-3"></article>
+        </div>
+
+        <div v-else class="text-center">
+        <p>Loading...</p>
+        </div>
     </div>
-
-    <div v-else class="text-center">
-      <p>Loading...</p>
-    </div>
-  </div>
 </template>
   
 <script setup>
