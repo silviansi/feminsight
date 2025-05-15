@@ -11,63 +11,83 @@
     <!-- Section: Jumbotron -->
     <section class="relative py-28 md:py-16 px-8 sm:px-6 md:px-20 w-full max-w-7xl mt-8">
       <div class="flex flex-col-reverse md:flex-row items-center gap-8">
+
         <!-- Text content -->
         <div class="w-full md:w-1/2 text-center md:text-left">
-          <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#6a4c46] mb-4 leading-snug">
-            Kenali tubuhmu, cintai dirimu — bersama <span class="text-[#333333]">Fem</span><span class="text-pink-800">Insight</span>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#6a4c46] mb-4 leading-snug" data-aos="fade-up" data-aos-duration="2000">
+            Kenali tubuhmu, cintai dirimu — bersama
+            <span class="text-[#333333]">Fem</span><span class="text-pink-800">Insight</span>
           </h1>
-          <p class="text-gray-700 text-base sm:text-lg mb-6">
+          <p class="text-gray-700 text-base sm:text-lg mb-6" data-aos="fade-up" data-aos-duration="3000">
             Tubuh perempuan unik dan berharga — FemInsight membantu Anda memahami siklus, merencanakan kesehatan, dan merawat diri dengan percaya diri.
           </p>
-          <button
+          <motion.button
+            :whileHover="{ scale: 1.05 }"
+            :whileTap="{ scale: 0.95 }"
             @click="scrollToFeatures"
-            class="px-6 py-3 bg-[#f8bbd0] text-[#6a4c46] font-medium rounded-full transition-all hover:scale-105 hover:bg-[#f4a6c6] shadow-lg focus-visible:outline focus-visible:outline-pink-400">
+            class="px-6 py-3 bg-[#f8bbd0] text-[#6a4c46] font-medium rounded-full hover:scale-105 hover:bg-[#f4a6c6] shadow-lg focus-visible:outline focus-visible:outline-pink-400"
+            data-aos="fade-up" data-aos-duration="3000">
             Ayo Mulai! 💗
-          </button>
-          <p class="text-gray-500 text-sm mt-4">Dapatkan informasi lebih lanjut tentang fitur kami.</p> 
+          </motion.button>
         </div>
 
-        <!-- Kolase gambar -->
+        <!-- Image collage -->
         <div class="relative w-full md:w-1/2 h-[350px] sm:h-[400px] hidden md:block">
-          <!-- Polaroid 1 -->
-          <div class="absolute top-8 left-6 sm:left-10 w-40 rotate-[-10deg] bg-white shadow-lg p-2 border rounded-lg">
-            <img src="/images/polaroid-1.png" alt="Self Care" loading="lazy" class="w-full h-28 sm:h-32 object-cover rounded" />
-            <p class="text-xs text-center mt-1 text-gray-600">Self-care 💅</p>
-            <div class="absolute top-[-10px] left-1/2 -translate-x-1/2 w-12 sm:w-16 h-4 bg-yellow-300/70 rounded rotate-[5deg]"></div>
-          </div>
+          <motion.div 
+            :initial="{ opacity: 0, y: 60, rotate: -25 }"
+            :animate="{ opacity: 1, y: 0, rotate: -10 }"
+            :transition="{ duration: 1.0, delay: 0.9, ease: 'easeOut' }"
+            class="absolute top-8 left-6 rotate-[-10deg] sm:left-10 w-40 bg-white shadow-lg p-2 border rounded-lg">
+            <img src="/images/polaroid-1.png" alt="Self Care" class="w-full h-28 sm:h-32 object-cover rounded" />
+          </motion.div>
 
-          <!-- Polaroid 2 -->
-          <div class="absolute top-8 right-0 w-36 rotate-[8deg] bg-white shadow-lg p-2 border rounded-lg">
-            <img src="/images/polaroid-2.png" alt="Fem Power" loading="lazy" class="w-full h-24 sm:h-28 object-cover rounded" />
-            <p class="text-xs text-center mt-1 text-gray-600">FemPower 💪</p>
-            <div class="absolute top-[-10px] left-1/2 -translate-x-1/2 w-12 sm:w-14 h-4 bg-pink-300/70 rounded rotate-[3deg]"></div>
-          </div>
+          <motion.div 
+            :initial ="{ opacity: 0, y: 60, rotate: 25 }"
+            :animate="{ opacity: 1, y: 0, rotate: 10 }"
+            :transition="{ duration: 1.0, delay: 1.0, ease: 'easeOut' }"
+            class="absolute top-8 right-0 w-36 rotate-[8deg] bg-white shadow-lg p-2 border rounded-lg">
+            <img src="/images/polaroid-2.png" alt="Fem Power" class="w-full h-24 sm:h-28 object-cover rounded" />
+          </motion.div>
 
-          <!-- Polaroid 3 -->
-          <div class="absolute top-28 right-36 w-40 rotate-[-3deg] bg-white shadow-lg p-2 border rounded-lg">
-            <img src="/images/polaroid-3.png" alt="Body Awareness" loading="lazy" class="w-full h-24 sm:h-28 object-cover rounded" />
-            <p class="text-xs text-center mt-1 text-gray-600">Body Awareness 🧘🏻‍♀️</p>
-            <div class="absolute top-[-10px] left-1/2 -translate-x-1/2 w-12 sm:w-14 h-4 bg-fuchsia-300/70 rounded rotate-[3deg]"></div>
-          </div>
+          <motion.div
+            :initial="{ opacity: 0, y: 60, rotate: -15 }"
+            :animate="{ opacity: 1, y: 0, rotate: -5 }"
+            :transition="{ duration: 1.0, delay: 1.2, ease: 'easeOut' }"
+            class="absolute top-28 right-36 w-40 rotate-[-3deg] bg-white shadow-lg p-2 border rounded-lg">
+            <img src="/images/polaroid-3.png" alt="Body Awareness" class="w-full h-24 sm:h-28 object-cover rounded" />
+          </motion.div>
 
-          <!-- Sticky Note -->
-          <div class="absolute bottom-4 left-36 w-32 rotate-[10deg] bg-[#f8bbd0] p-3 shadow-lg border-2 border-[#f8bbd0] rounded-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:rotate-3">
+          <motion.div 
+            :initial="{ opacity: 0, y: 60, rotate: 10 }"
+            :animate="{ opacity: 1, y: 0, rotate: 5 }"
+            :transition="{ duration: 1.0, delay: 1.4, ease: 'easeOut' }"
+            class="absolute bottom-4 left-36 w-32 rotate-[10deg] bg-[#f8bbd0] p-3 shadow-lg border-2 border-[#f8bbd0] rounded-lg">
             <p class="text-sm text-[#6a4c46] text-center font-medium leading-tight">Jaga kesehatanmu 🌸</p>
-            <div class="absolute top-[-8px] left-1/2 -translate-x-1/2 w-10 sm:w-12 h-3 bg-blue-200/70 rounded rotate-[-6deg]"></div>
-          </div>
+          </motion.div>
 
-          <!-- Stamps -->
-          <div class="absolute bottom-0 right-10 w-24">
+          <motion.div 
+            :initial="{ opacity: 0, scale: 0 }"
+            :animate="{ opacity: 1, scale: 1 }"
+            :transition="{ 
+              duration: 0.4,
+              scale: { type: 'spring', visualDuration: 0.8, bounce: 0.5 } }"
+            class="absolute bottom-0 right-10 w-24">
             <img src="/images/stamp-1.png" alt="Stamp" class="w-full h-auto object-cover opacity-80" />
-          </div>
-          <div class="absolute bottom-20 right-4 w-20 rotate-[10deg]">
+          </motion.div>
+          <motion.div
+            :initial="{ opacity: 0, scale: 0, rotate: 10 }"
+            :animate="{ opacity: 1, scale: 1, rotate: 10 }"
+            :transition="{ 
+              duration: 0.4,
+              scale: { type: 'spring', visualDuration: 0.8, bounce: 0.5 } }"
+            class="absolute bottom-20 right-4 w-20 rotate-[10deg]">
             <img src="/images/stamp-2.png" alt="Stamp" class="w-full h-auto object-cover opacity-80" />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
 
-    <!-- Section Fitur Unggulan FemInsight -->
+    <!-- Section: Fitur Unggulan -->
     <section id="features" class="w-full max-w-6xl py-16 px-4 text-center mx-auto">
       <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] mb-4">
         Fitur Unggulan FemInsight
@@ -80,7 +100,10 @@
         <div
           v-for="(fitur, i) in fiturList"
           :key="i"
-          class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300"
+          class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg"
+          data-aos="zoom-in-up"
+          data-aos-duration="1000"
+          :data-aos-delay="i * 200"
         >
           <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-pink-200 text-[#6a4c46] rounded-full text-3xl">
             {{ fitur.icon }}
@@ -99,7 +122,10 @@
       </p>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:scale-105">
+        <div 
+          data-aos="zoom-in-up"
+          data-aos-duration="1000"
+          class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition transform">
           <img src="/images/icon-calendar-1.png" alt="Kalkulator Menstruasi" class="mx-auto w-16 h-16 mb-4" />
           <h3 class="text-xl font-bold text-pink-600 mb-2">Kalkulator Menstruasi</h3>
           <p class="text-gray-600 text-sm sm:text-base mb-4">Prediksi siklus menstruasi Anda.</p>
@@ -110,7 +136,10 @@
           </router-link>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:scale-105">
+        <div 
+          data-aos="zoom-in-up"
+          data-aos-duration="2000"
+          class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition transform">
           <img src="/images/icon-bmi.png" alt="Kalkulator BMI" class="mx-auto w-16 h-16 mb-4" />
           <h3 class="text-xl font-bold text-blue-500 mb-2">Kalkulator BMI</h3>
           <p class="text-gray-600 text-sm sm:text-base mb-4">Hitung indeks massa tubuh Anda.</p>
@@ -121,7 +150,10 @@
           </router-link>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:scale-105">
+        <div 
+          data-aos="zoom-in-up"
+          data-aos-duration="3000"
+          class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition transform">
           <img src="/images/icon-hpl.png" alt="Kalkulator HPL" class="mx-auto w-16 h-16 mb-4" />
           <h3 class="text-xl font-bold text-green-500 mb-2">Kalkulator HPL</h3>
           <p class="text-gray-600 text-sm sm:text-base mb-4">Perkirakan tanggal persalinan Anda.</p>
@@ -144,7 +176,10 @@
       <!-- Wrapper for Articles -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
         <!-- Artikel 1 -->
-        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <div
+          data-aos="zoom-in-up"
+          data-aos-duration="1000"
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
           <img src="/images/articel-1.jpg" alt="Artikel 1" class="w-full h-40 object-cover">
           <div class="p-4">
             <h3 class="font-semibold text-[#6a4c46] text-lg text-center mb-2">Menjaga Kesehatan Reproduksi Wanita</h3>
@@ -154,7 +189,10 @@
         </div>
 
         <!-- Artikel 2 -->
-        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <div
+          data-aos="zoom-in-up"
+          data-aos-duration="2000"
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
           <img src="/images/articel-2.jpg" alt="Artikel 2" class="w-full h-40 object-cover">
           <div class="p-4">
             <h3 class="font-semibold text-[#6a4c46] text-lg text-center mb-2">Nutrisi untuk Kesehatan Wanita</h3>
@@ -164,7 +202,10 @@
         </div>
 
         <!-- Artikel 3 -->
-        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <div
+          data-aos="zoom-in-up"
+          data-aos-duration="3000"
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
           <img src="/images/articel-3.jpg" alt="Artikel 3" class="w-full h-40 object-cover">
           <div class="p-4">
             <h3 class="font-semibold text-[#6a4c46] text-lg text-center mb-2">Cara Mengelola Stres dengan Yoga</h3>
@@ -185,7 +226,11 @@
         <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] text-center mb-10">Pertanyaan yang Sering Diajukan (FAQ)</h2>
 
         <div class="space-y-4">
-          <div v-for="(faq, index) in faqs" :key="index" class="bg-white border border-pink-100 rounded-xl shadow hover:shadow-md transition">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            :data-aos-delay="i * 200"
+            v-for="(faq, index) in faqs" :key="index" class="bg-white border border-pink-100 rounded-xl shadow hover:shadow-md transition">
             <button @click="toggle(index)" class="w-full flex justify-between items-center p-4 sm:p-6 text-left rounded-xl hover:bg-pink-50 transition">
               <span class="text-[#6a4c46] text-base sm:text-lg font-semibold flex items-center gap-2">
                 {{ faq.question }} <span class="text-pink-500 text-xl">{{ faq.emoji }}</span>
@@ -218,17 +263,11 @@
   </div>
 </template>
 
-
 <script setup>
 import { ref } from 'vue'
+import { motion } from 'motion-v'
 
-const scrollToFeatures = () => {
-  const element = document.getElementById('features')
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' })
-  }
-}
-
+// Data fitur
 const fiturList = [
   {
     icon: '📆',
@@ -262,6 +301,7 @@ const fiturList = [
   }
 ]
 
+// Data FAQ
 const faqs = [
   {
     question: 'Apakah FemInsight aman digunakan?',
@@ -280,8 +320,15 @@ const faqs = [
   }
 ]
 
-const activeIndex = ref(null)
+const scrollToFeatures = () => {
+  const element = document.getElementById('features')
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' })
+  }
+}
 
+// FAQ toggle
+const activeIndex = ref(null)
 const toggle = (index) => {
   activeIndex.value = activeIndex.value === index ? null : index
 }
