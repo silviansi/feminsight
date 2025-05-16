@@ -1,35 +1,41 @@
 <template>
-    <div class="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden mt-8">
-        <!-- Lace background di bawah navbar -->
-        <div class="absolute lace-border w-full h-12 top-2"></div>
+  <div class="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden mt-8">
+    <!-- Lace background di bawah navbar -->
+    <div class="absolute lace-border w-full h-12 top-2"></div>
     
-        <!-- Hero Section -->
-        <section class="w-full max-w-6xl text-center pt-16 px-4">
-            <h1 class="text-xl md:text-4xl font-extrabold text-[#6a4c46] mb-4">Blog FemInsight</h1>
-            <p class="text-lg md:text-xl text-pink-600">Berita dan informasi seputar kesehatan perempuan.</p>
-        </section>
+    <!-- Hero Section -->
+    <section class="w-full max-w-6xl text-center pt-16 px-4">
+      <h1 class="text-xl md:text-4xl font-extrabold text-[#6a4c46] mb-4" data-aos="zoom-in-up" data-aos-duration="1000">
+        Blog FemInsight
+      </h1>
+      <p class="text-lg md:text-xl text-pink-600" data-aos="zoom-in-down" data-aos-duration="1200">
+        Berita dan informasi seputar kesehatan perempuan.
+      </p>
+    </section>
   
-        <!-- Blog Posts -->
-        <section class="w-full max-w-6xl py-12 px-4 grid md:grid-cols-4 gap-8 mb-6">
-            <!-- Daftar blog -->
-            <div
-            v-for="blog in blogs"
-            :key="blog.id"
-            class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition transform hover:scale-105 overflow-hidden flex flex-col"
-            >
-            <img :src="blog.image" alt="Blog Image" class="w-full h-40 object-cover rounded-t-xl" />
-            <div class="p-4 flex flex-col flex-grow">
-                <h2 class="text-lg font-semibold text-pink-600 mb-2">{{ blog.title }}</h2>
-                <p class="text-gray-700 text-base flex-grow">{{ blog.shortDescription }}</p>
-                <router-link :to="`/blog/${blog.id}`" class="mt-4">
-                <button class="text-[#6a4c46] font-semibold hover:underline">
-                    Baca Selengkapnya
-                </button>
-                </router-link>
-            </div>
-            </div>
-        </section>
-    </div>
+    <!-- Blog Posts -->
+    <section class="w-full max-w-6xl py-12 px-4 grid md:grid-cols-4 gap-8 mb-6">
+      <!-- Daftar blog -->
+      <div
+      v-for="blog in blogs"
+      :key="blog.id"
+      class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition transform hover:scale-105 overflow-hidden flex flex-col"
+      data-aos="zoom-in-up"
+      data-aos-duration="1000"
+      :data-aos-delay="i * 100"
+      >
+        <img :src="blog.image" alt="Blog Image" class="w-full h-40 object-cover rounded-t-xl" />
+        <div class="p-4 flex flex-col flex-grow">
+          <h2 class="text-lg font-semibold text-pink-600 mb-2">{{ blog.title }}</h2>
+          <p class="text-gray-700 text-base flex-grow">{{ blog.shortDescription }}</p>
+          <router-link :to="`/blog/${blog.id}`" class="mt-4">
+            <button class="text-[#6a4c46] font-semibold hover:underline">Baca Selengkapnya</button>
+          </router-link>
+        </div>
+      </div>
+    </section>
+
+  </div>
 </template>
   
 <script setup>
