@@ -14,19 +14,24 @@
 
         <!-- Text content -->
         <div class="w-full md:w-1/2 text-center md:text-left">
-          <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#6a4c46] mb-4 leading-snug" data-aos="fade-up" data-aos-duration="2000">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#6a4c46] mb-4 leading-snug" data-aos="fade-up" data-aos-duration="1000">
             Kenali tubuhmu, cintai dirimu — bersama
             <span class="text-[#333333]">Fem</span><span class="text-pink-800">Insight</span>
           </h1>
-          <p class="text-gray-700 text-base sm:text-lg mb-6" data-aos="fade-up" data-aos-duration="3000">
+          <p class="text-gray-700 text-base sm:text-lg mb-6" data-aos="fade-up" data-aos-duration="1200">
             Tubuh perempuan unik dan berharga — FemInsight membantu Anda memahami siklus, merencanakan kesehatan, dan merawat diri dengan percaya diri.
           </p>
           <motion.button
-            :whileHover="{ scale: 1.05 }"
-            :whileTap="{ scale: 0.95 }"
+            :animate="{
+              scale: [1, 1.1, 1],
+            }"
+            :transition="{
+              duration: 3,
+              repeat: Infinity,
+              ease: 'easeInOut'
+            }"
             @click="scrollToFeatures"
-            class="px-6 py-3 bg-[#f8bbd0] text-[#6a4c46] font-medium rounded-full hover:scale-105 hover:bg-[#f4a6c6] shadow-lg focus-visible:outline focus-visible:outline-pink-400"
-            data-aos="fade-up" data-aos-duration="3000">
+            class="px-6 py-3 bg-[#f8bbd0] text-[#6a4c46] font-medium rounded-full hover:scale-105 hover:bg-[#f4a6c6] shadow-lg focus-visible:outline focus-visible:outline-pink-400">
             Ayo Mulai! 💗
           </motion.button>
         </div>
@@ -36,21 +41,21 @@
           <motion.div 
             :initial="{ opacity: 0, y: 60, rotate: -25 }"
             :animate="{ opacity: 1, y: 0, rotate: -10 }"
-            :transition="{ duration: 1.0, delay: 0.9, ease: 'easeOut' }"
+            :transition="{ duration: 1.0, delay: 0.4, ease: 'easeOut' }"
             class="absolute top-8 left-6 rotate-[-10deg] sm:left-10 w-40 bg-white shadow-lg p-2 border rounded-lg">
             <img src="/images/polaroid-1.png" alt="Self Care" class="w-full h-28 sm:h-32 object-cover rounded" />
           </motion.div>
 
           <motion.div 
-            :initial ="{ opacity: 0, y: 60, rotate: 25 }"
+            :initial="{ opacity: 0, y: 60, rotate: 25 }"
             :animate="{ opacity: 1, y: 0, rotate: 10 }"
-            :transition="{ duration: 1.0, delay: 1.0, ease: 'easeOut' }"
+            :transition="{ duration: 1.0, delay: 0.8, ease: 'easeOut' }"
             class="absolute top-8 right-0 w-36 rotate-[8deg] bg-white shadow-lg p-2 border rounded-lg">
             <img src="/images/polaroid-2.png" alt="Fem Power" class="w-full h-24 sm:h-28 object-cover rounded" />
           </motion.div>
 
           <motion.div
-            :initial="{ opacity: 0, y: 60, rotate: -15 }"
+            :initial="{ opacity: 0, y: 60, rotate: -10 }"
             :animate="{ opacity: 1, y: 0, rotate: -5 }"
             :transition="{ duration: 1.0, delay: 1.2, ease: 'easeOut' }"
             class="absolute top-28 right-36 w-40 rotate-[-3deg] bg-white shadow-lg p-2 border rounded-lg">
@@ -89,10 +94,10 @@
 
     <!-- Section: Fitur Unggulan -->
     <section id="features" class="w-full max-w-6xl py-16 px-4 text-center mx-auto">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] mb-4">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] mb-4" data-aos="zoom-in-up" data-aos-duration="1000">
         Fitur Unggulan FemInsight
       </h2>
-      <p class="text-base sm:text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+      <p class="text-base sm:text-lg text-gray-600 mb-12 max-w-2xl mx-auto" data-aos="zoom-in-down" data-aos-duration="1200">
         FemInsight hadir untuk membantu perempuan memahami dan menjaga kesehatannya dengan alat dan informasi terpercaya.
       </p>
 
@@ -100,10 +105,10 @@
         <div
           v-for="(fitur, i) in fiturList"
           :key="i"
-          class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg"
+          class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl"
           data-aos="zoom-in-up"
           data-aos-duration="1000"
-          :data-aos-delay="i * 200"
+          :data-aos-delay="i * 100"
         >
           <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-pink-200 text-[#6a4c46] rounded-full text-3xl">
             {{ fitur.icon }}
@@ -116,8 +121,9 @@
 
     <!-- Section: Kalkulator -->
     <section class="w-full max-w-6xl py-12 px-4 text-center">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] mb-6">Kalkulator Kesehatan & Kebugaran</h2>
-      <p class="text-base sm:text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] mb-6" data-aos="zoom-in-up" data-aos-duration="1000">
+        Kalkulator Kesehatan & Kebugaran</h2>
+      <p class="text-base sm:text-lg text-gray-600 mb-10 max-w-2xl mx-auto" data-aos="zoom-in-down" data-aos-duration="1200">
         Solusi mudah untuk melacak kesehatan dan merencanakan masa depan Anda dengan percaya diri.
       </p>
 
@@ -169,8 +175,10 @@
     <!-- Section: Artikel Populer -->
     <section class="w-full max-w-6xl py-12 px-4">
       <div class="text-center mb-10">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#6a4c46]">Artikel Populer & Tips Kesehatan Wanita</h2>
-        <p class="text-base sm:text-lg text-gray-600 mt-2">Temukan berbagai artikel seputar kesehatan wanita yang bermanfaat untuk gaya hidup sehat dan keseimbangan tubuh.</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] mb-6" data-aos="zoom-in-up" data-aos-duration="1000">
+          Artikel Populer & Tips Kesehatan Wanita</h2>
+        <p class="text-base sm:text-lg text-gray-600 mb-10 max-w-2xl mx-auto" data-aos="zoom-in-down" data-aos-duration="1200">
+          Temukan berbagai artikel seputar kesehatan wanita yang bermanfaat untuk gaya hidup sehat dan keseimbangan tubuh.</p>
       </div>
 
       <!-- Wrapper for Articles -->
@@ -179,7 +187,7 @@
         <div
           data-aos="zoom-in-up"
           data-aos-duration="1000"
-          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+          class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
           <img src="/images/articel-1.jpg" alt="Artikel 1" class="w-full h-40 object-cover">
           <div class="p-4">
             <h3 class="font-semibold text-[#6a4c46] text-lg text-center mb-2">Menjaga Kesehatan Reproduksi Wanita</h3>
@@ -192,7 +200,7 @@
         <div
           data-aos="zoom-in-up"
           data-aos-duration="2000"
-          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+          class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
           <img src="/images/articel-2.jpg" alt="Artikel 2" class="w-full h-40 object-cover">
           <div class="p-4">
             <h3 class="font-semibold text-[#6a4c46] text-lg text-center mb-2">Nutrisi untuk Kesehatan Wanita</h3>
@@ -205,7 +213,7 @@
         <div
           data-aos="zoom-in-up"
           data-aos-duration="3000"
-          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+          class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
           <img src="/images/articel-3.jpg" alt="Artikel 3" class="w-full h-40 object-cover">
           <div class="p-4">
             <h3 class="font-semibold text-[#6a4c46] text-lg text-center mb-2">Cara Mengelola Stres dengan Yoga</h3>
@@ -223,7 +231,8 @@
 
       <!-- Section: FAQ -->
       <section class="w-full max-w-6xl py-12 px-4">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] text-center mb-10">Pertanyaan yang Sering Diajukan (FAQ)</h2>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] text-center mb-6" data-aos="zoom-in-up" data-aos-duration="1000">
+          Pertanyaan yang Sering Diajukan (FAQ)</h2>
 
         <div class="space-y-4">
           <div
@@ -248,7 +257,7 @@
       
 
     <!-- Section: Fun Fact -->
-    <section class="w-full max-w-6xl py-12 px-4">
+    <section class="w-full max-w-6xl py-12 px-4" data-aos="zoom-in" data-aos-duration="1000">
       <div class="bg-pink-100 p-8 rounded-xl shadow-lg text-center">
         <h3 class="text-xl font-semibold text-[#6a4c46] mb-4">Fun Fact</h3>
         <p class="text-lg text-gray-700 mb-4">
