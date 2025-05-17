@@ -1,5 +1,5 @@
 <template>
-    <nav class="fixed top-0 left-0 w-full px-6 md:px-10 py-3 flex justify-between items-center bg-pink-100/70 backdrop-blur-md shadow-md rounded-b-2xl z-50 transition-all">
+    <nav class="fixed top-0 left-0 w-full px-6 md:px-10 py-3 flex justify-between items-center bg-pink-100/70 backdrop-blur-md shadow-md rounded-b-2xl z-[999] transition-all">
         <!-- Logo -->
         <router-link to="/" class="text-[#333333] font-bold text-2xl">
             Fem<span class="text-pink-800">Insight</span>
@@ -17,7 +17,7 @@
                     </svg>
                 </button>
                 <ul v-show="dropdownOpen" class="absolute bg-pink-100/80 backdrop-blur-md rounded-lg shadow-md mt-2 w-40 z-20 overflow-hidden">
-                    <li><router-link to="/menstruasi" class="block px-4 py-2 hover:bg-pink-200 transition-colors" @click="closeDropdown">Menstruasi</router-link></li>
+                    <li><router-link to="/menstruasi" class="block px-4 py-2 hover:bg-pink-200 transition-colors" @click="closeDropdown">Siklus Menstruasi</router-link></li>
                     <li><router-link to="/bmi" class="block px-4 py-2 hover:bg-pink-200 transition-colors" @click="closeDropdown">BMI</router-link></li>
                     <li><router-link to="/hpl" class="block px-4 py-2 hover:bg-pink-200 transition-colors" @click="closeDropdown">HPL</router-link></li>
                 </ul>
@@ -34,7 +34,7 @@
   
     <!-- Menu Mobile -->
     <transition name="fade">
-        <ul v-show="isOpen" class="md:hidden absolute top-16 left-0 w-full bg-pink-100/80 backdrop-blur-md text-[#6a4c46] shadow-md z-40 space-y-2 p-4 rounded-b-2xl transition-all">
+        <ul v-show="isOpen" class="md:hidden fixed top-[64px] left-0 w-full bg-pink-100/80 backdrop-blur-md text-[#6a4c46] shadow-md z-40 space-y-2 p-4 rounded-b-2xl transition-all">
             <li><router-link to="/" class="block py-2 font-medium hover:text-pink-600 transition-colors" @click="closeMenu">Beranda</router-link></li>
   
             <li>
@@ -45,7 +45,7 @@
                     </svg>
                 </button>
                 <ul v-show="dropdownMobileOpen" class="ml-4 space-y-2 font-medium text-[#6a4c46]">
-                    <li><router-link to="/menstruasi" class="block py-2 hover:text-pink-600 transition-colors" @click="closeAll">Menstruasi</router-link></li>
+                    <li><router-link to="/menstruasi" class="block py-2 hover:text-pink-600 transition-colors" @click="closeAll">Siklus Menstruasi</router-link></li>
                     <li><router-link to="/bmi" class="block py-2 hover:text-pink-600 transition-colors" @click="closeAll">BMI</router-link></li>
                     <li><router-link to="/hpl" class="block py-2 hover:text-pink-600 transition-colors" @click="closeAll">HPL</router-link></li>
                 </ul>
