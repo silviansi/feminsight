@@ -2,7 +2,7 @@
     <div class="relative h-screen flex items-center justify-center">
       
       <!-- Konten utama -->
-      <div class="relative z-10 text-center w-full max-w-md px-8 py-8 bg-white bg-opacity-80 rounded-xl shadow-lg mt-4">
+      <div class="relative z-10 text-center w-full max-w-md px-8 py-8 bg-white bg-opacity-80 rounded-xl shadow-lg mt-4" data-aos="zoom-in" data-aos-duration="800">
         <h1 class="text-xl sm:text-2xl font-extrabold text-[#6a4c46] mb-6">Kalkulator BMI</h1>
         <!-- Form Kalkulator -->
         <form @submit.prevent="calculateBMI" class="space-y-6">

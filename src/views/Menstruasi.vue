@@ -2,14 +2,14 @@
   <div class="relative h-screen flex items-center justify-center mt-12 sm:mt-6">
 
     <!-- Card peringatan (desktop) -->
-    <div class="absolute top-6 left-6 mt-6 bg-pink-100 p-4 rounded-xl shadow-lg max-w-xs mx-auto hidden sm:block">
+    <div class="absolute top-6 left-6 mt-6 bg-pink-100 p-4 rounded-xl shadow-lg max-w-xs mx-auto hidden sm:block" data-aos="fade-down-right" data-aos-duration="800">
       <p class="text-sm font-medium text-pink-600">
         *Hasil prediksi ini hanya bersifat perkiraan dan tidak dapat dipercaya 100%. Siklus menstruasi dapat bervariasi antar individu.
       </p>
     </div>
 
     <!-- Konten utama -->
-    <div class="relative z-10 text-center w-full max-w-md px-8 py-8 bg-white rounded-xl shadow-lg mt-4">
+    <div class="relative z-10 text-center w-full max-w-md px-8 py-8 bg-white rounded-xl shadow-lg mt-4" data-aos="zoom-in" data-aos-duration="800">
       <h1 class="text-xl sm:text-2xl font-extrabold text-[#6a4c46] mb-6">Kalkulator Siklus Menstruasi</h1>
 
       <!-- Form kalkulator -->

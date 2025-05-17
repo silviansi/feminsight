@@ -1,14 +1,14 @@
 <template>
     <div class="relative h-screen flex items-center justify-center">
         <!-- Card Peringatan (desktop) -->
-        <div class="absolute top-6 left-6 mt-12 bg-pink-100 p-4 rounded-xl shadow-lg max-w-xs mx-auto hidden sm:block">
+        <div class="absolute top-6 left-6 mt-12 bg-pink-100 p-4 rounded-xl shadow-lg max-w-xs mx-auto hidden sm:block" data-aos="fade-down-right" data-aos-duration="800">
             <p class="text-sm font-medium text-pink-600">
                 *Hasil perkiraan Hari Perkiraan Lahir (HPL) ini hanya bersifat estimasi. Tanggal persalinan dapat berbeda tergantung kondisi ibu dan janin. Konsultasikan selalu dengan tenaga kesehatan.
             </p>
         </div>
 
         <!-- Konten utama -->
-        <div class="relative z-10 text-center w-full max-w-md px-8 py-8 bg-white bg-opacity-80 rounded-xl shadow-lg mt-4">
+        <div class="relative z-10 text-center w-full max-w-md px-8 py-8 bg-white bg-opacity-80 rounded-xl shadow-lg mt-4" data-aos="zoom-in" data-aos-duration="800">
             <h1 class="text-xl sm:text-2xl font-extrabold text-[#6a4c46] mb-6">Kalkulator Perkiraan Hari Lahir</h1>
 
             <!-- Form Kalkulator -->
