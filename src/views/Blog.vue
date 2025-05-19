@@ -13,12 +13,12 @@
       </p>
     </section>
   
-    <!-- Blog Posts: Daftar blog yang ditampilkan dengan looping -->
+    <!-- Blog Posts: Daftar blog yang ditampilkan -->
     <section class="w-full max-w-6xl py-12 px-4 grid md:grid-cols-4 gap-8 mb-6">
       <div
       v-for="(blog, i) in blogs"
       :key="blog.id"
-      class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition transform hover:scale-105 overflow-hidden flex flex-col"
+      class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition transform overflow-hidden flex flex-col"
       data-aos="zoom-in-up"
       data-aos-duration="1000"
       :data-aos-delay="i * 100"
