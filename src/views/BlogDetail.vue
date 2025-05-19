@@ -1406,6 +1406,141 @@ const blogs = [
         date: '10-05-2025',
         image: '/images/blog-24.jpg'
     },
+    {
+        id: '25',
+        title: 'Menjaga Kesehatan Reproduksi Wanita',
+        content: `
+    <p>Kesehatan reproduksi wanita adalah bagian penting dari kesejahteraan secara keseluruhan. 
+        Menjaga kesehatan organ reproduksi tidak hanya penting bagi wanita yang merencanakan kehamilan, tetapi juga untuk mereka yang ingin menjalani kehidupan yang sehat dan berkualitas. 
+        Dalam artikel ini, kita akan membahas bagaimana cara menjaga kesehatan reproduksi serta faktor-faktor yang perlu diperhatikan.</p><br>
+
+    <h2><strong>Mengenal Sistem Reproduksi Wanita</strong></h2>
+    <p>Sistem reproduksi wanita terdiri dari organ-organ seperti rahim, ovarium, tuba falopi, dan vagina. 
+        Semua organ ini bekerja bersama untuk menjalankan fungsi reproduksi, termasuk menstruasi, pembuahan, dan kehamilan. 
+        Kesehatan sistem ini dipengaruhi oleh hormon, gaya hidup, serta kondisi medis tertentu.</p><br>
+
+    <h2><strong>Cara Menjaga Kesehatan Reproduksi</strong></h2>
+
+    <h3><strong>1. Pemeriksaan Rutin 🧾</strong></h3>
+    <p>Lakukan pemeriksaan rutin seperti Pap Smear, pemeriksaan panggul, dan USG untuk mendeteksi masalah sejak dini. 
+        Deteksi dini bisa menyelamatkan dari risiko penyakit serius seperti kanker serviks atau kista ovarium.</p>
+
+    <h3><strong>2. Pola Makan Sehat 🥗</strong></h3>
+    <p>Gizi seimbang yang kaya vitamin dan mineral dapat menunjang keseimbangan hormon dan fungsi organ reproduksi. 
+        Konsumsi sayuran hijau, buah-buahan, protein tanpa lemak, dan makanan tinggi omega-3 sangat dianjurkan.</p>
+
+    <h3><strong>3. Hindari Rokok dan Alkohol 🚫</strong></h3>
+    <p>Merokok dan konsumsi alkohol bisa mengganggu keseimbangan hormon dan memengaruhi kesuburan. 
+        Berhenti dari kebiasaan ini akan membantu menjaga fungsi reproduksi tetap optimal.</p>
+
+    <h3><strong>4. Kelola Stres ✨</strong></h3>
+    <p>Stres dapat menyebabkan gangguan hormonal yang berujung pada masalah menstruasi atau kesuburan. 
+        Meditasi, yoga, dan tidur cukup bisa membantu meredakan stres.</p><br>
+
+    <h2><strong>Tanda Masalah Reproduksi</strong></h2>
+    <ul>
+    <li>⚠️ Nyeri menstruasi berlebihan</li>
+    <li>⚠️ Siklus haid tidak teratur</li>
+    <li>⚠️ Pendarahan di luar jadwal</li>
+    <li>⚠️ Nyeri saat berhubungan seksual</li>
+    <li>⚠️ Keputihan tidak normal</li>
+    </ul><br>
+
+    <h2><strong>💌 Kesimpulan</strong></h2>
+    <p>Menjaga kesehatan reproduksi tidak hanya penting untuk kesuburan, tapi juga untuk kenyamanan dan kualitas hidup. 
+        Gaya hidup sehat, pemeriksaan rutin, dan pemahaman tentang tubuh sendiri adalah kunci untuk menjaga fungsi reproduksi tetap optimal.</p>
+        `,
+        date: '19-05-2025',
+        image: '/images/articel-1.jpg'
+    },
+    {
+        id: '26',
+        title: 'Nutrisi untuk Kesehatan Wanita',
+        content: `
+    <p>Nutrisi memiliki peran vital dalam menjaga kesehatan wanita, termasuk keseimbangan hormon, kekuatan tulang, energi harian, hingga kesuburan. 
+        Wanita membutuhkan asupan gizi yang cukup dan seimbang sepanjang siklus hidupnya, terutama pada masa menstruasi, kehamilan, dan menopause.</p><br>
+
+    <h2><strong>Gizi Penting untuk Wanita</strong></h2>
+    <ul>
+    <li>🧬 <strong>Kalsium</strong>: Penting untuk menjaga kepadatan tulang dan mencegah osteoporosis.</li>
+    <li>🧬 <strong>Zat Besi</strong>: Sangat penting terutama bagi wanita yang mengalami menstruasi karena risiko anemia lebih tinggi.</li>
+    <li>🧬 <strong>Asam Folat</strong>: Membantu dalam pembentukan sel darah merah dan mencegah cacat tabung saraf pada janin.</li>
+    <li>🧬 <strong>Vitamin D</strong>: Membantu penyerapan kalsium dan mendukung fungsi sistem kekebalan tubuh.</li>
+    </ul><br>
+
+    <h2><strong>Makanan yang Dianjurkan</strong></h2>
+    <ul>
+    <li>🍎 Buah-buahan segar seperti apel, jeruk, dan pisang</li>
+    <li>🥦 Sayuran hijau seperti bayam dan brokoli</li>
+    <li>🥩 Protein tanpa lemak seperti ikan dan dada ayam</li>
+    <li>🥜 Kacang-kacangan dan biji-bijian</li>
+    <li>🍚 Karbohidrat kompleks dari beras merah atau quinoa</li>
+    </ul><br>
+
+    <h2><strong>Makanan yang Sebaiknya Dibatasi</strong></h2>
+    <ul>
+    <li>🍟 Makanan olahan tinggi lemak jenuh</li>
+    <li>🍰 Makanan manis berlebihan</li>
+    <li>🥤 Minuman tinggi gula dan kafein</li>
+    </ul><br>
+
+    <h2><strong>💡 Tips Menjaga Pola Makan Sehat</strong></h2>
+    <p>Usahakan untuk makan dengan jadwal teratur, hindari melewatkan sarapan, dan minum air putih minimal 2 liter per hari. 
+        Persiapkan menu mingguan agar lebih mudah memilih makanan sehat setiap harinya.</p><br>
+
+    <h2><strong>💌 Kesimpulan</strong></h2>
+    <p>Gizi yang seimbang sangat penting untuk menunjang kesehatan wanita dalam berbagai fase kehidupan. 
+        Dengan memperhatikan apa yang dikonsumsi setiap hari, wanita dapat menjaga kesehatan tubuh, kesuburan, serta mencegah berbagai penyakit kronis sejak dini.</p>
+        `,
+        date: '19-05-2025',
+        image: '/images/articel-2.jpg'
+    },
+    {
+        id: '27',
+        title: 'Cara Mengelola Stres dengan Yoga',
+        content: `
+    <p>Stres adalah bagian dari kehidupan, tetapi jika tidak dikelola dengan baik, stres dapat berdampak buruk pada kesehatan fisik dan mental. 
+        Salah satu cara paling efektif dan alami untuk mengelola stres adalah melalui yoga. 
+        Artikel ini akan menjelaskan bagaimana yoga dapat membantu mengatasi stres dan memberikan panduan sederhana untuk memulainya.</p><br>
+
+    <h2><strong>Mengapa Yoga Efektif untuk Mengatasi Stres?</strong></h2>
+    <p>Yoga tidak hanya melibatkan gerakan fisik, tetapi juga mengajarkan teknik pernapasan dan meditasi yang membantu menenangkan pikiran. 
+        Saat tubuh rileks, sistem saraf parasimpatik aktif, yang dapat menurunkan hormon stres seperti kortisol.</p><br>
+
+    <h2><strong>Manfaat Yoga bagi Kesehatan Mental</strong></h2>
+    <ul>
+    <li>🧘‍♀️ Meningkatkan suasana hati</li>
+    <li>🧘‍♀️ Membantu mengurangi kecemasan dan depresi</li>
+    <li>🧘‍♀️ Meningkatkan fokus dan konsentrasi</li>
+    <li>🧘‍♀️ Meningkatkan kualitas tidur</li>
+    </ul><br>
+
+    <h2><strong>Gerakan Yoga untuk Pemula</strong></h2>
+
+    <h3><strong>1. Child's Pose (Balasana) 🌸</strong></h3>
+    <p>Pose ini sangat baik untuk menenangkan sistem saraf dan meregangkan tubuh bagian bawah. 
+        Duduklah di atas tumit, tekuk tubuh ke depan, dan regangkan tangan ke depan.</p>
+
+    <h3><strong>2. Cat-Cow Pose (Marjaryasana-Bitilasana) 🌸</strong></h3>
+    <p>Pergantian antara pose kucing dan sapi membantu mengendurkan otot punggung dan meningkatkan sirkulasi darah.</p>
+
+    <h3><strong>3. Legs-Up-the-Wall (Viparita Karani) 🌸</strong></h3>
+    <p>Pose ini sangat menenangkan. Berbaring dengan kaki disandarkan ke dinding, membantu aliran darah kembali ke jantung dan mengurangi kelelahan.</p><br>
+
+    <h2><strong>Tips Memulai Yoga</strong></h2>
+    <ul>
+    <li>📅 Jadwalkan yoga secara rutin, walaupun hanya 10 menit sehari</li>
+    <li>📱 Gunakan aplikasi atau video tutorial untuk panduan gerakan</li>
+    <li>🧘‍♀️ Mulailah perlahan dan dengarkan tubuhmu</li>
+    </ul><br>
+
+    <h2><strong>💌 Kesimpulan</strong></h2>
+    <p>Yoga bukan hanya latihan fisik, tetapi juga alat untuk meredakan stres dan membangun kedamaian batin. 
+        Dengan rutin melakukan yoga, wanita dapat menjaga keseimbangan antara tubuh dan pikiran, serta menghadapi tekanan hidup dengan lebih tenang.</p>
+        `,
+        date: '19-05-2025',
+        image: '/images/articel-3.jpg'
+    }
 ]
   
 // Fetch data blog berdasarkan id
