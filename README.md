@@ -41,5 +41,26 @@
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/username/feminsight.git
+git clone https://github.com/silviansi/feminsight.git
 cd feminsight
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+Open your browser and go to http://localhost:5173 to use the app
+
+## 🌐 Demo Link
+📍 [View FemInsight Demo](https://menstrual-cycle.vercel.app)
+
+## 💖 Thank You for Using FemInsight
+“Empowering women with informed health.”
