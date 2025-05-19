@@ -19,7 +19,7 @@
   Smooth scroll-based animations using [AOS](https://michalsnik.github.io/aos/) and dynamic transitions with [Motion One for Vue](https://motion.dev/vue).
 
 - 🧮 **Health Calculators**  
-  *(Coming Soon)* Tools for calculating nutrition needs, menstrual cycles, and more.
+  Tools for calculating menstrual cycles, body mass index, and estimated day of birth.
 
 ---
 
