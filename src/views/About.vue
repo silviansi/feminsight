@@ -1,7 +1,8 @@
 <template>
     <div class="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden mt-8">
-        <!-- Lace background di bawah navbar -->
+        <!-- Background renda di bawah navbar -->
         <div class="absolute lace-border w-full h-12 top-2"></div>
+
         <!-- Hero Section -->
         <section class="w-full max-w-6xl text-center pt-16 px-4">
             <h1 class="text-xl md:text-4xl font-extrabold text-[#6a4c46] mb-4" data-aos="zoom-in-up" data-aos-duration="1000">
@@ -11,18 +12,18 @@
                 Bersama memahami tubuh, merawat diri, dan merayakan kesehatan perempuan.
             </p>
         </section>
-  
-        <!-- Visi & Misi -->
+
+        <!-- Visi & Misi Section -->
         <section class="w-full max-w-6xl py-12 px-4 grid md:grid-cols-2 gap-8">
+            <!-- Visi -->
             <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition" data-aos="zoom-in" data-aos-duration="1000">
-                <h2 class="text-xl font-semibold text-pink-600 mb-4">
-                    Visi Kami
-                </h2>
+                <h2 class="text-xl font-semibold text-pink-600 mb-4">Visi Kami</h2>
                 <p class="text-gray-700 text-base md:text-lg">
-                    Menjadi sahabat terpercaya perempuan Indonesia dalam memahami kesehatan reproduksi dan merawat diri dengan percaya diri dan cinta.
+                Menjadi sahabat terpercaya perempuan Indonesia dalam memahami kesehatan reproduksi dan merawat diri dengan percaya diri dan cinta.
                 </p>
             </div>
 
+        <!-- Misi -->
             <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition" data-aos="zoom-in" data-aos-duration="1000">
                 <h2 class="text-xl font-semibold text-pink-600 mb-4">Misi Kami</h2>
                 <ul class="space-y-2 text-gray-700 text-base md:text-lg">
@@ -32,7 +33,7 @@
                 </ul>
             </div>
         </section>
-  
+
         <!-- Cerita FemInsight -->
         <section class="w-full max-w-5xl py-12 px-4 text-center">
             <h2 class="text-xl md:text-4xl font-extrabold text-[#6a4c46] mb-6" data-aos="zoom-in-up" data-aos-duration="1000">
@@ -43,27 +44,24 @@
                 Bersama FemInsight, mari kita rayakan perjalanan kesehatan perempuan dengan bijak, lembut, dan penuh cinta.
             </p>
         </section>
-  
-        <!-- CTA -->
+
+        <!-- Call to Action (CTA) -->
         <section class="w-full max-w-5xl py-12 px-4 text-center">
-            <h2 class="text-2xl md:text-3xl font-extrabold text-[#6a4c46] mb-4" data-aos="zoom-in-up" data-aos-duration="1000"> 
+            <h2 class="text-2xl md:text-3xl font-extrabold text-[#6a4c46] mb-4" data-aos="zoom-in-up" data-aos-duration="1000">
                 Mari jelajahi FemInsight bersama kami!
             </h2>
             <p class="text-gray-700 mb-6" data-aos="zoom-in-up" data-aos-duration="1200">
                 Gunakan kalkulator kesehatan atau baca FemTips untuk merawat diri dengan bijaksana.
             </p>
+
+            <!-- Tombol CTA dengan animasi -->
             <router-link to="/tips">
                 <motion.button 
-                    :animate="{
-                        scale: [1, 1.1, 1],
-                    }"
-                        :transition="{
-                        duration: 3,
-                        repeat: Infinity,
-                        ease: 'easeInOut'
-                    }"
-                    class="px-6 py-3 bg-[#f8bbd0] text-[#6a4c46] font-medium rounded-full transition hover:scale-105 hover:bg-[#f4a6c6] shadow-lg hover:shadow-xl">
-                    🎀 Baca FemTips 🎀
+                :animate="{ scale: [1, 1.1, 1] }"
+                :transition="{ duration: 3, repeat: Infinity, ease: 'easeInOut' }"
+                class="px-6 py-3 bg-[#f8bbd0] text-[#6a4c46] font-medium rounded-full transition hover:bg-[#f4a6c6] shadow-lg hover:shadow-xl"
+                >
+                🎀 Baca FemTips 🎀
                 </motion.button>
             </router-link>
         </section>
@@ -71,10 +69,12 @@
 </template>
 
 <script setup>
+// Import motion animation dari motion-v
 import { motion } from 'motion-v';
 </script>
 
 <style scoped>
+/* Gaya renda dekoratif sebagai latar atas */
 .lace-border {
   background-image: url('/images/lace-2.png');
   background-repeat: repeat-x;
