@@ -133,7 +133,7 @@
           data-aos-duration="1000"
           class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition transform">
           <img src="/images/icon-calendar-1.png" alt="Kalkulator Menstruasi" class="mx-auto w-16 h-16 mb-4" />
-          <h3 class="text-xl font-bold text-pink-600 mb-2">Kalkulator Menstruasi</h3>
+          <h3 class="text-xl font-bold text-pink-600 mb-2">Kalkulator Siklus Menstruasi</h3>
           <p class="text-gray-600 text-sm sm:text-base mb-4">Prediksi siklus menstruasi Anda.</p>
           <router-link to="/menstruasi">
             <button class="px-6 py-3 bg-pink-200 text-[#6a4c46] font-medium rounded-full transition hover:scale-105 hover:bg-pink-300 shadow">
@@ -176,56 +176,43 @@
     <section class="w-full max-w-6xl py-12 px-4">
       <div class="text-center mb-10">
         <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6a4c46] mb-6" data-aos="zoom-in-up" data-aos-duration="1000">
-          Artikel Populer & Tips Kesehatan Wanita</h2>
+          Artikel Populer & Tips Kesehatan Wanita
+        </h2>
         <p class="text-base sm:text-lg text-gray-600 mb-10 max-w-2xl mx-auto" data-aos="zoom-in-down" data-aos-duration="1200">
-          Temukan berbagai artikel seputar kesehatan wanita yang bermanfaat untuk gaya hidup sehat dan keseimbangan tubuh.</p>
+          Temukan berbagai artikel seputar kesehatan wanita yang bermanfaat untuk gaya hidup sehat dan keseimbangan tubuh.
+        </p>
       </div>
 
-      <!-- Wrapper for Articles -->
+      <!-- Wrapper: Grid for 3 Articles + 1 Button -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
-        <!-- Artikel 1 -->
-        <div
+
+        <!-- Loop untuk 3 artikel -->
+        <div 
+          v-for="(blog, i) in blogs.slice(0, 3)" 
+          :key="blog.id"
+          class="flex flex-col bg-white rounded-xl shadow-lg hover:shadow-2xl transition overflow-hidden"
           data-aos="zoom-in-up"
           data-aos-duration="1000"
-          class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
-          <img src="/images/articel-1.jpg" alt="Artikel 1" class="w-full h-40 object-cover">
-          <div class="p-4">
-            <h3 class="font-semibold text-[#6a4c46] text-lg text-center mb-2">Menjaga Kesehatan Reproduksi Wanita</h3>
-            <p class="text-gray-600 text-sm mb-4">Pelajari bagaimana menjaga kesehatan reproduksi dengan tips yang mudah diterapkan dalam kehidupan sehari-hari.</p>
-            <a href="#" class="text-[#6a4c46] font-semibold hover:underline">Baca Selengkapnya</a>
+          :data-aos-delay="i * 100"
+        >
+          <img :src="blog.image" alt="Blog Image" class="w-full h-40 object-cover" />
+          <div class="p-4 flex flex-col flex-grow">
+            <h2 class="text-lg font-semibold text-pink-600 mb-2">{{ blog.title }}</h2>
+            <p class="text-gray-700 text-base flex-grow">{{ blog.shortDescription }}</p>
+            <router-link :to="`/blog/${blog.id}`" class="mt-4">
+              <button class="text-[#6a4c46] font-semibold hover:underline">Baca Selengkapnya</button>
+            </router-link>
           </div>
         </div>
 
-        <!-- Artikel 2 -->
-        <div
-          data-aos="zoom-in-up"
-          data-aos-duration="2000"
-          class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
-          <img src="/images/articel-2.jpg" alt="Artikel 2" class="w-full h-40 object-cover">
-          <div class="p-4">
-            <h3 class="font-semibold text-[#6a4c46] text-lg text-center mb-2">Nutrisi untuk Kesehatan Wanita</h3>
-            <p class="text-gray-600 text-sm mb-4">Artikel ini memberikan tips diet sehat yang bisa meningkatkan kualitas hidup dan mendukung kesehatan jangka panjang.</p>
-            <a href="#" class="text-[#6a4c46] font-semibold hover:underline">Baca Selengkapnya</a>
-          </div>
+        <!-- Grid ke-4: Tombol lihat semua artikel -->
+        <div class="flex flex-col justify-center items-center p-6" data-aos="fade-left">
+          <p class="mb-4 text-center text-[#6a4c46] font-medium">Ingin baca lebih banyak?</p>
+          <a href="/blog" class="bg-transparent text-[#6a4c46] border-2 border-[#6a4c46] py-2 px-6 rounded-full text-sm font-semibold hover:bg-[#f8bbd0] hover:text-[#6a4c46] transition duration-300">
+            Lihat Semua Artikel
+          </a>
         </div>
 
-        <!-- Artikel 3 -->
-        <div
-          data-aos="zoom-in-up"
-          data-aos-duration="3000"
-          class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
-          <img src="/images/articel-3.jpg" alt="Artikel 3" class="w-full h-40 object-cover">
-          <div class="p-4">
-            <h3 class="font-semibold text-[#6a4c46] text-lg text-center mb-2">Cara Mengelola Stres dengan Yoga</h3>
-            <p class="text-gray-600 text-sm mb-4">Stres bisa mempengaruhi kesehatan tubuh. Pelajari cara mengelola stres dengan yoga dan relaksasi yang mudah diikuti.</p>
-            <a href="#" class="text-[#6a4c46] font-semibold hover:underline">Baca Selengkapnya</a>
-          </div>
-        </div>
-
-        <!-- Button: Lihat Semua Artikel -->
-        <div class="flex justify-center items-center p-4">
-          <a href="/blog" class="bg-transparent text-[#6a4c46] border-2 border-[#6a4c46] py-2 px-6 rounded-full text-sm font-semibold hover:bg-[#f8bbd0] hover:text-[#6a4c46] transition duration-300">Lihat Semua Artikel</a>
-        </div>
       </div>
     </section>
 
@@ -309,6 +296,28 @@ const fiturList = [
     deskripsi: 'Pelajari tips relaksasi dan teknik perawatan diri untuk menjaga keseimbangan tubuh dan pikiran.'
   }
 ]
+
+// Data blog
+const blogs = ref([
+  {
+    id: '25',
+    title: 'Menjaga Kesehatan Reproduksi Wanita',
+    shortDescription: 'Pelajari bagaimana menjaga kesehatan reproduksi dengan tips yang mudah diterapkan dalam kehidupan sehari-hari.',
+    image: '/images/articel-1.jpg',
+  },
+  {
+    id: '26',
+    title: 'Nutrisi untuk Kesehatan Wanita',
+    shortDescription: 'Artikel ini memberikan tips diet sehat yang bisa meningkatkan kualitas hidup dan mendukung kesehatan jangka panjang.',
+    image: '/images/articel-2.jpg',
+  },
+  {
+    id: '27',
+    title: 'Cara Mengelola Stres dengan Yoga',
+    shortDescription: 'Stres bisa mempengaruhi kesehatan tubuh. Pelajari cara mengelola stres dengan yoga dan relaksasi yang mudah diikuti.',
+    image: '/images/articel-3.jpg',
+  }
+])
 
 // Data FAQ
 const faqs = [
