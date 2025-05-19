@@ -1,35 +1,45 @@
-# menstrual-cycle
+# 🌸 FemInsight
 
-This template should help get you started developing with Vue 3 in Vite.
+**FemInsight** is an educational web application focused on **women’s health**, including reproductive health, hormonal balance, nutrition, and mental well-being. Designed with a **minimalist**, **interactive**, and **responsive** interface, this app also features modern animations powered by **AOS** and **Motion One**.
 
-## Recommended IDE Setup
+---
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🚀 Key Features
 
-## Customize configuration
+- 📚 **Educational Blog**  
+  Informative and trustworthy articles on various women’s health topics.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- 🔍 **Detailed Blog Navigation**  
+  Users can read each article in full detail.
 
-## Project Setup
+- 💅 **Modern & Responsive Design**  
+  Built with Tailwind CSS and fully responsive across devices.
 
-```sh
-npm install
-```
+- 🎞️ **Interactive Animations**  
+  Smooth scroll-based animations using [AOS](https://michalsnik.github.io/aos/) and dynamic transitions with [Motion One for Vue](https://motion.dev/vue).
 
-### Compile and Hot-Reload for Development
+- 🧮 **Health Calculators**  
+  *(Coming Soon)* Tools for calculating nutrition needs, menstrual cycles, and more.
 
-```sh
-npm run dev
-```
+---
 
-### Compile and Minify for Production
+## 🛠️ Tech Stack
 
-```sh
-npm run build
-```
+| Technology              | Description                                              |
+|-------------------------|----------------------------------------------------------|
+| [Vue 3](https://vuejs.org/)               | Progressive JavaScript framework                      |
+| [Tailwind CSS](https://tailwindcss.com/)  | Utility-first CSS framework                           |
+| [AOS](https://michalsnik.github.io/aos/)  | Animate elements on scroll                            |
+| [@motionone/vue](https://motion.dev/vue)  | Motion One integration for Vue                        |
+| [Vue Router](https://router.vuejs.org/)   | Routing and navigation                                |
+| [Vite](https://vitejs.dev/)               | Lightning-fast frontend build tool                    |
 
-### Lint with [ESLint](https://eslint.org/)
+---
 
-```sh
-npm run lint
-```
+## ▶️ Getting Started
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/username/feminsight.git
+cd feminsight
