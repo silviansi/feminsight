@@ -208,9 +208,11 @@
         <!-- Grid ke-4: Tombol lihat semua artikel -->
         <div class="flex flex-col justify-center items-center p-6" data-aos="fade-left">
           <p class="mb-4 text-center text-[#6a4c46] font-medium">Ingin baca lebih banyak?</p>
-          <a href="/blog" class="bg-transparent text-[#6a4c46] border-2 border-[#6a4c46] py-2 px-6 rounded-full text-sm font-semibold hover:bg-[#f8bbd0] hover:text-[#6a4c46] transition duration-300">
-            Lihat Semua Artikel
-          </a>
+          <router-link to="/blog">
+            <button class="bg-transparent text-[#6a4c46] border-2 border-[#6a4c46] py-2 px-6 rounded-full text-sm font-semibold hover:bg-[#f8bbd0] hover:text-[#6a4c46] transition duration-300">
+              Lihat Semua Artikel
+            </button>
+          </router-link>
         </div>
 
       </div>
